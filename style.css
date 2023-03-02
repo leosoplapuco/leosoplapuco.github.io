@@ -354,7 +354,6 @@ header{
 
 footer{
     background: #151515;
-    color: var(--white);
 }
 
 /**/
@@ -370,6 +369,9 @@ footer{
 @media screen and (max-width:600px){
     .hamburguer{
         cursor: unset;
+    }
+    .networks{
+        margin-bottom: 100px;
     }
     .network{
         cursor: none;
