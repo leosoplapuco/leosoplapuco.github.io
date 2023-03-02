@@ -354,6 +354,7 @@ header{
 
 footer{
     background: #151515;
+    color: var(--white);
 }
 
 /**/
