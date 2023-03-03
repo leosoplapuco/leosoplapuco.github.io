@@ -687,17 +687,11 @@ textarea{
 /**/
 
 @media screen and (max-width:600px){
-    .link{
-        cursor: none;
-    }
-    .hamburguer{
-        cursor: none;
+    a, .hamburguer{
+        cursor: none !important;
     }
     .networks{
         margin-bottom: 100px;
-    }
-    .network{
-        cursor: none;
     }
     .index{
         grid-template-columns: 1fr;
