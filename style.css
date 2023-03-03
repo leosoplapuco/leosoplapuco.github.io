@@ -34,6 +34,121 @@ body{
     color: var(--text);
 }
 
+.preLoaderContainer{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100 !important;
+    background: var(--black);
+    animation: preloader 5s ease;
+    transition: all 100ms ease;
+}
+
+@keyframes preloader{
+    0%{
+        left: 0;
+    }
+    98%{
+        left: 0;
+    }
+    100%{
+        left: -100%;
+    }
+}
+
+.preLoaderContent{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    display: flex;
+    width: auto;
+    height: 100px;
+}
+
+.l{
+    width: 50px;
+    height: 100px;
+    margin-right: -50px;
+    background: var(--one);
+    animation: ele 5s ease infinite;
+    z-index: 2;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 80px, 20px 80px, 20px 0%);
+}
+
+@keyframes ele{
+    50%{
+        margin-right: -50px;
+    }
+    51%{
+        margin-right: 0;
+    }
+    100%{
+        margin-right: 0;
+    }
+}
+
+.e{
+    width: 50px;
+    height: 100px;
+    background: var(--one);
+    opacity: 0;
+    animation: ee 5s ease infinite;
+    transition: all 100ms ease;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0%, 100% 20px, 20px 20px, 20px 40px, 40px 40px, 40px 60px, 20px 60px, 20px 80px, 100% 80px, 100% 100%, 0% 100%);
+}
+
+@keyframes ee{
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.o{
+    width: 50px;
+    height: 100px;
+    background: var(--one);
+    position: relative;
+    margin-left: -50px;
+    opacity: 0;
+    animation: oo 5s ease infinite;
+    transition: all 100ms ease;
+    z-index: 0;
+}
+
+@keyframes oo{
+    50%{
+        opacity: 1;
+        margin-left: -50px;
+    }
+    51%{
+        margin-left: 0;
+    }
+    100%{
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+
+.o::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    width: calc(100% - 35px);
+    height: calc(100% - 35px);
+    background: var(--black);
+}
+
+/**/
+
 header{
     width: 100%;
     height: 70px;
@@ -352,23 +467,231 @@ header{
 
 /**/
 
-footer{
-    background: #151515;
+.proyects{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.proyect{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.proyectImg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.gradient{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #000, transparent);
+    z-index: 1;
+}
+
+.proyectName{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    z-index: 2;
+    color: var(--white);
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    pointer-events: none;
+    user-select: none;
+}
+
+.proyectLink{
+    position: absolute;
+    right: -60px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    background: var(--one);
+    display: flex;
+    z-index: 3;
+    border-radius: 5px;
+    transition: all 300ms ease;
+}
+
+.proyect:hover .proyectLink{
+    right: 20px;
+}
+
+.proyectLink i{
+    margin: auto;
+    color: var(--white);
 }
 
 /**/
 
-.textr{
-    margin: auto;
-    width: 100%;
-    max-width: 1000px;
-    padding: 10px 20px;
-    margin-top: 70px;
+footer{
+    background: #151515;
+    position: relative;
+    overflow: hidden;
 }
 
+footer::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    height: 200%;
+    width: 20px;
+    background: var(--white);
+    rotate: 45deg;
+}
+
+.contact{
+    display: flex;
+}
+
+.form{
+    margin: auto;
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 30px;
+    background: rgba(0 0 0 / 0.1);
+    backdrop-filter: blur(10px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    box-shadow: 0 0 50px rgba(0 0 0 / 0.2);
+}
+
+.formSection{
+    width: 100%;
+    background: rgba(235 235 235 / 0.05);
+    border-radius: 5px;
+}
+
+.formData{
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 10px;
+}
+
+.formSection input, textarea{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: var(--white);
+    background: transparent;
+    padding-left: 10px;
+}
+
+.formSection:nth-child(4){
+    grid-column: 1/-1;
+}
+
+textarea{
+    width: 100%;
+    height: 80px;
+    resize: none;
+    padding: 10px;
+}
+
+.footerText{
+    margin-top: 20px;
+}
+
+.footerText .text{
+    width: 100%;
+    text-align: center;
+}
+
+.footerText .text a{
+    color: var(--white);
+    transition: all 300ms ease;
+}
+
+.footerText .text a:hover{
+    color: var(--one);
+}
+
+.submitContainer{
+    width: 100%;
+    grid-column: 1/-1;
+}
+
+.submit{
+    display: block;
+    margin: auto;
+    width: 150px;
+    height: 50px;
+    background: transparent;
+    border: 3px solid var(--white);
+    outline: 0;
+    border-radius: 20px 5px 20px 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 300ms ease;
+}
+
+.submit::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background: var(--white);
+    backdrop-filter: blur(10px);
+    transition: all 300ms ease;
+    z-index: 0;
+}
+
+.submit:hover::before{
+    height: 100%;
+}
+
+.submit span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.submit:hover span{
+    color: var(--black);
+    transition: all 300ms ease;
+}
+
+/**/
+
 @media screen and (max-width:600px){
+    .link{
+        cursor: none;
+    }
     .hamburguer{
-        cursor: unset;
+        cursor: none;
     }
     .networks{
         margin-bottom: 100px;
@@ -386,5 +709,21 @@ footer{
     .miTarget:nth-child(3){
         grid-column: 1/-1;
         grid-row: 3/4;
+    }
+    .proyects{
+        grid-template-columns: 1fr;
+    }
+    .proyectLink{
+        cursor: unset;
+    }
+    .form{
+        grid-template-columns: 1fr;
+        padding: 40px 10px;
+    }
+    textarea{
+        height: 130px;
+    }
+    .submit{
+        cursor: unset;
     }
 }
