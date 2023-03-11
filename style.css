@@ -34,23 +34,26 @@ body{
     color: var(--text);
 }
 
-.preLoaderContainer{
+/**/
+
+.loaderContainer{
     position: fixed;
     left: -100%;
     top: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    z-index: 100 !important;
+    z-index: 100;
+    display: flex;
     background: var(--black);
-    animation: preloader 5s ease;
-    transition: all 100ms ease;
+    pointer-events: none;
+    animation: loader 5s ease;
 }
 
-@keyframes preloader{
+@keyframes loader{
     0%{
         left: 0;
     }
-    98%{
+    95%{
         left: 0;
     }
     100%{
@@ -58,168 +61,83 @@ body{
     }
 }
 
-.preLoaderContent{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    display: flex;
-    width: auto;
-    height: 100px;
-}
-
-.l{
-    width: 50px;
-    height: 100px;
-    margin-right: -50px;
-    background: var(--one);
-    animation: ele 5s ease infinite;
-    z-index: 2;
-    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 80px, 20px 80px, 20px 0%);
-}
-
-@keyframes ele{
-    50%{
-        margin-right: -50px;
-    }
-    51%{
-        margin-right: 0;
-    }
-    100%{
-        margin-right: 0;
-    }
-}
-
-.e{
-    width: 50px;
-    height: 100px;
-    background: var(--one);
-    opacity: 0;
-    animation: ee 5s ease infinite;
-    transition: all 100ms ease;
-    z-index: 1;
-    clip-path: polygon(0 0, 100% 0%, 100% 20px, 20px 20px, 20px 40px, 40px 40px, 40px 60px, 20px 60px, 20px 80px, 100% 80px, 100% 100%, 0% 100%);
-}
-
-@keyframes ee{
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-.o{
-    width: 50px;
-    height: 100px;
-    background: var(--one);
-    position: relative;
-    margin-left: -50px;
-    opacity: 0;
-    animation: oo 5s ease infinite;
-    transition: all 100ms ease;
-    z-index: 0;
-}
-
-@keyframes oo{
-    50%{
-        opacity: 1;
-        margin-left: -50px;
-    }
-    51%{
-        margin-left: 0;
-    }
-    100%{
-        opacity: 1;
-        margin-left: 0;
-    }
-}
-
-.o::before{
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    width: calc(100% - 35px);
-    height: calc(100% - 35px);
-    background: var(--black);
+.loaderContainer img{
+    margin: auto;
+    width: 50%;
+    height: auto;
+    pointer-events: none;
 }
 
 /**/
 
 header{
+    background: var(--black);
     width: 100%;
     height: 70px;
     padding: 0 10px;
-    background: var(--header);
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 10;
+    z-index: 50;
 }
 
 .header{
-    width: 100%;
-    max-width: 1500px;
     margin: auto;
+    width: 100%;
     height: 100%;
+    max-width: 1500px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .logo{
-    font-size: 45px;
     color: var(--white);
     font-weight: 600;
+    font-size: 50px;
 }
 
 .hamburguer{
-    width: 50px;
-    height: 55px;
-    position: relative;
+    width: 45px;
+    height: 45px;
     cursor: pointer;
+    position: relative;
 }
 
 .line{
     position: absolute;
-    height: 5px;
+    height: 4px;
     background: var(--white);
-    rotate: 45deg;
     transition: all 300ms ease;
 }
 
-.hamburguer:hover .line{
-    background: var(--one);
-}
-
 .line-1{
-    left: 0;
-    bottom: 30%;
-    translate: 0 70%;
     width: 50%;
+    rotate: 45deg;
+    bottom: 30%;
+    left: 0;
+    translate: 0 70%;
 }
 
 .line-2{
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
     width: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    rotate: 45deg;
 }
 
 .line-2__active{
-    width: 80%;
-    height: 3px;
     background: var(--one);
+    width: 80%;
 }
 
 .line-3{
-    right: 0;
-    top: 30%;
-    translate: 0 -70%;
     width: 50%;
+    rotate: 45deg;
+    top: 30%;
+    right: 0;
+    translate: 0 -70%;
 }
 
 .line-1__active, .line-3__active{
@@ -227,12 +145,11 @@ header{
 }
 
 .line-4{
+    width: 0;
     top: 50%;
     left: 50%;
     translate: -50% -50%;
     rotate: -45deg;
-    width: 0;
-    height: 3px;
 }
 
 .line-4__active{
@@ -242,50 +159,36 @@ header{
 
 /**/
 
-.bannerContainer{
-    width: 100%;
-    height: 100vh;
-    background: url('https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=906&q=80');
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-/**/
-
 .menuContainer{
     width: 100%;
     height: 100vh;
+    background: var(--black);
+    display: flex;
     position: fixed;
+    z-index: 9;
     left: -100%;
     top: 0;
-    background: var(--black);
-    z-index: 9;
-    padding: 20px;
-    transition: all 300ms ease;
+    transition: all 200ms ease;
 }
 
-.menuContainer__active{
+.menu__active{
     left: 0;
 }
 
 .menu{
     width: 100%;
     height: 100%;
+    display: flex;
     position: relative;
 }
 
-.menuLinks{
-    position: absolute;
-    left: 0;
-    top: 50%;
-    translate: 0 -50%;
+.menu ul{
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5px;
     flex-direction: column;
-    width: 100%;
 }
 
 .link{
@@ -302,7 +205,7 @@ header{
 .networks{
     position: absolute;
     left: 50%;
-    bottom: 0;
+    bottom: 20px;
     translate: -50% 0;
     display: flex;
     align-items: center;
@@ -311,158 +214,131 @@ header{
 }
 
 .network{
-    width: 45px;
-    height: 45px;
-    border-radius: 100%;
+    width: 40px;
+    height: 40px;
     display: flex;
-    background: rgba(0 0 0 / 0.5);
+    border-radius: 100%;
     position: relative;
     overflow: hidden;
 }
 
 .network::before{
     content: '';
+    width: 100%;
+    height: 0;
+    background: var(--one);
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%;
-    height: 0;
+    z-index: -1;
     transition: all 300ms ease;
-    z-index: 0;
 }
 
 .network:hover::before{
     height: 100%;
-    background: var(--one);
 }
 
 .network i{
     margin: auto;
+    font-size: 20px;
     color: var(--white);
-    font-size: 15px;
-    z-index: 1;
 }
 
 /**/
 
-.blockContainer{
-    padding: 0 10px;
+.bannerContainer{
     width: 100%;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.blockContainer{
+    padding: 10px 20px;
 }
 
 .blockContent{
     margin: auto;
     width: 100%;
     max-width: 1000px;
-    padding: 10px 0;
 }
 
 .blockTitle{
     font-size: 30px;
     font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.text{
+    text-align: justify;
 }
 
 /**/
 
-.index{
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-.index li{
-    width: 100%;
-    height: 30px;
+.webButtons{
     display: flex;
     align-items: center;
     justify-content: left;
-    gap: 5px;
-}
-
-.index li i{
-    color: var(--one);
-}
-
-.index li b{
-    font-weight: normal;
-    font-weight: 500;
-}
-
-.index li a{
-    color: var(--white);
-    transition: all 300ms ease;
-}
-
-.index li a:hover{
-    color: var(--one);
-}
-
-/**/
-
-.mi{
-    margin-top: 20px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     gap: 10px;
-}
-
-.miTarget{
-    width: 100%;
-    height: 100%;
-}
-
-.targetTitle{
-    width: 100%;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.miTargetContent{
-    width: 100%;
-    height: calc(100% - 30px);
-    padding-left: 30px;
     position: relative;
 }
 
-.miTargetContent::before{
-    content: '';
+.webButton{
+    border: 0;
+    outline: 0;
+    width: 110px;
+    height: 40px;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    border-radius: 5px;
+    transition: all 300ms ease;
+}
+
+.webButton:hover{
+    background: #111;
+}
+
+.indicator{
     position: absolute;
     left: 0;
     top: 0;
-    width: 24px;
-    height: 24px;
-    border-radius: 100%;
-    background: var(--header);
-    border: 3px solid var(--one);
-    z-index: 1;
-}
-
-.miTargetContent::after{
-    content: '';
-    position: absolute;
-    left: 13px;
-    top: 4px;
-    width: 4px;
-    height: calc(100% - 4px);
-    background: var(--one);
+    width: 110px;
+    height: 40px;
+    background: #111;
     z-index: 0;
+    border-radius: 5px;
+    transition: all 300ms ease;
 }
 
-.target{
+.webButton span{
+    display: block;
+    margin: auto;
+    color: var(--white);
+}
+
+.kindOfWeb{
     width: 100%;
-    padding-left: 5px;
+    overflow: hidden;
 }
 
-.miTarget:nth-child(3){
-    grid-column: 2/3;
-    grid-row: 1/-1;
+.kindOfWebUl{
+    width: 300%;
+    height: 100%;
+    display: flex;
+    transition: all 500ms ease;
+}
+
+.kind{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /**/
@@ -470,7 +346,7 @@ header{
 .proyects{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 20px;
 }
 
 .proyect{
@@ -478,52 +354,68 @@ header{
     height: 200px;
     overflow: hidden;
     position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0 0 0 / 0.3);
 }
 
-.proyectImg{
-    position: absolute;
-    left: 0;
-    top: 0;
+.proyect img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
     z-index: 0;
+    transition: all 1s ease;
+}
+
+.proyect:hover img{
+    scale: 1.5;
 }
 
 .gradient{
     position: absolute;
+    left: 0;
+    bottom: -100%;
+    z-index: 1;
     width: 100%;
     height: 100%;
     background: linear-gradient(to top, #000, transparent);
-    z-index: 1;
+    transition: all 300ms ease;
+}
+
+.proyect:hover .gradient{
+    bottom: 0;
 }
 
 .proyectName{
     position: absolute;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    z-index: 2;
-    color: var(--white);
-    font-size: 30px;
     width: 100%;
     text-align: center;
-    font-weight: 600;
-    pointer-events: none;
-    user-select: none;
+    left: 0;
+    top: 50%;
+    translate: 0 -50%;
+    z-index: 2;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 .proyectLink{
+    width: 40px;
+    height: 40px;
+    background: var(--black);
+    color: var(--white);
     position: absolute;
     right: -60px;
     bottom: 20px;
-    width: 40px;
-    height: 40px;
-    background: var(--one);
-    display: flex;
     z-index: 3;
+    display: flex;
     border-radius: 5px;
-    transition: all 300ms ease;
+    transition: all 500ms ease;
+}
+
+.proyectLink:hover{
+    background: var(--one);
 }
 
 .proyect:hover .proyectLink{
@@ -532,192 +424,37 @@ header{
 
 .proyectLink i{
     margin: auto;
-    color: var(--white);
 }
 
 /**/
 
 footer{
-    background: #151515;
-    position: relative;
-    overflow: hidden;
+    background: #111;
 }
 
-footer::before{
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    height: 200%;
-    width: 20px;
-    background: var(--white);
-    rotate: 45deg;
-}
-
-.contact{
-    display: flex;
-}
-
-.form{
-    margin: auto;
-    width: 100%;
-    max-width: 600px;
-    padding: 40px 30px;
-    background: rgba(0 0 0 / 0.1);
-    backdrop-filter: blur(10px);
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    box-shadow: 0 0 50px rgba(0 0 0 / 0.2);
-}
-
-.formSection{
-    width: 100%;
-    background: rgba(235 235 235 / 0.05);
-    border-radius: 5px;
-}
-
-.formData{
-    width: 100%;
-    font-size: 14px;
-    font-weight: 500;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    padding-left: 10px;
-}
-
-.formSection input, textarea{
-    width: 100%;
-    border: 0;
-    outline: 0;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    color: var(--white);
-    background: transparent;
-    padding-left: 10px;
-}
-
-.formSection:nth-child(4){
-    grid-column: 1/-1;
-}
-
-textarea{
-    width: 100%;
-    height: 80px;
-    resize: none;
-    padding: 10px;
-}
-
-.footerText{
-    margin-top: 20px;
-}
-
-.footerText .text{
-    width: 100%;
-    text-align: center;
-}
-
-.footerText .text a{
-    color: var(--white);
-    transition: all 300ms ease;
-}
-
-.footerText .text a:hover{
-    color: var(--one);
-}
-
-.submitContainer{
-    width: 100%;
-    grid-column: 1/-1;
-}
-
-.submit{
-    display: block;
-    margin: auto;
-    width: 150px;
-    height: 50px;
-    background: transparent;
-    border: 3px solid var(--white);
-    outline: 0;
-    border-radius: 20px 5px 20px 5px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    transition: all 300ms ease;
-}
-
-.submit::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 0;
-    background: var(--white);
-    backdrop-filter: blur(10px);
-    transition: all 300ms ease;
-    z-index: 0;
-}
-
-.submit:hover::before{
-    height: 100%;
-}
-
-.submit span{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    color: var(--white);
-    font-size: 20px;
-    font-weight: 600;
-    z-index: 1;
-}
-
-.submit:hover span{
-    color: var(--black);
-    transition: all 300ms ease;
-}
-
-/**/
-
-@media screen and (max-width:600px){
-    a, .hamburguer{
-        cursor: none !important;
+@media screen and (max-width:800px){
+    .hamburguer, a, .webButton{
+        cursor: none;
     }
-    .networks{
-        margin-bottom: 100px;
-    }
-    .index{
-        grid-template-columns: 1fr;
-    }
-    .mi{
-        grid-template-columns: 1fr !important;
-        grid-template-rows: repeat(3, auto);
-    }
-    .miTarget:nth-child(3){
-        grid-column: 1/-1;
-        grid-row: 3/4;
-    }
-    .proyects{
-        grid-template-columns: 1fr;
-    }
-    .proyectLink{
-        cursor: unset;
-    }
-    .form{
-        grid-template-columns: 1fr;
-        padding: 40px 10px;
-    }
-    textarea{
-        height: 130px;
+    footer{
+        background-size: 500%;
     }
     .submit{
         cursor: unset;
+    }
+}
+
+@media screen and (max-width:600px){
+    .networks{
+        bottom: 80px;
+    }
+    .webButtons{
+        justify-content: center;
+    }
+    .indicator{
+        display: none;
+    }
+    .proyects{
+        grid-template-columns: 1fr;
     }
 }

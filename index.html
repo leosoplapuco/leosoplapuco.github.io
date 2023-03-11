@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.svg" type="image/x-icon">
 </head>
-<body>
-<div class="preLoaderContainer">
-    <div class="preLoaderContent">
-        <div class="l"></div>
-        <div class="e"></div>
-        <div class="o"></div>
-    </div>
-</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D88QTQY209"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-D88QTQY209');
+</script>
+<body>
 <header>
     <div class="header">
-        <a href="index.html" class="logo">
+        <a href="#" class="logo">
             Leo
         </a>
 
@@ -31,82 +32,73 @@
     </div>
 </header>
 
-<div class="bannerContainer">
-    <div class="banner">
-        <div class="name">Mi nombre es <b>Leonardo Soplapuco</b></div>
-        <div class="worksContainer">
-            <span>y soy,</span> <div class="workContainer">Desarrollador Web</div>
-        </div>
-    </div>
+<div class="loaderContainer">
+    <img src="leonodos.svg">
 </div>
 
 <div class="menuContainer">
     <div class="menu">
-        <div class="menuLinks">
-            <li><a href="#Inicio" class="link" onclick="Close()">Inicio</a></li>
-            <li><a href="#SobreMi" class="link" onclick="Close()">Sobre mi</a></li>
-            <li><a href="#Proyectos" class="link" onclick="Close()">Proyectos</a></li>
-            <li><a href="#Contacto" class="link" onclick="Close()">Contacto</a></li>
-        </div>
+        <ul>
+            <a href="#Inicio" class="link" onclick="Close()">Inicio</a>
+            <a href="#SobreMi" class="link" onclick="Close()">Sobre mi</a>
+            <a href="#Proyectos" class="link" onclick="Close()">Proyectos</a>
+            <a href="#Contacto" class="link" onclick="Close()">Contacto</a>
+        </ul>
 
         <div class="networks">
-            <a href="https://bit.ly/3HCH7iH" class="network fb">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://bit.ly/3JnX6Ta" class="network ig">
+            <a href="#" class="network">
                 <i class="fa-brands fa-instagram"></i>
             </a>
-            <a href="https://bit.ly/3WHwfEt" class="network gh">
+            <a href="#" class="network">
                 <i class="fa-brands fa-github"></i>
             </a>
-            <a href="https://bit.ly/3JnJWFv" class="network lk">
+            <a href="#" class="network">
                 <i class="fa-brands fa-linkedin"></i>
             </a>
+            <a href="#" class="network">
+                <i class="fa-brands fa-at"></i>
+            </a>
         </div>
-    </div>
+    </div>    
+</div>
+
+<div class="bannerContainer">
 </div>
 
 <div class="blockContainer" id="Inicio">
     <div class="blockContent">
         <div class="blockTitle">
-            Desarrollador Front-End
+            Desarrollador Web Front-End
         </div>
         <div class="text">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet odit doloribus totam architecto quos corporis quisquam commodi repellat, maiores, vero voluptates iure quasi hic possimus. Nesciunt quam, officia, dolores iure corporis dolor praesentium incidunt, dignissimos sed consequuntur qui velit pariatur!
+            Un desarrollador web es un profesional encargado de crear y mantener sitios web y aplicaciones en línea. Esta tarea implica la escritura de código y el uso de diferentes tecnologías y herramientas para construir sitios web que sean atractivos, funcionales y fáciles de usar para los usuarios. Los desarrolladores web también pueden trabajar en la optimización de la velocidad y el rendimiento de los sitios web, así como en la seguridad para proteger la información de los usuarios. En resumen, un desarrollador web es responsable de crear una experiencia en línea fluida y satisfactoria para los usuarios, y de garantizar que los sitios web funcionen sin problemas en diferentes dispositivos y navegadores web.
         </div>
-        <div class="index">
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <b>Cumpleaños:</b><span>27 Jun 2003</span>
-            </li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <b>Sitio Web:</b><a href="https://leosoplapuco.github.io/">leosoplapuco.github.io</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <b>Teléfono:</b><a href="tel:+51932966372">+51 932966372</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <b>Ciudad:</b><a href="https://goo.gl/maps/Mb8ztMsae5jUMGWv7">SMP, Lima, Perú</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <b>Edad:</b><span>20</span>
-            </li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <b>Nivel:</b><span>Junior</span>
-            </li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <b>Correo:</b><a href="mailto:leosoplapuco29@gmail.com">leosoplapuco29@gmail.com</a>
-            </li>
-            <li>
-                <i class="fa-solid fa-chevron-right"></i>
-                <b>Ocupación:</b><span>Freelancer</span>
-            </li>
+    </div>
+</div>
+
+<div class="blockContainer">
+    <div class="blockContent">
+        <div class="blockTitle">
+            Tipos de Web's
+        </div>
+        <div class="webButtons">
+            <div class="indicator"></div>
+            <button class="webButton webButton-1" onclick="kindOne()"><span>Páginas Web</span></button>
+            <button class="webButton webButton-2" onclick="kindTwo()"><span>Sitios Web</span></button>
+            <button class="webButton webButton-3" onclick="kindThree()"><span>Aplicaciones</span></button>
+        </div>
+        <div class="kindOfWeb">
+            <ul class="kindOfWebUl">
+                <div class="kind kind-1">1
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto dolorem aut esse necessitatibus unde nam enim saepe neque laudantium, fugit nisi eligendi earum, facilis rerum reprehenderit hic ad quod incidunt iste. Dolores placeat modi maxime nobis minima molestiae sequi assumenda sapiente, at inventore obcaecati nemo aperiam necessitatibus rem! Cumque, earum.
+                </div>
+                <div class="kind kind-2">2
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti quidem quasi cum, ducimus, maxime libero veniam temporibus reprehenderit commodi, hic earum. Sit unde, aliquam odio eligendi nulla, quibusdam assumenda fugit laboriosam obcaecati saepe sapiente sint. Magnam quos earum iure quas. Hic minima nisi, assumenda harum maxime, a id ullam consequatur similique nam delectus voluptate numquam quasi. Eaque ipsa ex consectetur.
+                </div>
+                <div class="kind kind-3">3
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis possimus libero voluptatibus non illo ut quam assumenda, reiciendis, ipsum error consequatur officiis cum molestias temporibus quasi nobis nisi ab neque harum deserunt corrupti accusantium totam sed vero? Debitis ad, tempore ab, fugit quisquam, exercitationem sequi iusto quasi modi ratione incidunt rem ut perferendis! Quas, esse quis. Cupiditate esse tempore quae commodi quam expedita suscipit et, illum neque nobis, repellat sequi maiores ea ipsa. Harum fuga culpa cupiditate aliquam consectetur laboriosam!
+                </div>
+            </ul>
         </div>
     </div>
 </div>
@@ -117,45 +109,7 @@
             Sobre mi
         </div>
         <div class="text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum temporibus ad cum neque esse dolorem tenetur repudiandae perferendis non, doloremque quisquam, expedita laborum aliquid recusandae!
-        </div>
-        <div class="mi">
-            <div class="miTarget">
-                <div class="targetTitle">
-                    Resumen
-                </div>
-
-                <div class="miTargetContent">
-                    <div class="target">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum fugiat, eius dolores non eum, optio explicabo maiores ab dolorem autem, nemo saepe totam soluta nesciunt quidem esse error corporis pariatur! Beatae tempore accusantium aliquid. Laudantium dignissimos nesciunt amet. Veritatis, fugiat!
-                    </div>
-                </div>
-            </div>
-
-            <div class="miTarget">
-                <div class="targetTitle">
-                    Formación
-                </div>
-
-                <div class="miTargetContent">
-                    <div class="target">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum fugiat, eius dolores non eum, optio explicabo maiores ab dolorem autem, nemo saepe totam soluta nesciunt quidem esse error corporis pariatur! Beatae tempore accusantium aliquid. Laudantium dignissimos nesciunt amet. Veritatis, fugiat!
-                    </div>
-                </div>
-            </div>
-
-            <div class="miTarget">
-                <div class="targetTitle">
-                    Experencia
-                </div>
-
-                <div class="miTargetContent">
-                    <div class="target">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur tempora, laboriosam perspiciatis dolor dolores quaerat quis. Eius nemo quibusdam mollitia libero maiores blanditiis molestias sit deserunt, aperiam, quod neque itaque incidunt sunt est rerum eaque reprehenderit quam. Repellat nihil mollitia harum? Sed vitae dolorum dolore laudantium qui blanditiis cumque maxime sequi tenetur est delectus error odio aspernatur pariatur similique eos iusto debitis, perferendis minus ullam nihil provident vel. Harum ipsa, quidem dolores laborum repudiandae dolorum a tempore exercitationem corrupti odio excepturi earum, facere eaque ullam explicabo beatae sequi officiis pariatur assumenda ea commodi ratione sunt nisi. Incidunt maxime ipsum officia.
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum fugiat, eius dolores non eum, optio explicabo maiores ab dolorem autem, nemo saepe totam soluta nesciunt quidem esse error corporis pariatur! Beatae tempore accusantium aliquid. Laudantium dignissimos nesciunt amet. Veritatis, fugiat!
-                    </div>
-                </div>
-            </div>
+            ¡Hola! Soy Leonardo Soplapuco, un apasionado desarrollador web Front-End con 20 años de edad de estos 3 son de experencia. Aprendí de manera acádemica y sobre todo empírica a través de la práctica y la experiencia, lo que me ha permitido adquirir habilidades en lenguajes de programación como HTML, CSS y JavaScript como base. Me encanta trabajar en proyectos creativos y desafiantes, siempre buscando nuevas formas de hacer que la experiencia del usuario sea más atractiva e intuitiva. Mi experiencia me ha permitido trabajar en diversos proyectos, desde sitios web para pequeñas empresas hasta aplicaciones web de mayor envergadura personal. Me apasiona mantenerme actualizado con las últimas tendencias en diseño y tecnología web, lo que me permite crear soluciones modernas y eficaces para mis clientes.
         </div>
     </div>
 </div>
@@ -168,36 +122,44 @@
 
         <div class="proyects">
             <div class="proyect">
-                <img src="https://images.unsplash.com/photo-1564865878688-9a244444042a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="proyectImg">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
                 <div class="gradient"></div>
-                <div class="proyectName">Xivalú</div>
+                <div class="proyectName">
+                    L-earn
+                </div>
                 <a href="#" class="proyectLink">
                     <i class="fa-solid fa-link"></i>
                 </a>
             </div>
 
             <div class="proyect">
-                <img src="https://images.unsplash.com/photo-1564865878688-9a244444042a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="proyectImg">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
                 <div class="gradient"></div>
-                <div class="proyectName">Sem Ingenieros</div>
+                <div class="proyectName">
+                    Selimcenter
+                </div>
+                <a href="https://www.selimcenter.com" class="proyectLink">
+                    <i class="fa-solid fa-link"></i>
+                </a>
+            </div>
+
+            <div class="proyect">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
+                <div class="gradient"></div>
+                <div class="proyectName">
+                    Xivalú
+                </div>
                 <a href="#" class="proyectLink">
                     <i class="fa-solid fa-link"></i>
                 </a>
             </div>
 
             <div class="proyect">
-                <img src="https://images.unsplash.com/photo-1564865878688-9a244444042a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="proyectImg">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
                 <div class="gradient"></div>
-                <div class="proyectName">Selimcenter</div>
-                <a href="#" class="proyectLink">
-                    <i class="fa-solid fa-link"></i>
-                </a>
-            </div>
-
-            <div class="proyect">
-                <img src="https://images.unsplash.com/photo-1564865878688-9a244444042a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="proyectImg">
-                <div class="gradient"></div>
-                <div class="proyectName">L-earn</div>
+                <div class="proyectName">
+                    Sem Ingenieros
+                </div>
                 <a href="#" class="proyectLink">
                     <i class="fa-solid fa-link"></i>
                 </a>
@@ -207,47 +169,9 @@
 </div>
 
 <footer class="blockContainer" id="Contacto">
-    <div class="blockContent">
-        <div class="blockTitle">
-            Contacto
-        </div>
-
-        <div class="contact">
-            <form class="form" id="form">
-                <div class="formSection">
-                    <div class="formData">Nombres</div>
-                    <input type="text" class="input">
-                </div>
-
-                <div class="formSection">
-                    <div class="formData">Celular</div>
-                    <input type="text" class="input">
-                </div>
-
-                <div class="formSection">
-                    <div class="formData">Correo</div>
-                    <input type="text" class="input">
-                </div>
-
-                <div class="formSection">
-                    <div class="formData">Describe tu proyecto</div>
-                    <textarea></textarea>
-                </div>
-
-                <div class="submitContainer">
-                    <button type="submit" class="submit">
-                        <span>Contacto</span>
-                    </button>
-                </div>
-            </form>
-        </div>
-
-        <div class="footerText">
-            <div class="text">2023 &copy; Derechos reservados a <a href="https://www.leosoplapuco.github.io">Leonardo Soplapuco</a></div>
-        </div>
+    <div class="blockContent footer">
     </div>
 </footer>
-
 <script src="https://kit.fontawesome.com/623c7fa679.js" crossorigin="anonymous"></script>
 <script src="app.js"></script>
 </body>
