@@ -1,4 +1,4 @@
-hamburguer = document.querySelector('.hamburguer')
+hamburguer = document.querySelector('.hamburger')
 
 lineOne = document.querySelector('.line-1')
 lineTwo = document.querySelector('.line-2')
@@ -25,25 +25,18 @@ function Close(){
     menu.classList.remove('menu__active')
 }
 
-webButtonOne = document.querySelector('.webButton-1')
-webButtonTwo = document.querySelector('.webButton-2')
-webButtonThree = document.querySelector('.webButton-3')
+typeButtonOne = document.querySelector('.webButton-1')
+typeButtonTwo = document.querySelector('.webButton-2')
+typeButtonThree = document.querySelector('.webButton-3')
 
-kindOfWebUl = document.querySelector('.kindOfWebUl')
+typeList = document.querySelector('.typeOfWeb')
 
-indicator = document.querySelector('.indicator')
-
-function kindOne(){
-    kindOfWebUl.style.marginLeft = "0"
-    indicator.style.left = "0"
+function listOne(){
+    typeList.style.marginLeft = "0"
 }
-
-function kindTwo(){
-    kindOfWebUl.style.marginLeft = "-100%"
-    indicator.style.left = "120px"
+function listTwo(){
+    typeList.style.marginLeft = "-100%"
 }
-
-function kindThree(){
-    kindOfWebUl.style.marginLeft = "-200%"
-    indicator.style.left = "240px"
+function listThree(){
+    typeList.style.marginLeft = "-200%"
 }
