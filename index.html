@@ -4,41 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi portafolio</title>
+    <title>Leonardo Soplapuco</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="icon.svg" type="image/x-icon">
     <meta name="description" content="Bienvenido a mi portafolio personal, podrás ver más información acerca de mi, mi formación, proyectos en los que he participado y desarrollado en el rubro, no dudes en contáctarme si tienes algún proyecto en mente.">
     <meta name="author" content="Leonardo Soplapuco">
     <meta name="keywords" content="Leonardo Soplapuco, Leo Soplapuco, diseño web, páginas web, paginas web, desarrollo web, programación, html, css, javascript, juegos, arcade">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D88QTQY209"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-D88QTQY209');
-</script>
-
-<div class="preloaderContainer">
-    <div class="preloader">
-        <div class="c l-1"></div>
-        <div class="l l-2"></div>
-        <div class="c l-3"></div>
-        <div class="c l-4"></div>
-
-        <div class="c e"></div>
-
-        <div class="l o-1"></div>
-        <div class="l o-2"></div>
-        <div class="l o-3"></div>
-    </div>
-</div>
-
-<div class="bannerContainer">
-    <div class="bannerContent"></div>
-</div>
 
 <header>
     <div class="header">
@@ -46,36 +20,99 @@
             Leo
         </a>
 
+        <button class="dark__button" onclick="Close()">
+            <span class="material-symbols-outlined light">light_mode</span>
+            <span class="material-symbols-outlined dark">dark_mode</span>
+        </button>
+
         <div class="hamburguer" onclick="Open()">
-            <div class="line line-1"></div>
-            <div class="line line-2"></div>
-            <div class="line line-3"></div>
-            <div class="line line-4"></div>
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+        <div class="line line-4"></div>
         </div>
     </div>
 </header>
 
 <div class="menuContainer">
     <div class="menu">
-        <a href="#Inicio" class="link" onclick="Close()">Inicio</a>
-        <a href="#Conceptos" class="link" onclick="Close()">Conceptos</a>
-        <a href="#Proyectos" class="link" onclick="Close()">Proyectos</a>
-        <a href="#Arcade" class="link" onclick="Close()">Arcade</a>
-        <a href="#Contacto" class="link" onclick="Close()">Contacto</a>
+        <div class="links">
+            <a href="#Inicio" class="link link-1" onclick="Close()">Inicio</a>
+            <a href="#Conceptos" class="link link-2" onclick="Close()">Conceptos</a>
+            <a href="#Servicios" class="link link-3" onclick="Close()">Servicios</a>
+            <a href="#Portafolio" class="link link-4" onclick="Close()">Portafolio</a>
+            <a href="#Contacto" class="link link-5" onclick="Close()">Contacto</a>
+        </div>
+
+        <div class="menu__links">
+            <a href="#" class="menu__link">Términos y condiciones</a>
+            <a href="#" class="menu__link">Trabaja conmigo</a>
+        </div>
+    </div>
+</div>
+
+<div class="bannerContainer">
+    <div class="banner">
     </div>
 </div>
 
 <div class="blockContainer" id="Inicio">
     <div class="blockContent">
-        <h1 class="blockTitle">
-            Hola
-        </h1>
-        <div class="text">
-            ¡Hola! Soy Leonardo Soplapuco, un desarrollador web freelance con una pasión por crear soluciones en línea impresionantes y eficaces para mis clientes. Con solo 20 años, he aprendido y crecido de manera empírica en el campo del desarrollo web, lo que me ha permitido desarrollar una visión única y creativa en el diseño y desarrollo de sitios web. Como desarrollador web, me apasiona la creación de sitios web dinámicos y funcionales que no solo sean atractivos visualmente, sino que también cumplan con los objetivos de mis clientes. Con mi amplia experiencia en HTML, CSS, JavaScript y otros lenguajes de programación, puedo crear sitios web personalizados que se adaptan perfectamente a las necesidades y deseos de mis clientes.
+        <div class="blockTitle">
+            ¡Hola!
+        </div>
+        <div class="blockText">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ex doloremque veniam dicta fugit iste deserunt consequuntur hic possimus! Commodi?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio laboriosam ab illo saepe voluptatibus porro officia nemo, voluptates ipsam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ab explicabo eum voluptatem rem dolore, dolores enim beatae dolor deserunt accusantium quasi eligendi autem repellendus sapiente ex porro voluptatibus corrupti.
         </div>
 
         <div class="formationContainer">
+            <div class="formation">
+                <div class="subTitle">Formación</div>
 
+                <div class="formationList">
+                    <li><a href="Certificado IDAT.pdf" class="formationLink">Curso Diseño y Desarrollo Web</a></li>
+                    <li><a href="#" class="formationLink">Inglés Avanzado</a></li>
+                </div>
+            </div>
+            <div class="formation">
+                <div class="subTitle">Lenguajes</div>
+
+                <div class="languages">
+                    <div class="html">
+                        <i class="fa-brands fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="css">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="js">
+                        <i class="fa-brands fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="bootstrap">
+                        <i class="fa-brands fa-bootstrap"></i>
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="php">
+                        <i class="fa-brands fa-php"></i>
+                        <span>PHP</span>
+                    </div>
+                    <div class="git">
+                        <i class="fa-brands fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="github">
+                        <i class="fa-brands fa-github"></i>
+                        <span>Git Hub</span>
+                    </div>
+                </div>
+            </div>
+            <div class="formation">
+                <div class="subTitle">Herramientas</div>
+            </div>
         </div>
     </div>
 </div>
@@ -83,200 +120,180 @@
 <div class="blockContainer" id="Conceptos">
     <div class="blockContent">
         <div class="blockTitle">
-            Conceptos
+            Debes saber
         </div>
-        <div class="firstText">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iste blanditiis provident molestias, voluptate a quia earum ullam numquam iure similique quisquam laborum! Rem, dolor!
-        </div>
-
-        <div class="webConcept">
-            <div class="webTitle">
-                ¿Qué es la Web?
-            </div>
-            <div class="text">
-                La web, o World Wide Web, es un sistema global de información que permite acceder a una amplia variedad de contenidos a través de internet. La web se compone de una vasta red de sitios web interconectados que contienen información en formato de texto, imagen, audio y video, y que pueden ser accesibles desde cualquier dispositivo con conexión a internet. La web ha revolucionado la forma en que las personas acceden y comparten información, permitiendo una mayor conectividad y colaboración en todo el mundo. Desde simples blogs hasta complejas aplicaciones web, la web es una herramienta esencial para la comunicación, el entretenimiento y la realización de negocios en la era digital.
-            </div>
+        <div class="blockText">
+            Todas las carreras tienen sus propias ramas de estudios y el "Desarrollo Web" es una de la programación en general y esta misma tiene sus propios conceptos. Por eso antes de adentrarte en su mundo ya sea para estudiarla o contratar los servicios de algún desarrollador web, tienes que saber algunos de estos y sus diferencias.
         </div>
 
-        <div class="conceptButtons">
-            <div class="conceptButton conceptButton-1" onclick="conceptOne()">1</div>
-            <div class="conceptButton conceptButton-2" onclick="conceptTwo()">2</div>
-        </div>
-
-        <div class="conceptsContainer">
-            <div class="concepts">
-                <div class="concept">
-                    <div class="number">1</div>
-                    <div class="conceptTitle">
+        <div class="typesWebContainer">
+            <div class="typesWeb">
+                <div class="type">
+                    <div class="num">1</div>
+                    <div class="subTitle">
                         Página Web
                     </div>
                     <div class="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio maiores ratione suscipit dolorum distinctio quos exercitationem amet, iste nihil vero delectus doloribus debitis rem, iure veniam. Vero provident odit nemo?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores illo sit veritatis repellendus velit sapiente quia inventore, sequi aliquid, quae, fuga distinctio exercitationem consequatur ipsa!
                     </div>
-                    <div class="conceptLink">
-                        <a href="#" class="quote">Cotizar</a>
-                    </div>
+                    <a href="#Contacto" class="typeLink" title="Cotizar">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
                 </div>
-
-                <div class="concept">
-                    <div class="number">2</div>
-                    <div class="conceptTitle">
+    
+                <div class="type">
+                    <div class="num">2</div>
+                    <div class="subTitle">
                         Sitio Web
                     </div>
                     <div class="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio maiores ratione suscipit dolorum distinctio quos exercitationem amet, iste nihil vero delectus doloribus debitis rem, iure veniam. Vero provident odit nemo?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores illo sit veritatis repellendus velit sapiente quia inventore, sequi aliquid, quae, fuga distinctio exercitationem consequatur ipsa!
                     </div>
-                    <div class="conceptLink">
-                        <a href="#" class="quote">Cotizar</a>
-                    </div>
+                    <a href="#Contacto" class="typeLink" title="Cotizar">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
                 </div>
-
-                <div class="concept">
-                    <div class="number">3</div>
-                    <div class="conceptTitle">
-                        Aplicación Web
+    
+                <div class="type">
+                    <div class="num">3</div>
+                    <div class="subTitle">
+                        Apliación Web
                     </div>
                     <div class="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio maiores ratione suscipit dolorum distinctio quos exercitationem amet, iste nihil vero delectus doloribus debitis rem, iure veniam. Vero provident odit nemo?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores illo sit veritatis repellendus velit sapiente quia inventore, sequi aliquid, quae, fuga distinctio exercitationem consequatur ipsa!
                     </div>
                 </div>
-
-                <div class="concept">
-                    <div class="number">4</div>
-                    <div class="conceptTitle">
+    
+                <div class="type">
+                    <div class="num">4</div>
+                    <div class="subTitle">
                         Landing Page
                     </div>
                     <div class="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio maiores ratione suscipit dolorum distinctio quos exercitationem amet, iste nihil vero delectus doloribus debitis rem, iure veniam. Vero provident odit nemo?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores illo sit veritatis repellendus velit sapiente quia inventore, sequi aliquid, quae, fuga distinctio exercitationem consequatur ipsa!
                     </div>
-                    <div class="conceptLink">
-                        <a href="#" class="quote">Cotizar</a>
-                    </div>
+                    <a href="#Contacto" class="typeLink" title="Cotizar">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
                 </div>
-
-                <div class="concept">
-                    <div class="number">5</div>
-                    <div class="conceptTitle">
+    
+                <div class="type">
+                    <div class="num">5</div>
+                    <div class="subTitle">
                         Portafolio
                     </div>
                     <div class="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio maiores ratione suscipit dolorum distinctio quos exercitationem amet, iste nihil vero delectus doloribus debitis rem, iure veniam. Vero provident odit nemo?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores illo sit veritatis repellendus velit sapiente quia inventore, sequi aliquid, quae, fuga distinctio exercitationem consequatur ipsa!
                     </div>
-                    <div class="conceptLink">
-                        <a href="#" class="quote">Cotizar</a>
-                    </div>
+                    <a href="#Contacto" class="typeLink" title="Cotizar">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
                 </div>
-                
-                <div class="concept">
-                    <div class="number">6</div>
-                    <div class="conceptTitle">
+    
+                <div class="type">
+                    <div class="num">6</div>
+                    <div class="subTitle">
                         Blog
                     </div>
                     <div class="text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio maiores ratione suscipit dolorum distinctio quos exercitationem amet, iste nihil vero delectus doloribus debitis rem, iure veniam. Vero provident odit nemo?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores illo sit veritatis repellendus velit sapiente quia inventore, sequi aliquid, quae, fuga distinctio exercitationem consequatur ipsa!
                     </div>
-                    <div class="conceptLink">
-                        <a href="#" class="quote">Cotizar</a>
+                    <a href="#Contacto" class="typeLink" title="Cotizar">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
+                </div>
+    
+                <div class="type">
+                    <div class="num">7</div>
+                    <div class="subTitle">
+                        Catalago
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="whatNeed">
-            <div class="whatNeedTitle">
-                ¿Qué necesitas?
-            </div>
-
-            <div class="concept">
-                <div class="conceptTitle">
-                    Hosting Web
-                </div>
-                <div class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum est consequatur similique ullam, atque vel. Debitis quisquam pariatur quae tenetur.
-                </div>
-            </div>
-            <div class="concept">
-                <div class="conceptTitle">
-                    Dominio
-                </div>
-                <div class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id assumenda eum dolores possimus soluta harum inventore aspernatur commodi dignissimos recusandae?
+                    <div class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores illo sit veritatis repellendus velit sapiente quia inventore, sequi aliquid, quae, fuga distinctio exercitationem consequatur ipsa!
+                    </div>
+                    <a href="#Contacto" class="typeLink" title="Cotizar">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="hostAndDomine">
-                <a href="#">
-                    <img src="ofert.jpg">
-                </a>
+            <div class="typeButtons">
+                <button class="typeButton" onclick="typesOne()">1</button>
+                <button class="typeButton" onclick="typesTwo()">2</button>
+                <button class="typeButton" onclick="typesThree()">3</button>
             </div>
         </div>
     </div>
 </div>
 
-<div class="blockContainer" id="Proyectos">
+<div class="blockContainer" id="Servicios">
     <div class="blockContent">
         <div class="blockTitle">
-            Proyectos
+            Servicios
         </div>
-        <div class="firstText">
-            Dale un vistazo a algunos de los proyectos más recientes en los que he participado.
+        <div class="blockText">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ex doloremque veniam dicta fugit iste deserunt consequuntur hic possimus! Commodi?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio laboriosam ab illo saepe voluptatibus porro officia nemo, voluptates ipsam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ab explicabo eum voluptatem rem dolore, dolores enim beatae dolor deserunt accusantium quasi eligendi autem repellendus sapiente ex porro voluptatibus corrupti.
+        </div>
+    </div>
+</div>
+
+<div class="blockContainer" id="Portafolio">
+    <div class="blockContent">
+        <div class="blockTitle">
+            Mis proyectos
+        </div>
+        <div class="blockText">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim odio laboriosam ab illo saepe voluptatibus porro officia nemo, voluptates ipsam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ab explicabo eum voluptatem rem dolore, dolores enim beatae dolor deserunt accusantium quasi eligendi autem repellendus sapiente ex porro voluptatibus corrupti.
         </div>
 
         <div class="proyects">
             <div class="proyect">
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80">
+                <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80">
                 <div class="gradient"></div>
-                <div class="proyectName">
-                    L-earn
-                </div>
+                <div class="proyectName">L-earn</div>
                 <a href="#" class="proyectLink">
                     <i class="fa-solid fa-link"></i>
                 </a>
             </div>
 
             <div class="proyect">
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80">
+                <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80">
                 <div class="gradient"></div>
-                <div class="proyectName">
-                    Selimcenter
-                </div>
+                <div class="proyectName">Selimcenter</div>
                 <a href="#" class="proyectLink">
                     <i class="fa-solid fa-link"></i>
                 </a>
             </div>
 
             <div class="proyect">
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80">
+                <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80">
                 <div class="gradient"></div>
-                <div class="proyectName">
-                    Sem Ingenieros
-                </div>
+                <div class="proyectName">Sem Ingenieros</div>
                 <a href="#" class="proyectLink">
                     <i class="fa-solid fa-link"></i>
                 </a>
             </div>
 
             <div class="proyect">
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80">
+                <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80">
                 <div class="gradient"></div>
-                <div class="proyectName">
-                    Xivalú
-                </div>
+                <div class="proyectName">Xivalú</div>
                 <a href="#" class="proyectLink">
                     <i class="fa-solid fa-link"></i>
                 </a>
             </div>
-        </div>
-    </div>
-</div>
 
-<div class="blockContainer" id="Arcade">
-    <div class="blockContent">
-        <div class="blockTitle">
-            Arcade
-        </div>
-        <div class="firstText">
-            En la carrera de desarrollador web necesitamos ponernos retos, varios de estos son juegos, recrearlos con nuestros conocimientos y a nuestra manera; te dejo algunos por acá, diviertete!.
+            <div class="proyect">
+                <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80">
+                <div class="gradient"></div>
+                <div class="proyectName">¿Si o No?</div>
+                <a href="#" class="proyectLink">
+                    <i class="fa-solid fa-link"></i>
+                </a>
+            </div>
         </div>
     </div>
 </div>
@@ -286,24 +303,138 @@
         <div class="blockTitle">
             Contáctame
         </div>
-        <div class="formContainer"></div>
-        <div class="networks">
-            <a href="#" class="network">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="#" class="network">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="#" class="network">
-                <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="#" class="network">
-                <i class="fa-brands fa-github"></i>
-            </a>
+        <div class="formContainer">
+            <form class="form" id="form" action="https://formspree.io/f/xoqzjdlp" method="POST">
+                <div class="formSection">
+                    <div class="formSpan">Nombres</div>
+                    <input type="text" placeholder="Leo" name="Nombres" maxlength="40" required>
+                </div>
+                <div class="formSection">
+                    <div class="formSpan">Correo electrónico</div>
+                    <input type="email" placeholder="ejemplo@dominio.com" maxlength="40" name="Correo">
+                </div>
+                <div class="formSection">
+                    <div class="formSpan">Teléfono</div>
+                    <input type="text" placeholder="999-999-999" name="Teléfono" minlength="6" maxlength="9" required>
+                </div>
+                <div class="formSection">
+                    <div class="selectbox">
+                        <div class="select" id="select">
+                            <div class="contenido-select">
+                                <h1 class="titulo">Tipo de proyecto</h1>
+                            </div>
+                            <i class="fas fa-angle-down"></i>
+                        </div>
+
+                        <div class="opciones" id="opciones">
+                            <a href="#" class="opcion">
+                                <div class="contenido-opcion">
+                                    <div class="textos">
+                                        <h1 class="titulo">Página Web</h1>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="opcion">
+                                <div class="contenido-opcion">
+                                    <div class="textos">
+                                        <h1 class="titulo">Sitio Web</h1>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="opcion">
+                                <div class="contenido-opcion">
+                                    <div class="textos">
+                                        <h1 class="titulo">Landing Page</h1>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="opcion">
+                                <div class="contenido-opcion">
+                                    <div class="textos">
+                                        <h1 class="titulo">Portafolio</h1>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="opcion">
+                                <div class="contenido-opcion">
+                                    <div class="textos">
+                                        <h1 class="titulo">Blog</h1>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="opcion">
+                                <div class="contenido-opcion">
+                                    <div class="textos">
+                                        <h1 class="titulo">Catalogo</h1>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+			        </div>
+                    <input type="hidden" name="Tipo de proyecto" id="inputSelect" value="">
+                </div>
+                <div class="formSection">
+                    <div class="formSpan">Nombre de tu proyecto</div>
+                    <input type="text" placeholder="Tu proyecto" name="Nombre del proyecto" required>
+                </div>
+                <div class="formSection">
+                    <div class="formSpan">Presupuesto</div>
+                    <input type="text" placeholder="S/." name="Presupuesto" pattern="[0-9]*" required>
+                </div>
+                <div class="formSection">
+                    <div class="formSpan">Describe tu proyecto</div>
+                    <textarea placeholder="Mensaje..." name="Mensaje"></textarea>
+                </div>
+                <div class="formLinks">
+                    <section>
+                        <input type="checkbox" id="accept" required>
+                        <label for="accept"></label>
+                        <div class="text">
+                            Acepto los <a href="#">Términos y condiciones</a>
+                        </div>
+                    </section>
+                </div>
+                <div class="submitContainer">
+                    <button type="submit" class="submit">
+                        <span>Contactar</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="final">
+            <div class="finalLinks">
+                <li><a href="#" class="finalLink">Trabaja conmigo</a></li>
+                <li><a href="#" class="finalLink">Tu sitio web GRATIS</a></li>
+                <li><a href="#" class="finalLink">Términos y condiciones</a></li>
+            </div>
+            <div class="networks">
+                <a href="#" class="network">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#" class="network">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
         </div>
     </div>
 </footer>
 
+<div class="alertContainer">
+    <div class="alertContent">
+        <button class="closeAlert" onclick="closeAlert()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="blockTitle">
+            Contacto éxitoso
+        </div>
+        <div class="text">
+            Gracias por contactarme. Me comunicaré contigo lo antes posible para responder a tu consulta. ¡Gracias por tu interés!
+        </div>
+        <img src="alert.svg">
+    </div>
+</div>
 <script src="https://kit.fontawesome.com/623c7fa679.js" crossorigin="anonymous"></script>
 <script src="app.js"></script>
 </body>
