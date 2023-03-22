@@ -1,90 +1,85 @@
 //DarkMode
-const dark = document.querySelector('.dark__button')
+const dark = document.querySelector('.darkButton')
 const body = document.querySelector('body')
-
 load();
 dark.addEventListener('click', e =>{
-    body.classList.toggle('dark-mode');
-    store(body.classList.contains('dark-mode'));
+    body.classList.toggle('light-mode');
+    store(body.classList.contains('light-mode'));
 });
 function load(){
-    const darkmode = localStorage.getItem('dark-mode');
-
+    const darkmode = localStorage.getItem('light-mode');
     if(!darkmode){
         store('false');
     }
     else if(darkmode == 'true'){
-        body.classList.add('dark-mode')
+        body.classList.add('light-mode')
     }
 }
 function store(value){
-    localStorage.setItem('dark-mode', value);
+    localStorage.setItem('light-mode', value);
 }
 
-//Menu
-hamburguer = document.querySelector('.hamburguer')
-
+//Hamburguer Menu Animation
 lineOne = document.querySelector('.line-1')
-lineTwo = document.querySelector('.line-2')
 lineThree = document.querySelector('.line-3')
 lineFour = document.querySelector('.line-4')
-
-header = document.querySelector('header')
 menu = document.querySelector('.menuContainer')
-
-function Open(){
-    menu.classList.toggle('menu__active')
-
+function openMenu(){
     lineOne.classList.toggle('line-1__active')
-    lineTwo.classList.toggle('line-2__active')
     lineThree.classList.toggle('line-3__active')
     lineFour.classList.toggle('line-4__active')
+    menu.classList.toggle('menu__active')
 }
-
-function Close(){
-    menu.classList.remove('menu__active')
-
+function closeMenu(){
     lineOne.classList.remove('line-1__active')
-    lineTwo.classList.remove('line-2__active')
     lineThree.classList.remove('line-3__active')
     lineFour.classList.remove('line-4__active')
+    menu.classList.remove('menu__active')
 }
 
-types = document.querySelector('.typesWeb')
-function typesOne(){
+//TypesScroll
+types = document.querySelector('.types')
+function typeOne(){
     types.style.marginLeft = "0"
 }
-function typesTwo(){
+function typeTwo(){
     types.style.marginLeft = "-100%"
 }
-function typesThree(){
+function typeThree(){
     types.style.marginLeft = "-200%"
 }
+function typeFour(){
+    types.style.marginLeft = "-300%"
+}
 
-//
-const select = document.querySelector('#select');
-const opciones = document.querySelector('#opciones');
-const contenidoSelect = document.querySelector('#select .contenido-select');
-const hiddenInput = document.querySelector('#inputSelect');
+//FreeWebPage
+freeModal = document.querySelector('.freeModalContainer')
+function openFree(){
+    freeModal.classList.add('freeModalContainer__active')
+}
+function closeFree(){
+    freeModal.classList.remove('freeModalContainer__active')
+}
 
-document.querySelectorAll('#opciones > .opcion').forEach((opcion) => {
-	opcion.addEventListener('click', (e) => {
-		e.preventDefault();
-		contenidoSelect.innerHTML = e.currentTarget.innerHTML;
-		select.classList.toggle('active');
-		opciones.classList.toggle('active');
-		hiddenInput.value = e.currentTarget.querySelector('.titulo').innerText;
-	});
-});
-select.addEventListener('click', () => {
-	select.classList.toggle('active');
-	opciones.classList.toggle('active');
-});
+transparent = document.querySelector('.transparent')
+function openTransparent(){
+    transparent.classList.add('transparent__active')
+}
+function closeTransparent(){
+    transparent.classList.remove('transparent__active')
+}
 
-//Form
-const $form = document.querySelector('#form')
-$form.addEventListener('submit', handleSubmit)
+freeThanks = document.querySelector('.thanksFree')
+function openFreeThanks(){
+    freeThanks.classList.add('thanksFree__active')
+}
+function closeFreeThanks(){
+    freeThanks.classList.remove('thanksFree__active')
+}
 
+//FreeForm
+const $freeForm = document.querySelector('.freeForm')
+$freeForm.addEventListener('submit', handleSubmit)
 async function handleSubmit(event){
     event.preventDefault()
     const form = new FormData(this)
@@ -97,15 +92,6 @@ async function handleSubmit(event){
     })
     if (response.ok){
         this.reset()
-        openAlert()
+        closeFree(), openTransparent(), openFreeThanks()
     }
-}
-
-alert = document.querySelector('.alertContainer')
-function openAlert(){
-    alert.classList.add('alertContainer__active')
-}
-
-function closeAlert(){
-    alert.classList.remove('alertContainer__active')
 }
