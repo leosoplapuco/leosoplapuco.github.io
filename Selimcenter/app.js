@@ -5,9 +5,11 @@ function Scroll(){
     var ypos=window.pageYOffset;
     if (ypos > 350){
         header.style.background="#fff";
+        header.style.borderBottom="3px solid #0043a1"
     }
     else{
         header.style.background="none";
+        header.style.borderBottom="3px solid transparent"
     }
 }
 
@@ -51,111 +53,6 @@ function menuClose(){
     headerC.classList.remove('header__active')
 
     menu.classList.remove('menu__active')
-}
-
-//Treatments
-treatmentOne = document.querySelector('.treatment-1')
-treatmentOne.addEventListener('click', treatmentOneActive)
-function treatmentOneActive(){
-    treatmentOne.classList.toggle('treatment__active')
-    treatmentTwo.classList.remove('treatment__active')
-    treatmentThree.classList.remove('treatment__active')
-    treatmentFour.classList.remove('treatment__active')
-    treatmentFive.classList.remove('treatment__active')
-    treatmentSix.classList.remove('treatment__active')
-    treatmentSeven.classList.remove('treatment__active')
-    treatmentEight.classList.remove('treatment__active')
-}
-
-treatmentTwo = document.querySelector('.treatment-2')
-treatmentTwo.addEventListener('click', treatmentTwoActive)
-function treatmentTwoActive(){
-    treatmentOne.classList.remove('treatment__active')
-    treatmentTwo.classList.toggle('treatment__active')
-    treatmentThree.classList.remove('treatment__active')
-    treatmentFour.classList.remove('treatment__active')
-    treatmentFive.classList.remove('treatment__active')
-    treatmentSix.classList.remove('treatment__active')
-    treatmentSeven.classList.remove('treatment__active')
-    treatmentEight.classList.remove('treatment__active')
-}
-
-treatmentThree = document.querySelector('.treatment-3')
-treatmentThree.addEventListener('click', treatmentThreeActive)
-function treatmentThreeActive(){
-    treatmentOne.classList.remove('treatment__active')
-    treatmentTwo.classList.remove('treatment__active')
-    treatmentThree.classList.toggle('treatment__active')
-    treatmentFour.classList.remove('treatment__active')
-    treatmentFive.classList.remove('treatment__active')
-    treatmentSix.classList.remove('treatment__active')
-    treatmentSeven.classList.remove('treatment__active')
-    treatmentEight.classList.remove('treatment__active')
-}
-
-treatmentFour = document.querySelector('.treatment-4')
-treatmentFour.addEventListener('click', treatmentFourActive)
-function treatmentFourActive(){
-    treatmentOne.classList.remove('treatment__active')
-    treatmentTwo.classList.remove('treatment__active')
-    treatmentThree.classList.remove('treatment__active')
-    treatmentFour.classList.toggle('treatment__active')
-    treatmentFive.classList.remove('treatment__active')
-    treatmentSix.classList.remove('treatment__active')
-    treatmentSeven.classList.remove('treatment__active')
-    treatmentEight.classList.remove('treatment__active')
-}
-
-treatmentFive = document.querySelector('.treatment-5')
-treatmentFive.addEventListener('click', treatmentFiveActive)
-function treatmentFiveActive(){
-    treatmentOne.classList.remove('treatment__active')
-    treatmentTwo.classList.remove('treatment__active')
-    treatmentThree.classList.remove('treatment__active')
-    treatmentFour.classList.remove('treatment__active')
-    treatmentFive.classList.toggle('treatment__active')
-    treatmentSix.classList.remove('treatment__active')
-    treatmentSeven.classList.remove('treatment__active')
-    treatmentEight.classList.remove('treatment__active')
-}
-
-treatmentSix = document.querySelector('.treatment-6')
-treatmentSix.addEventListener('click', treatmentSixActive)
-function treatmentSixActive(){
-    treatmentOne.classList.remove('treatment__active')
-    treatmentTwo.classList.remove('treatment__active')
-    treatmentThree.classList.remove('treatment__active')
-    treatmentFour.classList.remove('treatment__active')
-    treatmentFive.classList.remove('treatment__active')
-    treatmentSix.classList.toggle('treatment__active')
-    treatmentSeven.classList.remove('treatment__active')
-    treatmentEight.classList.remove('treatment__active')
-}
-
-treatmentSeven = document.querySelector('.treatment-7')
-treatmentSeven.addEventListener('click', treatmentSevenActive)
-function treatmentSevenActive(){
-    treatmentOne.classList.remove('treatment__active')
-    treatmentTwo.classList.remove('treatment__active')
-    treatmentThree.classList.remove('treatment__active')
-    treatmentFour.classList.remove('treatment__active')
-    treatmentFive.classList.remove('treatment__active')
-    treatmentSix.classList.remove('treatment__active')
-    treatmentSeven.classList.toggle('treatment__active')
-    treatmentEight.classList.remove('treatment__active')
-}
-
-treatmentEight = document.querySelector('.treatment-8')
-treatmentEight.addEventListener('click', treatmentEightActive)
-function treatmentEightActive(){
-    treatmentOne.classList.remove('treatment__active')
-    treatmentTwo.classList.remove('treatment__active')
-    treatmentThree.classList.remove('treatment__active')
-    treatmentFour.classList.remove('treatment__active')
-    treatmentFive.classList.remove('treatment__active')
-    treatmentSix.classList.remove('treatment__active')
-    treatmentSeven.classList.remove('treatment__active')
-    treatmentEight.classList.toggle('treatment__active')
 }
 
 //Testimonial
@@ -204,3 +101,50 @@ function testimonialFour(){
     testimonialButtonThree.classList.remove('testimonialButton__active')
     testimonialButtonFour.classList.add('testimonialButton__active')
 }
+
+//FormSended
+thanks = document.querySelector('.thanksContainer')
+thanksClose = document.querySelector('.thanksClose')
+thanksClose.addEventListener('click', thanksRemove)
+
+function thanksActive(){
+    thanks.classList.add('thanks__active')
+}
+
+function thanksRemove(){
+    thanks.classList.remove('thanks__active')
+}
+
+const $form = document.querySelector('form')
+$form.addEventListener('submit', handleSubmit)
+async function handleSubmit(event){
+    event.preventDefault()
+    const form = new FormData(this)
+    const response = await fetch(this.action, {
+        method: this.method,
+        body: form,
+        headers:{
+            'Accept': 'aplication/json'
+        }
+    })
+    if (response.ok){
+        this.reset()
+        thanksActive()
+    }
+}
+
+//AnimationScroll
+opacity = document.querySelectorAll(".opacity")
+left = document.querySelectorAll(".left")
+
+function animationOpacity(){
+    scrollTop = document.documentElement.scrollTop;
+    for(i = 0; i<opacity.length; i++){
+        altura = opacity[i].offsetTop;
+        if(altura - 270 < scrollTop){
+            opacity[i].style.opacity = "1"
+        }
+    }
+}
+
+window.addEventListener('scroll', animationOpacity)

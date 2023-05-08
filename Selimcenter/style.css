@@ -35,6 +35,46 @@ body{
     --whatsapp:#25D366;
 }
 
+.preloader{
+    width: 100%;
+    height: 100vh;
+    background: var(--body);
+    position: fixed;
+    left: -100%;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: preloader 5s ease;
+    display: none;
+}
+
+@keyframes preloader{
+    0%, 90%{
+        left: 0;
+    }
+    100%{
+        left: -100%;
+    }
+}
+
+.preloader img{
+    width: 07%;
+    object-fit: cover;
+}
+
+.preloader span, .preloader span b{
+    font-size: 40px;
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.preloader span b{
+    color: var(--green);
+}
+
 header{
     position: fixed;
     left: 0;
@@ -44,6 +84,7 @@ header{
     width: 100%;
     height: 80px;
     transition: all 300ms ease;
+    border-bottom: 3px solid transparent;
 }
 
 .header-c{
@@ -92,13 +133,13 @@ header{
     height: 80%;
 }
 
-.logo span, .logo span b{
+.logo h1, .logo h1 b{
     font-size: 35px;
     font-weight: 500;
     color: var(--blue);
 }
 
-.logo span b{
+.logo h1 b{
     color: var(--green);
 }
 
@@ -141,6 +182,7 @@ header{
     height: 100%;
     display: flex;
     animation: slider 15s ease infinite alternate;
+    transition: all 300ms ease;
 }
 
 @keyframes slider{
@@ -329,9 +371,9 @@ header{
 .cares{
     margin: auto;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1500px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
@@ -375,72 +417,60 @@ header{
 
 .treatments{
     width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     gap: 10px;
 }
 
 .treatment{
-    width: 100%;
-    border-radius: 10px;
+    flex: 1;
+    transition: all 1s ease;
+    height: 300px;
     position: relative;
 }
 
 .treatment:hover{
-    background: rgba(0 0 0 / 0.03);
-    transition: all 300ms ease;
+    flex: 10;
 }
 
-.treatment__active{
-    background: rgba(0 0 0 / 0.03);
-}
-
-.treatmentButton{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    cursor: pointer;
-}
-
-.treatmentButton span{
-    color: var(--blue);
-    font-size: 20px;
-    transition: all 300ms ease;
-}
-
-.treatmentButton i{
-    color: var(--blue);
-    font-size: 22px;
-    transition: all 300ms ease;
-}
-
-.treatment__active .treatmentButton i{
-    rotate: 180deg;
-}
-
-.treatmentText{
+.treatment img{
     position: absolute;
     left: 0;
-    top: calc(100% + 10px);
+    top: 0;
     width: 100%;
-    height: auto;
-    padding: 0 20px;
-    transition: all 300ms ease;
-    height: 0;
-    overflow: hidden;
-    background: var(--white);
-    box-shadow: 0 0 10px rgba(0 0 0 / 0.05);
-    border-radius: 10px;
-    z-index: 10;
+    height: 100%;
+    z-index: 0;
+    object-fit: cover;
 }
 
-.treatment__active .treatmentText{
-    height: auto;
-    padding: 10px 20px;
+.gradient{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: var(--white);
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.treatment:hover .gradient{
+    opacity: 0.65;
+}
+
+.treatment span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    rotate: -90deg;
+    transition: all 500ms ease;
+    z-index: 2;
+    font-weight: 500;
+    color: var(--blue);
+    font-size: 40px;
+}
+
+.treatment:hover > span{
+    rotate: 0deg;
 }
 
 /**/
@@ -448,7 +478,7 @@ header{
 .products{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    gap: 10px;
 }
 
 .product{
@@ -583,6 +613,7 @@ header{
     height: 100%;
     display: flex;
     transition: all 300ms ease;
+    margin-bottom: 25px;
 }
 
 .testimonial{
@@ -615,7 +646,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 7px;
+    gap: 5px;
 }
 
 .testimonialButton{
@@ -698,7 +729,7 @@ header{
     padding: 0 15px;
     border: 0;
     outline: 0;
-    border-radius: 25px;
+    border-radius: 5px;
 }
 
 .suscribe input::placeholder{
@@ -714,22 +745,24 @@ header{
     font-weight: 500;
     outline: 0;
     border: 0;
+    border-radius: 5px !important;
 }
 
 /**/
 
+#Final{
+    background: var(--blue);
+}
+
 #Final .blockContent p{
     width: 100%;
     text-align: center;
+    color: var(--white);
 }
 
 #Final .blockContent p a, #Final .blockContent p a b{
-    color: var(--blue);
+    color: var(--white);
     font-weight: 500;
-}
-
-#Final .blockContent p a b{
-    color: var(--green);
 }
 
 /**/
@@ -743,7 +776,6 @@ header{
     z-index: 20;
     background: transparent;
     display: flex;
-    padding: 20px;
     opacity: 0;
     pointer-events: none;
     transition: all 300ms ease;
@@ -762,7 +794,6 @@ header{
     height: 100%;
     background: var(--white);
     margin: auto;
-    border-radius: 10px;
     display: grid;
     grid-template-columns: 400px 1fr;
     overflow: hidden;
@@ -780,7 +811,6 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 0 0 0 10px;
     z-index: 5;
 }
 
@@ -917,7 +947,19 @@ header{
 
 /**/
 
+@media screen and (max-width:800px){
+    .cares{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .products{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media screen and (max-width:600px){
+    .preloader img{
+        width: 30%;
+    }
     .header-c{
         padding: 0 10px;
     }
@@ -1011,14 +1053,17 @@ header{
     .careTitle{
         font-size: 20px;
     }
-    .treatments{
-        grid-template-columns: 1fr;
+    .treatment span{
+        font-size: 20px;
     }
     .products{
         grid-template-columns: repeat(2, 1fr);
         gap: 0;
     }
     .product{
+        cursor: none;
+    }
+    .testimonialButton{
         cursor: none;
     }
     #Contacto{
@@ -1033,7 +1078,6 @@ header{
     .productSelectContainer{
         overflow: hidden;
         overflow-y: scroll;
-        padding: 10px;
     }
     .productSelectContent{
         height: auto;
@@ -1065,8 +1109,95 @@ header{
     .button{
         cursor: none !important;
     }
+    #Final .blockContent p a{
+        cursor: none;
+    }
 }
 
 .button{
     border-radius: 25px;
+}
+
+.thanksContainer{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    background: rgba(0 0 0 / 0.5);
+    display: flex;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 100ms ease;
+}
+
+.thanks__active{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.thanksContent{
+    margin: auto;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px 20px;
+    background: var(--body);
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0 0 0 / 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.thanksClose{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: crimson;
+}
+
+.thanksClose i{
+    font-size: 25px;
+}
+
+.thanksTop{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.thanksTop img{
+    height: 70px;
+    width: auto;
+    object-fit: cover;
+}
+
+.thanksTop span, .thanksTop span b{
+    color: var(--blue);
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.thanksTop span b{
+    color: var(--green);
+}
+
+.thanksText{
+    width: 100%;
+    text-align: center;
+}
+
+.opacity{
+    transition: all 1s ease;
+    opacity: 0;
 }
