@@ -48,7 +48,6 @@ body{
     justify-content: center;
     flex-direction: column;
     animation: preloader 5s ease;
-    display: none;
 }
 
 @keyframes preloader{
@@ -158,6 +157,7 @@ header{
 }
 
 .link{
+    font-size: 16px;
     font-weight: 500;
     color: var(--blue);
 }
