@@ -141,7 +141,7 @@ function animationOpacity(){
     scrollTop = document.documentElement.scrollTop;
     for(i = 0; i<opacity.length; i++){
         altura = opacity[i].offsetTop;
-        if(altura - 270 < scrollTop){
+        if(altura - 300 < scrollTop){
             opacity[i].style.opacity = "1"
         }
     }
