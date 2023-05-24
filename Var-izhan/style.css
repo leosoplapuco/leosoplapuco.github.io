@@ -102,7 +102,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -137,7 +136,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -164,6 +162,23 @@ body{
     transition: all 200ms ease;
     border: 2px solid var(--orange);
     border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.photo img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    width: 100%;
+    height: 100%;
+    transition: all 200ms ease;
+    object-fit: cover;
+}
+
+.photo:hover img{
+    scale: 1.35;
 }
 
 /**/
@@ -174,16 +189,17 @@ body{
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .whyImg{
     width: 100%;
     max-width: 600px;
     height: 450px;
-    background: var(--orange);
     border-radius: 0 500px 500px 0;
     position: relative;
+    background: var(--body);
+    border: 4px solid var(--orange);
+    border-left: 0;
 }
 
 .whyImg img{
@@ -260,19 +276,74 @@ body{
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .whatsapp{
     width: 100%;
+    height: auto;
     max-width: 600px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .whatsapp img{
     margin: auto;
-    width: 300px;
+    width: 250px;
     height: auto;
+}
+
+.whatsapp a{
+    width: 65px;
+    height: 65px;
+    background: var(--orange);
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 200ms ease;
+    border: 3px solid transparent;
+}
+
+.whatsapp a::before{
+    content: 'Mediante nuestro WhatsApp';
+    position: absolute;
+    left: calc(100% + 10px);
+    top: 50%;
+    translate: 0 -50%;
+    background: var(--orange);
+    width: 250px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    color: var(--body);
+    border-radius: 50px;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 200ms ease;
+}
+
+.whatsapp a:hover::before{
+    opacity: 1;
+}
+
+.whatsapp a:hover{
+    background: var(--body);
+    border: 3px solid var(--orange);
+}
+
+.whatsapp a i{
+    color: var(--body);
+    font-size: 30px;
+    transition: all 200ms ease;
+}
+
+.whatsapp a:hover i{
+    color: var(--orange);
 }
 
 .formContainer{
@@ -313,6 +384,10 @@ body{
     outline: 0;
     background: transparent;
     border-radius: 5px;
+}
+
+.formSection input::placeholder, .formSection textarea::placeholder{
+    color: var(--text);
 }
 
 .formSection textarea{
@@ -489,14 +564,35 @@ body{
 }
 
 @media screen and (max-width:800px){
-    .label, .submit, .thanksClose i, a{
+    .label, .opcion, .contenido-opcion, .submit, .thanksClose i, a{
         cursor: none !important;
+    }
+    .whatImg, .whyImg{
+        max-width: 450px;
+    }
+    .whatImg img, .whyImg img{
+        width: 280px !important;
+    }
+    .photo{
+        width: 170px;
+        height: 150px;
     }
 }
 
 @media screen and (max-width:600px){
+    .presentationContainer img{
+        width: 280px !important;
+        height: auto;
+    }
     .blockTitle span{
         font-size: 30px;
+    }
+    .what, .for, .why, .who{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .whatImg img, .whyImg img{
+        width: 250px !important;
     }
     .whatText, .forText{
         padding: 10px;
@@ -515,9 +611,14 @@ body{
         margin: 0;
         padding: 0 10px;
     }
+    .whatsapp a::before{
+        left: 50%;
+        top: calc(100% + 10px);
+        translate: -50% 0;
+    }
     .formContainer{
         margin: 0;
-        padding: 0 20px;
+        padding: 0 10px;
     }
     .sms{
         height: 220px;
@@ -612,7 +713,7 @@ body{
 	align-items: center;
 	transition: all 200ms ease;
     cursor: pointer;
-    color: var(--orange);
+    color: var(--text);
     padding: 0 10px;
 }
 
