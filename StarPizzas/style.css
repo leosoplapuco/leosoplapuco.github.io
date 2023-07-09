@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+:root{
+    --pricipal: #be0000;
+    --white:#fff;
+    --text:#222;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.preloader{
+    width: 100%;
+    height: 100vh;
+    background: var(--pricipal);
+    display: flex;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    z-index: 100;
+    animation: preloader 3s linear;
+    user-select: none;
+}
+
+@keyframes preloader{
+    0%{
+        left: 0;
+    }
+    80%{
+        left: 0;
+    }
+    100%{
+        left: -100%;
+    }
+}
+
+.preloader img{
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.layer{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0 0 0 / 0.5);
+    z-index: 80;
+    transition: all 200ms ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.layer.active{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.modalInitial{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    translate: -50% -50%;
+    background: var(--white);
+    z-index: 81;
+    width: calc(100% - 20px);
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 300ms ease;
+}
+
+.modalInitial.active{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.modalInitial img{
+    border-radius: 100%;
+    width: 130px;
+    pointer-events: none;
+}
+
+.modalTitle{
+    width: 100%;
+    text-align: center;
+    color: var(--pricipal);
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.modalText{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.modalText p{
+    width: 100%;
+    text-align: left;
+}
+
+.modalTyc{
+    color: var(--pricipal);
+    font-weight: 500;
+}
+
+.modalTyc:hover{
+    text-decoration: underline;
+}
+
+.modalLinks{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.modalLink{
+    padding: 7px 25px;
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    border: 2px solid var(--pricipal);
+}
+
+.modalLink-deny{
+    color: var(--pricipal);
+    background: var(--white);
+}
+
+.modalLink-deny span{
+    font-weight: 500;
+}
+
+.modalLink-accept{
+    background: var(--pricipal);
+    color: var(--white);
+}
+
+.logo{
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 130px;
+    height: 130px;
+    z-index: 13;
+    overflow: hidden;
+    border-radius: 0 0 10px 0;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.nav{
+    position: fixed;
+    left: 50%;
+    top: 0;
+    translate: -50% 0;
+    height: 70px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    z-index: 11;
+}
+
+.navLink{
+    color: var(--pricipal);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.hamburguerContainer{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 13;
+}
+
+.hamburguer{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    background: var(--pricipal);
+    cursor: pointer;
+    border: 2px solid var(--white);
+}
+
+.line{
+    position: absolute;
+    left: 50%;
+    translate: -50% 0;
+    width: calc(100% - 12px);
+    height: 4px;
+    background: var(--white);
+    border-radius: 5px;
+    transition: all 200ms ease;
+}
+
+.line-1{
+    top: 12px;
+}
+
+.line-1__active{
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    rotate: 45deg;
+}
+
+.line-2{
+    top: 50%;
+    translate: -50% -50%;
+}
+
+.line-2__active{
+    scale: 0;
+}
+
+.line-3{
+    bottom: 12px;
+}
+
+.line-3__active{
+    bottom: 50%;
+    left: 50%;
+    translate: -50% 50%;
+    rotate: -45deg;
+}
+
+.backgroundHeader{
+    background: var(--white);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0px 3px 2px rgba(0 0 0 / 0.05);
+    z-index: 10;
+}
+
+.menuContainer{
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: var(--pricipal);
+    color: var(--white);
+    z-index: 12;
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    transition: all 200ms linear;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.menuContainer::-webkit-scrollbar{
+    display: none;
+}
+
+.menuContainer.active{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.menu{
+    margin: auto;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.menuTarget{
+    width: 100%;
+    background: rgba(255 255 255 / 0.15);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.menuTitle{
+    width: 100%;
+    background: rgba(255 255 255 / 0.15);
+    height: 50px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 5px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+}
+
+.menuTitle i{
+    color: var(--white);
+    font-size: 20px;
+}
+
+.menuTitle a{
+    color: var(--white);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.menuTargetList{
+    width: 100%;
+    padding: 0 10px;
+}
+
+.menuLink{
+    color: var(--white);
+}
+
+.menuTarget-5{
+    grid-column: 1/-1;
+}
+
+.menuTarget-5 iframe{
+    width: 100%;
+    height: 300px;
+    border-radius: 7px;
+}
+
+.whatsAppButton{
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 100%;
+    display: flex;
+    z-index: 8;
+}
+
+.whatsAppButton i{
+    color: var(--white);
+    margin: auto;
+    font-size: 33px;
+}
+
+.bannerContainer{
+    margin: auto;
+    margin-top: 70px;
+    width: 100%;
+    max-width: 2000px;
+    height: calc(100vh - 70px);
+    max-height: 1000px;
+}
+
+.bannerContent{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.banner img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bannerLayer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0 0 0 / 0.5);
+    z-index: 1;
+}
+
+.banner span{
+    color: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    rotate: -90deg;
+    translate: -50% -50%;
+    font-weight: bold;
+    font-size: 50px;
+    z-index: 2;
+}
+
+.blockContainer{
+    display: flex;
+    padding: 10px;
+}
+
+.blockContent{
+    margin: auto;
+    width: 100%;
+    max-width: 1440px;
+}
+
+.blockTitle{
+    width: 100%;
+    text-align: left;
+    color: var(--pricipal);
+    font-size: 40px;
+    font-weight: 500;
+    border-bottom: 3px solid var(--pricipal);
+}
+
+.cartaMenu{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.cartaMenuLink{
+    padding: 5px 20px;
+    color: var(--pricipal);
+    border: 2px solid var(--pricipal);
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 200ms ease;
+}
+
+.cartaMenuLink:hover, .cartaMenu__active{
+    background: var(--pricipal);
+    color: var(--white);
+}
+
+@media screen and (max-width: 900px){
+    *{
+        cursor: none !important;
+    }
+    .logo{
+        width: 110px;
+        height: 110px;
+    }
+    .banner span{
+        font-size: 40px;
+    }
+    .menu{
+        max-width: 500px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px){
+    *{
+        cursor: none !important;
+    }
+    .logo{
+        width: 100px;
+        height: 100px;
+    }
+    .nav{
+        display: none;
+    }
+    .banner span{
+        font-size: 30px;
+    }
+    .menu{
+        margin-top: 100px;
+        max-width: none;
+        grid-template-columns: 1fr;
+    }
+}
