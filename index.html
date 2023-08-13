@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leonardo Soplapuco</title>
+    <title>Leonardo Soplapuco | Desarrollo Web</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="GoogleSans-Regular/style.css">
+    <link rel="stylesheet" href="GoogleSans-Medium/style.css">
+    <link rel="stylesheet" href="responsive.css">
 </head>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2V47XEYDWL"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -15,23 +18,74 @@
 
   gtag('config', 'G-2V47XEYDWL');
 </script>
+
 <body>
 <header>
-    <div class="header">
+    <main class="header">
         <div class="logo">
             <div class="l">
-                <a href="index.html" class="logoNode"></a>
-                <a href="index.html" class="logoLine"></a>
-                <a href="index.html" class="logoNode"></a>
-                <a href="index.html" class="logoNode"></a>
+                <a href="index.html" class="logo-circle"></a>
+                <a href="index.html" class="logo-line"></a>
+                <a href="index.html" class="logo-circle"></a>
+                <a href="index.html" class="logo-circle"></a>
             </div>
-            <a href="index.html" class="e logoNode"></a>
+
+            <a href="index.html" class="e logo-circle"></a>
+
             <div class="o">
-                <a href="index.html" class="logoLine"></a>
-                <a href="index.html" class="logoLine"></a>
-                <a href="index.html" class="logoLine"></a>
+                <a href="index.html" class="logo-line"></a>
+                <a href="index.html" class="logo-line"></a>
+                <a href="index.html" class="logo-line"></a>
             </div>
         </div>
+
+        <nav class="nav">
+            <a href="index.html" class="name">Leo</a>
+            <ul>
+                <li>
+                    <a href="#" class="link link-1">
+                        <span>Inicio</span>
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="link link-2">
+                        <span>Yo</span>
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="link link-3">
+                        <span>Servicios</span>
+                        <i class="fa-regular fa-handshake"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="link link-4">
+                        <span>Proyectos</span>
+                        <i class="fa-solid fa-code"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="link link-5">
+                        <span>Contacto</span>
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="link link-6">
+                        <span>Arcade</span>
+                        <i class="fa-solid fa-gamepad"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="link link-7">
+                        <span>Blog</span>
+                        <i class="fa-solid fa-camera-retro"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
         <div class="hamburguer">
             <div class="line line-1"></div>
@@ -39,246 +93,85 @@
             <div class="line line-3"></div>
             <div class="line line-4"></div>
         </div>
-    </div>
+    </main>
 </header>
 
-<div class="layer"></div>
+<div class="body-layer"></div>
 
-<div class="menu">
-    <div class="menuLogo">
-        <a href="index.html">Leo</a>
-    </div>
+<div class="hero-container">
+    <video src="./Img/video-bg.mp4" autoplay muted loop></video>
+    <div class="hero-layer"></div>
 
-    <nav class="nav">
-        <a href="index.html#Inicio" class="link link-1">
-            <span>Inicio</span>
-        </a>
-        <a href="index.html#Servicios" class="link link-2">
-            <span>Servicios</span>
-        </a>
-        <a href="index.html#Proyectos" class="link link-3">
-            <span>Proyectos</span>
-        </a>
-        <a href="index.html#Contacto" class="link link-4">
-            <span>Contacto</span>
-        </a>
-        <a href="FAQs.html" class="link link-5">
-            <span>FAQ's</span>
-        </a>
-    </nav>
-
-    <div class="darkButtonContainer">
-        <button class="darkButton buttonSpans">
-            <span class="darkSpan">Modo oscuro</span>
-            <span class="lightSpan">Modo claro</span>
-        </button>
-        <div class="buttonIcons">
-            <span class="material-symbols-outlined moon">dark_mode</span>
-            <span class="material-symbols-outlined sun">light_mode</span>
+    <div class="hero-content">
+        <div class="hero">
+            <h2 class="hi">Hola, soy Leonardo Soplapuco</h2>
+            <h1 class="work">Desarrollador Web</h1>
+            <span class="lima">Lima, Perú <span><span></span></span></span>
+            <section>
+                <p><span>Desarrollador Web</span></p>
+                <p><span>Front-End</span></p>
+                <p><span>Freelance</span></p>
+            </section>
+            <div class="networks">
+                <a href="#" class="network">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="network">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="#" class="network">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+            <a href="#" class="button hero-link">Conóceme más</a>
         </div>
-    </div>
-    
-    <div class="networks">
-        <a href="#" class="network">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="#" class="network">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="#" class="network">
-            <i class="fa-brands fa-github"></i>
-        </a>
-    </div>
-</div>
 
-<div class="bannerContainer">
-    <div class="bannerContent">
-        <h1>Desarrollador Web</h1>
-        <h2>Leonardo Soplapuco</h2>
-        <p>Bienvenida/o a mi sitio web, podrás conocer un poco más acerca de mí y mi trabajo mediante mi portafolio.</p>
-    </div>
-</div>
-
-<div class="blockContainer" id="Inicio">
-    <div class="blockContent">
-        <h2>Inicio</h2>
-        <div class="index">
-            <div class="indexTarget about-me">
-                <h3>Sobre mi</h3>
-            </div>
-            <div class="indexTarget formation">
-                <div class="indexTargetTitle">
-                    <h3>Formación</h3>
-                    <i class="fa-solid fa-graduation-cap"></i>
-                </div>
-            </div>
-            <div class="indexTarget hobbies">
-                <h3>Hobbies</h3>
-            </div>
+        <div class="hero-img">
+            <div class="img"></div>
         </div>
     </div>
 </div>
 
-<div class="blockContainer" id="Servicios">
-    <div class="blockContent">
-        <h2>Servicios</h2>
-        <div class="servicies">
-            <div class="serviciesTarget servicieTarget-1">
-                <div class="servicieTitle">
-                    <h3>Diseño</h3>
-                    <i class="fa-brands fa-figma"></i>
-                </div>
-            </div>
-            <div class="serviciesTarget servicieTarget-2">
-                <div class="servicieTitle">
-                    <h3>Desarrollo</h3>
-                    <i class="fa-solid fa-code"></i>
-                </div>
-            </div>
-            <div class="serviciesTarget servicieTarget-3">
-                <div class="servicieTitle">
-                    <h3>Hosting / Dominio</h3>
-                    <i class="fa-solid fa-server"></i>
-                </div>
-            </div>
+<div class="targets-container">
+    <div class="targets">
+        <div class="target target-1">
+            <section>
+                <h3 class="target-title">Servicios</h3>
+                <p class="p target-title">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non ratione numquam corrupti asperiores eius sapiente ut cupiditate ad vitae nemo.
+                </p>
+            </section>
+            <a href="#" class="button target-link">Ver más</a>
+        </div>
+
+        <div class="target target-2">
+            <section>
+                <h3 class="target-title">Proyectos</h3>
+                <p class="p target-title">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non ratione numquam corrupti asperiores eius sapiente ut cupiditate ad vitae nemo.
+                </p>
+            </section>
+            <a href="#" class="button target-link">Ver más</a>
+        </div>
+
+        <div class="target target-3">
+            <section>
+                <h3 class="target-title">Arcade</h3>
+                <p class="p target-title">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non ratione numquam corrupti asperiores eius sapiente ut cupiditate ad vitae nemo.
+                </p>
+            </section>
+            <a href="#" class="button target-link">Visitar</a>
         </div>
     </div>
 </div>
 
-<div class="blockContainer" id="Proyectos">
-    <div class="blockContent">
-        <h2>Proyectos</h2>
-        <div class="proyects">
-            <div class="proyect proyect-1">
-                <section>
-                    <div class="proyectTitle">
-                        <h3>Selimcenter</h3>
-                        <div class="statusCircle active"></div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta voluptatum, tenetur est dolorum cupiditate.</p>
-                </section>
-                <div class="proyectLinks">
-                    <a href="https://selimcenter.com" class="proyectLink proyectLink-1">Visitar</a>
-                </div>
-            </div>
-
-            <div class="proyect proyect-2">
-                <section>
-                    <div class="proyectTitle">
-                        <h3>StarPizzas</h3>
-                        <div class="statusCircle semiactive"></div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta voluptatum, tenetur est dolorum cupiditate.</p>
-                </section>
-                <div class="proyectLinks">
-                    <a href="Proyectos/StarPizzas/index.html" class="proyectLink proyectLink-2">Beta</a>
-                </div>
-            </div>
-
-            <div class="proyect proyect-3">
-                <section>
-                    <div class="proyectTitle">
-                        <h3>Xivalú</h3>
-                        <div class="statusCircle semiactive"></div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta voluptatum, tenetur est dolorum cupiditate.</p>
-                </section>
-                <div class="proyectLinks">
-                    <a href="Proyectos/Xivalú/index.html" class="proyectLink proyectLink-2">Beta</a>
-                </div>
-            </div>
-
-            <div class="proyect proyect-4">
-                <section>
-                    <div class="proyectTitle">
-                        <h3>Sem Ingenieros</h3>
-                        <div class="statusCircle semiactive"></div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta voluptatum, tenetur est dolorum cupiditate.</p>
-                </section>
-                <div class="proyectLinks">
-                    <a href="Proyectos/Sem Ingenieros/index.html" class="proyectLink proyectLink-2">Beta</a>
-                </div>
-            </div>
-
-            <div class="proyect proyect-5">
-                <section>
-                    <div class="proyectTitle">
-                        <h3>Var-izhan</h3>
-                        <div class="statusCircle semiactive"></div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta voluptatum, tenetur est dolorum cupiditate.</p>
-                </section>
-                <div class="proyectLinks">
-                    <a href="Proyectos/Var-izhan/index.html" class="proyectLink proyectLink-2">Beta</a>
-                </div>
-            </div>
-
-            <div class="proyect proyect-6">
-                <section>
-                    <div class="proyectTitle">
-                        <h3>Mi playlist</h3>
-                        <div class="statusCircle semiactive"></div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta voluptatum, tenetur est dolorum cupiditate.</p>
-                </section>
-                <div class="proyectLinks">
-                    <a href="Proyectos/MiPlaylist/index.html" class="proyectLink proyectLink-2">Beta</a>
-                </div>
-            </div>
-
-            <div class="proyect proyect-7">
-                <section>
-                    <div class="proyectTitle">
-                        <h3>Si o no</h3>
-                        <div class="statusCircle active"></div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta voluptatum, tenetur est dolorum cupiditate.</p>
-                </section>
-                <div class="proyectLinks">
-                    <a href="Proyectos/Propuesta/index.html" class="proyectLink proyectLink-2">Beta</a>
-                </div>
-            </div>
-
-            <div class="proyect proyect-8">
-                <section>
-                    <div class="proyectTitle">
-                        <h3>L-earn</h3>
-                        <div class="statusCircle undisponible"></div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta voluptatum, tenetur est dolorum cupiditate.</p>
-                </section>
-                <div class="proyectLinks">
-                    <a href="Proyectos/L-earn/index.html" class="proyectLink proyectLink-2">Beta</a>
-                </div>
-            </div>
-
-            <div class="proyect proyect-9">
-                <section>
-                    <div class="proyectTitle">
-                        <h3>Arcade</h3>
-                        <div class="statusCircle active"></div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta voluptatum, tenetur est dolorum cupiditate.</p>
-                </section>
-                <div class="proyectLinks">
-                    <a href="Arcade/index.html" class="proyectLink proyectLink-2">Beta</a>
-                </div>
-            </div>
-
-            <div class="proyect proyect-10">
-                <section>
-                    <div class="proyectTitle">
-                        <h3>Apps clone</h3>
-                        <div class="statusCircle active"></div>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dicta voluptatum, tenetur est dolorum cupiditate.</p>
-                </section>
-                <div class="proyectLinks">
-                    <a href="Apps clone/index.html" class="proyectLink proyectLink-2">Beta</a>
-                </div>
-            </div>
-        </div>
+<div class="block-container" id="Yo">
+    <div class="block-content">
+        <section class="title">
+            <h2 class="block-title">Yo</h2>
+            <span class="title-span">Sobre mi</span>
+        </section>
     </div>
 </div>
 
