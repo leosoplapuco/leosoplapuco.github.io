@@ -14,24 +14,10 @@
     --color-white:#fff;
     --color-black:#222;
     --color-text:#222;
-
-    --button-height:50px;
-    --button-padding:0 30px;
-    --button-border: 3px solid var(--color-black);
-    --button-border-radius: 0px;
-    --button-background: var(--color-white);
-    --button-display: flex;
-    --button-align-items:center;
-    --button-justify-content:center;
-    --button-gap: 10px;
-
-    --shadow: 10px 10px 0 -3px white,
-                10px 10px var(--color-black);
-
     --transition: all 200ms ease;
 }
 
-h1, h2, h3, h4, h5, h6, p{
+h1, h2, h3, h4, h5, h6{
     width: 100%;
     font-weight: 500;
 }
