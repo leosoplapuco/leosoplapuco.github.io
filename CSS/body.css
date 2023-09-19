@@ -193,7 +193,6 @@ header{
 
 header.dark{
     background: var(--color-black);
-    border-bottom: 2px solid var(--color-white);
 }
 
 .header{
@@ -336,15 +335,20 @@ header.dark .hamburguer .line{
 
 .line-4{
     position: absolute;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
+    right: -50%;
+    top: -50%;
+    translate: 50% 50%;
     rotate: -45deg;
-    width: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 300ms ease !important;
 }
 
-.line-2.active, .line-4.active{
-    width: 90%;
+.line-4.active{
+    opacity: 1;
+    right: 50%;
+    top: 50%;
+    translate: 50% -50%;
 }
 
 .menu-container{
@@ -673,6 +677,113 @@ h3{
     background: rgba(0 0 0 / 0.2) !important;
 }
 
+.herramientas{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.herramienta{
+    width: 100%;
+    background: rgba(0 0 0 / 0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+}
+
+.herramienta img{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+
+.servicios{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.servicio{
+    width: 100%;
+    padding: 20px;
+    border: 2px solid var(--color-black);
+}
+
+.servicio h3{
+    text-align: center;
+}
+
+.servicio-text{
+    margin-bottom: 10px;
+}
+
+.servicio-1-list{
+    width: 100%;
+}
+
+.servicio-1-list div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.servicio-1-list div img{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+
+.servicio-1-list li{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+
+.cotizar{
+    width: 100%;
+    display: flex;
+    height: 45px;
+    background: var(--color-black);
+    margin-top: 40px;
+    transition: var(--transition);
+}
+
+.cotizar span{
+    margin: auto;
+    color: var(--color-white);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.servicio-3{
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.servicio-3 h3{
+    color: var(--color-white);
+}
+
+.servicio-3 .cotizar{
+    background: transparent;
+    border: 2px solid var(--color-white);
+}
+
+.servicio-3 .cotizar:hover{
+    background: var(--color-white);
+}
+
+.servicio-3 .cotizar:hover span{
+    color: var(--color-black);
+}
+
 footer{
     background: var(--color-black);
 }
@@ -766,5 +877,8 @@ footer{
     .yo-formacion{
         flex-direction: column;
         gap: 40px;
+    }
+    .servicios{
+        flex-direction: column;
     }
 }
