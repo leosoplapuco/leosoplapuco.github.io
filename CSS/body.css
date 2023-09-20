@@ -878,9 +878,8 @@ h4{
 }
 
 .form{
-    margin: auto;
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
     padding: 20px;
     border: 2px solid var(--color-black);
 }
