@@ -10,6 +10,12 @@ lineTwo = document.querySelector('.line-2')
 lineThree = document.querySelector('.line-3')
 lineFour = document.querySelector('.line-4')
 
+linkOne = document.querySelector('.link-1').addEventListener('click', menuDesactive)
+linkTwo = document.querySelector('.link-2').addEventListener('click', menuDesactive)
+linkThree = document.querySelector('.link-3').addEventListener('click', menuDesactive)
+linkFour = document.querySelector('.link-4').addEventListener('click', menuDesactive)
+linkFive = document.querySelector('.link-5').addEventListener('click', menuDesactive)
+
 function menuActive(){
     menu.classList.toggle('active')
     header.classList.toggle('dark')
@@ -29,11 +35,3 @@ function menuDesactive(){
     lineThree.classList.remove('active')
     lineFour.classList.remove('active')
 }
-
-// window.addEventListener('scroll', Scroll);
-// function Scroll(){
-//     var ypos=window.pageYOffset;
-//     if (ypos < 645){
-//         menuDesactive()
-//     }
-// }
