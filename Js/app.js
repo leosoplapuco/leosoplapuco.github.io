@@ -1,37 +1,51 @@
-header = document.querySelector('header')
+//Dark-mode
+const dark = document.querySelector('.dark-button')
+const body = document.querySelector('body')
 
-hamburguer = document.querySelector('.hamburguer')
-hamburguer.addEventListener('click', menuActive)
+load();
 
-menu = document.querySelector('.menu-container')
+dark.addEventListener('click', e =>{
+    body.classList.toggle('dark-mode');
+    store(body.classList.contains('dark-mode'));
+});
 
-lineOne = document.querySelector('.line-1')
-lineTwo = document.querySelector('.line-2')
-lineThree = document.querySelector('.line-3')
-lineFour = document.querySelector('.line-4')
+function load(){
+    const darkmode = localStorage.getItem('dark-mode');
 
-linkOne = document.querySelector('.link-1').addEventListener('click', menuDesactive)
-linkTwo = document.querySelector('.link-2').addEventListener('click', menuDesactive)
-linkThree = document.querySelector('.link-3').addEventListener('click', menuDesactive)
-linkFour = document.querySelector('.link-4').addEventListener('click', menuDesactive)
-linkFive = document.querySelector('.link-5').addEventListener('click', menuDesactive)
-
-function menuActive(){
-    menu.classList.toggle('active')
-    header.classList.toggle('dark')
-
-    lineOne.classList.toggle('active')
-    lineTwo.classList.toggle('active')
-    lineThree.classList.toggle('active')
-    lineFour.classList.toggle('active')
+    if(!darkmode){
+        store('false');
+    }
+    else if(darkmode == 'true'){
+        body.classList.add('dark-mode')
+    }
 }
 
-function menuDesactive(){
-    menu.classList.remove('active')
-    header.classList.remove('dark')
+function store(value){
+    localStorage.setItem('dark-mode', value);
+}
 
-    lineOne.classList.remove('active')
-    lineTwo.classList.remove('active')
-    lineThree.classList.remove('active')
-    lineFour.classList.remove('active')
+//Nav-Bar
+navBarContainer = document.querySelector('.nav-bar_container')
+
+navButton = document.querySelector('.nav-bar_button')
+navButton.addEventListener('click', navActive)
+
+layer = document.querySelector('.layer')
+layer.addEventListener('click', navDesactive)
+
+function navActive(){
+    navBarContainer.classList.toggle('active')
+    layer.classList.toggle('active')
+}
+
+linkOne = document.querySelector('.link-1').addEventListener('click', navDesactive)
+linkTwo = document.querySelector('.link-2').addEventListener('click', navDesactive)
+linkThree = document.querySelector('.link-3').addEventListener('click', navDesactive)
+linkFour = document.querySelector('.link-4').addEventListener('click', navDesactive)
+linkFive = document.querySelector('.link-5').addEventListener('click', navDesactive)
+linkSix = document.querySelector('.link-6').addEventListener('click', navDesactive)
+
+function navDesactive(){
+    navBarContainer.classList.remove('active')
+    layer.classList.remove('active')
 }

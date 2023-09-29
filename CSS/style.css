@@ -6,18 +6,23 @@
     list-style: none;
     font-family: 'Google Sans';
     font-size: 16px;
-    font-weight: 400;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 :root{
-    --body-background:#fff;
-    --color-white:#fff;
-    --color-black:#222;
-    --color-text:#222;
-    --transition: all 200ms ease;
+    --body:#fff;
+    --dark-dark:#0f0e0e;
+    --dark-light:#221e22;
+
+    --light:#fff;
+
+    --text:#222;
 }
 
-h1, h2, h3, h4, h5, h6{
-    width: 100%;
-    font-weight: 500;
+.dark-mode{
+    --body:#221e22;
+    --text:#fff;
 }
