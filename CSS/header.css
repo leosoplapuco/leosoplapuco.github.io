@@ -2,7 +2,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    width: 70px;
+    width: 73px;
     height: 100vh;
     background: var(--dark-dark);
     border-right: 3px solid transparent;
@@ -36,6 +36,8 @@
     justify-content: left;
     gap: 10px;
     margin-bottom: 70px;
+    position: relative;
+    overflow: hidden;
 }
 
 .profile-img{
@@ -51,6 +53,20 @@
 
 .profile-name{
     display: none;
+}
+
+.nav-bar_container.active .profile-name{
+    display: block;
+}
+
+.profile-name div{
+    color: var(--light);
+}
+
+.job{
+    color: var(--light);
+    font-weight: 500;
+    font-size: 13px;
 }
 
 .nav-bar_button{
@@ -173,6 +189,7 @@ nav{
     height: 17px;
     border-radius: 100%;
     background: var(--light);
+    transition: all 500ms ease;
 }
 
 .dark-mode .dark-button span{
@@ -219,18 +236,19 @@ nav{
     translate: -50% -50%;
     color: var(--light);
     font-size: 20px;
+    transition: all 500ms ease;
 }
 
 .fa-sun{
-    opacity: 0;
+    scale: 0;
 }
 
 .dark-mode .fa-sun{
-    opacity: 1;
+    scale: 1;
 }
 
 .dark-mode .fa-moon{
-    opacity: 0;
+    scale: 0;
 }
 
 .nav-bar_container.active .dark-spans{

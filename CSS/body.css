@@ -1,5 +1,7 @@
 body{
     background: var(--body);
+    color: var(--text);
+    transition: all 500ms ease;
 }
 
 body::-webkit-scrollbar{
@@ -17,6 +19,7 @@ body::-webkit-scrollbar{
     opacity: 0;
     pointer-events: none;
     z-index: 99;
+    transition: all 250ms ease;
 }
 
 .layer.active{
@@ -27,14 +30,249 @@ body::-webkit-scrollbar{
 .body-container{
     color: var(--text);
     margin-left: auto;
-    width: calc(100% - 70px);
+    width: calc(100% - 73px);
     padding: 10px;
     text-align: justify;
     overflow: hidden;
 }
 
+.block-container{
+    width: 100%;
+    display: flex;
+    padding: 20px 0;
+}
+
+.block-content{
+    margin: auto;
+    width: 100%;
+    max-width: 1500px;
+}
+
+.block-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.block-title h2{
+    font-size: 45px;
+}
+
+.block-title h2, .block-title span{
+    color: var(--text);
+    transition: all 500ms ease;
+}
+
+.about{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 20px;
+}
+
+.about-1{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.about-1 img{
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+}
+
+.about-2{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-list li span, .about-list li b, .about-list li a{
+    font-weight: normal;
+    color: var(--text);
+    transition: all 500ms ease;
+}
+
+.text{
+    transition: all 500ms ease;
+    color: var(--text);
+}
+
+.about-links{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+}
+
+.networks{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.network{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: var(--dark-dark);
+    display: flex;
+    position: relative;
+}
+
+.network::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    scale: 0.9;
+    transition: all 200ms ease;
+    border: 3px solid var(--dark-dark);
+}
+
+.network:hover::before{
+    scale: 1.1;
+}
+
+.network i{
+    color: var(--light);
+    margin: auto;
+    font-size: 20px;
+}
+
+.download{
+    width: 100%;
+    height: 50px;
+    background: var(--dark-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+}
+
+.formation{
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.formation-target{
+    width: 100%;
+    padding: 20px;
+    padding-top: 35px;
+    border: 2px solid var(--dark-dark);
+    position: relative;
+    transition: all 500ms ease;
+}
+
+.dark-mode .formation-target{
+    background: var(--dark-dark);
+}
+
+.formation-icon{
+    position: absolute;
+    left: 50%;
+    top: -30px;
+    translate: -50% 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 2px solid var(--dark-dark);
+    display: flex;
+    background: var(--body);
+    transition: all 500ms ease;
+}
+
+.dark-mode .formation-icon{
+    background: var(--dark-dark);
+}
+
+.formation-icon i{
+    color: var(--text);
+    margin: auto;
+    font-size: 20px;
+    transition: all 500ms ease;
+}
+
+h3{
+    color: var(--text);
+    font-size: 30px;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: all 500ms ease;
+}
+
+.formation-text, .languages-text{
+    margin-bottom: 10px;
+}
+
+.formation-list{
+    width: 100%;
+}
+
+.formation-list li{
+    width: 100%;
+}
+
+.formation-list li a{
+    color: var(--text);
+    transition: all 500ms ease;
+}
+
+.formation-list li a:hover{
+    text-decoration: underline;
+}
+
+.languages{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.language{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    background: red;
+}
+
 @media screen and (max-width:800px){
     *{
         cursor: none !important;
+    }
+}
+
+@media screen and (max-width:600px){
+    .about{
+        grid-template-columns: 1fr;
+    }
+    .about-1 img{
+        width: 100%;
+        height: auto;
+    }
+    .about-links{
+        grid-template-columns: 1fr;
     }
 }
