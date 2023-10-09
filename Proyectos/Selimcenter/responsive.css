@@ -1,0 +1,155 @@
+@media screen and (max-width:800px){
+    *{
+        cursor: none !important;
+    }
+    .footer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width:600px){
+    /* *{
+        font-size: 17px;
+    } */
+    header{
+        padding: 0 10px;
+    }
+    .block-container{
+        padding: 10px;
+    }
+    nav{
+        position: fixed;
+        right: -100%;
+        top: 80px;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: var(--white);
+        flex-direction: column;
+        z-index: 90;
+        gap: 10px;
+        transition: var(--transition);
+    }
+    nav.active{
+        right: 0;
+    }
+    .hamburguer{
+        display: block;
+        position: relative;
+        width: 35px;
+        height: 27px;
+        cursor: pointer;
+    }
+    .link{
+        font-size: 20px;
+    }
+    .line{
+        position: absolute;
+        left: 50%;
+        translate: -50% 0;
+        width: 100%;
+        height: 5px;
+        border-radius: 4px;
+        background: var(--blue);
+        transition: var(--transition);
+    }
+    .line-1{
+        top: 0;
+    }
+    .line-1.active{
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        rotate: 45deg;
+    }
+    .line-2{
+        top: 50%;
+        translate: -50% -50%;
+    }
+    .line-2.active{
+        width: 0;
+    }
+    .line-3{
+        bottom: 0;
+    }
+    .line-3.active{
+        bottom: 50%;
+        left: 50%;
+        translate: -50% 50%;
+        rotate: -45deg;
+    }
+    .hero-container{
+        height: auto;
+        max-height: none;
+        padding: 20px 10px;
+    }
+    .hero-content{
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    h1{
+        font-weight: 600;
+    }
+    .hero-img section{
+        width: 100%;
+    }
+    .whatsApp{
+        right: 10px;
+        bottom: 10px;
+        width: 55px;
+        height: 55px;
+    }
+    .whatsApp div i{
+        font-size: 25px;
+    }
+    .news{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .targets{
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .consult{
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+    .consult-form-section textarea{
+        height: 170px;
+    }
+    .filters-container{
+        overflow: auto;
+    }
+    .products{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .testimonials{
+        width: 600%;
+    }
+    .testimonial{
+        width: 100%;
+    }
+    .button-cellphone{
+        display: block;
+    }
+    footer{
+        padding: 40px 10px 10px 10px !important;
+    }
+    .footer{
+        grid-template-columns: 1fr;
+    }
+    .footer-title{
+        font-size: 23px;
+        margin-bottom: 0;
+    }
+    .form-sub div{
+        column-gap: 0;
+        gap: 10px;
+    }
+    .form-sub div input[type="email"]{
+        width: 100%;
+    }
+    .form-sub div input[type="submit"]{
+        width: 100%;
+    }
+}

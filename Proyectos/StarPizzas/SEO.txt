@@ -1,0 +1,5 @@
+<meta property="og:title" content="StarPizzas - La mejor pizzería en Olmos, Lambayeque, Perú">
+<meta property="og:description" content="StarPizzas ofrece deliciosas pizzas artesanales en Olmos, Lambayeque, con entrega a domicilio y un menú variado para satisfacer todos los gustos">
+<meta property="og:url" content="URL_DE_TU_PAGINA">
+<meta property="og:image" content="URL_DE_LA_IMAGEN">
+<meta property="og:type" content="website">
