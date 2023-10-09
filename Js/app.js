@@ -24,28 +24,44 @@ function store(value){
     localStorage.setItem('dark-mode', value);
 }
 
-//Nav-Bar
-navBarContainer = document.querySelector('.nav-bar_container')
+//Hamburguer
+hamburguer = document.querySelector('.hamburguer-container')
+hamburguer.addEventListener('click', menuActive)
 
-navButton = document.querySelector('.nav-bar_button')
-navButton.addEventListener('click', navActive)
+lineOne = document.querySelector('.line-1')
+lineTwo = document.querySelector('.line-2')
+lineThree = document.querySelector('.line-3')
+lineFour = document.querySelector('.line-4')
+
+menu = document.querySelector('.menu')
 
 layer = document.querySelector('.layer')
-layer.addEventListener('click', navDesactive)
+layer.addEventListener('click', menuDesactive)
 
-function navActive(){
-    navBarContainer.classList.toggle('active')
+navBottom = document.querySelector('.nav-bottom_container')
+
+function menuActive(){
+    lineOne.classList.toggle('active')
+    lineTwo.classList.toggle('active')
+    lineThree.classList.toggle('active')
+    lineFour.classList.toggle('active')
+
+    menu.classList.toggle('active')
+
     layer.classList.toggle('active')
+
+    navBottom.classList.toggle('active')
 }
 
-linkOne = document.querySelector('.link-1').addEventListener('click', navDesactive)
-linkTwo = document.querySelector('.link-2').addEventListener('click', navDesactive)
-linkThree = document.querySelector('.link-3').addEventListener('click', navDesactive)
-linkFour = document.querySelector('.link-4').addEventListener('click', navDesactive)
-linkFive = document.querySelector('.link-5').addEventListener('click', navDesactive)
-linkSix = document.querySelector('.link-6').addEventListener('click', navDesactive)
+function menuDesactive(){
+    lineOne.classList.remove('active')
+    lineTwo.classList.remove('active')
+    lineThree.classList.remove('active')
+    lineFour.classList.remove('active')
 
-function navDesactive(){
-    navBarContainer.classList.remove('active')
+    menu.classList.remove('active')
+
     layer.classList.remove('active')
+
+    navBottom.classList.remove('active')
 }
