@@ -1,0 +1,62 @@
+@media screen and (max-width:800px){
+    *{
+        cursor: none !important;
+        font-family: 'Google Sans';
+    }
+    .hero-container{
+        min-height: calc(100vh - 70px) !important;
+        height: auto !important;
+        max-height: none !important;
+    }
+    .hamburguer{
+        display: block !important;
+    }
+    nav{
+        position: fixed;
+        left: -400px;
+        top: 0;
+        width: 100% !important;
+        max-width: 400px;
+        height: 100vh;
+        display: flex;
+        align-items: flex-start !important;
+        justify-content: unset !important;
+        flex-direction: column;
+        gap: 10px !important;
+        background: var(--body);
+        box-shadow: 5px 0 5px rgba(0 0 0 / 0.1);
+        padding: 20px 0;
+        transition: var(--transition-250ms);
+        z-index: 99 !important;
+    }
+    nav.active{
+        left: 0;
+    }
+    .nav-title{
+        display: block !important;
+    }
+    nav li{
+        width: 100%;
+        height: auto !important;
+    }
+    nav li h2{
+        width: 100%;
+        height: auto !important;
+    }
+    nav li h2 a{
+        width: 100%;
+        height: auto !important;
+        padding: 0 10px;
+    }
+    .link-6{
+        height: 45px !important;
+    }
+    .services{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .service-target{
+        width: calc(50% - 10px) !important;
+    }
+}
