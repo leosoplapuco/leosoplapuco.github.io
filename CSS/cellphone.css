@@ -1,15 +1,20 @@
 @media screen and (max-width:600px){
-    *{
-        font-family: 'Google Sans';
-    } 
-    .about-me{
+    .index{
+        flex-direction: column-reverse;
+    }
+    .index-target_1{
+        width: 100% !important;
+    }
+    .info{
         flex-direction: column;
+    }
+    .index-target_2{
+        width: 100% !important;
+    }
+    .photo-profile{
+        height: 400px !important;
     }
     .services{
-        flex-wrap: nowrap !important;
         flex-direction: column;
-    }
-    .service-target{
-        width: 100% !important;
     }
 }

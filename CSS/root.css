@@ -1,10 +1,14 @@
 :root{
-    --body:#fff;
-    --black:#222;
+    --header:#fff;
+    --logo:#222;
+    --link:#222;
+
+    --one:crimson;
+    --target:rgb(34 34 34 / 0.05);
+
     --white:#fff;
+
     --text:#222;
-    
-    --one:red;
 
     --transition-250ms:all 250ms ease;
 }
