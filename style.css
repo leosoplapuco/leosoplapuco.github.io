@@ -2,6 +2,7 @@
 @import url('./CSS/GoogleSans-Medium/style.css');
 @import url('./CSS/icons.css');
 @import url('./CSS/root.css');
+@import url('./CSS/tablet.css');
 @import url('./CSS/cellphone.css');
 
 html{
@@ -83,10 +84,6 @@ body::-webkit-scrollbar{
     padding: 25px;
     border-radius: 50px;
     background: var(--target);
-}
-
-.info-target_1{
-    background: var(--target);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,6 +95,8 @@ h3{
     width: 100%;
     font-size: 30px;
     font-weight: 500;
+    color: var(--text);
+    transition: var(--transition-250ms);
 }
 
 .info-target_text{
@@ -107,6 +106,14 @@ h3{
 
 .formation-list{
     width: 100%;
+}
+
+.formation-list a{
+    color: var(--text);
+}
+
+.formation-list a:hover{
+    text-decoration: underline;
 }
 
 .info-target_2{
@@ -127,10 +134,13 @@ h3{
 
 .language-container{
     width: 100%;
-    height: 50px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: var(--target);
+    padding: 15px 25px;
+    border-radius: 25px;
 }
 
 .language{
@@ -173,6 +183,33 @@ h3{
 
 .high.active{
     opacity: 1;
+}
+
+.tools{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tool{
+    width: calc(50% - 5px);
+    background: var(--target);
+    border-radius: 25px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.tool img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
 }
 
 .index-target_2{
@@ -255,4 +292,8 @@ h3{
 
 .service-target_3 .service-text{
     color: var(--white);
+}
+
+footer{
+    background: var(--black);
 }
