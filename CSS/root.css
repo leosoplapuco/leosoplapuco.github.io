@@ -1,7 +1,8 @@
 :root{
-    --header:#fff;
+    --body:#fff;
+
+    --header:#222;
     --logo:#222;
-    --link:#222;
 
     --one:crimson;
     --target:rgb(34 34 34 / 0.05);
