@@ -36,8 +36,8 @@ header{
     top: 0;
     width: 100%;
     padding: 10px;
-    background: var(--header);
     display: flex;
+    background: var(--header);
 }
 
 .header{
@@ -48,24 +48,27 @@ header{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: relative;
+    gap: 10px;
 }
 
-.header > div{
+.header-top{
     width: 100%;
-    height: 50px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-h1 a{
+.logo{
     color: var(--white);
     font-size: 30px;
+    font-weight: 500;
 }
 
 .header-list{
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -73,23 +76,34 @@ h1 a{
     color: var(--white);
 }
 
+.header main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 nav{
-    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(235 235 235 / 0.1);
+    height: 60px;
     border-radius: 50px;
+    background: rgba(235 235 235 / 0.1);
+}
+
+nav li{
+    height: 100%;
 }
 
 .link{
     width: 140px;
-    height: 60px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
     border-radius: 50px;
+    gap: 5px;
     transition: var(--transition-250ms);
 }
 
@@ -97,64 +111,44 @@ nav{
     background: var(--white);
 }
 
-.link b, .link span{
-    color: var(--white) !important;
+.link h2, .link span{
+    color: var(--white);
     transition: var(--transition-250ms);
 }
 
-.link.active b, .link.active span{
-    color: var(--black) !important;
+.link.active h2, .link.active span{
+    color: var(--black);
 }
 
-.link b, .link span{
-    color: var(--text);
-}
-
-.link:hover b, .link:hover span{
-    color: var(--black) !important;
-}
-
-.news{
-    background: crimson;
+.link:hover h2, .link:hover span{
+    color: var(--black);
 }
 
 .dark-button_container{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: auto !important;
-    height: 60px !important;
-    border-radius: 50px;
+    height: 60px;
     background: rgba(235 235 235 / 0.1);
-    overflow: hidden;
-}
-
-.dark-button{
-    width: 100%;
-    height: 100%;
+    padding: 0 25px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
+    justify-content: center;
+    border-radius: 50px;
     gap: 10px;
-    user-select: none;
 }
 
-.dark-button b{
+.dark-button_container b{
     color: var(--white);
 }
 
-.dark-button span{
+.dark-button_container span{
     width: 45px;
     height: 30px;
+    border-radius: 30px;
     background: var(--white);
-    border-radius: 50px;
-    position: relative;
     cursor: pointer;
     position: relative;
 }
 
-.dark-button span::before{
+.dark-button_container span::before{
     content: '';
     position: absolute;
     left: 2px;
@@ -162,11 +156,61 @@ nav{
     translate: 0 -50%;
     width: 26px;
     height: 26px;
-    background: var(--black);
     border-radius: 100%;
+    background: #444;
     transition: var(--transition-250ms);
 }
 
-.dark-mode .dark-button span::before{
+.dark-mode .dark-button_container span::before{
     left: calc(100% - 28px);
+}
+
+.news{
+    background: var(--one);
+}
+
+.hero-container{
+    width: 100%;
+    padding: 10px;
+    margin-top: 130px;
+}
+
+.hero-content{
+    margin: auto;
+    width: 100%;
+    max-width: 2000px;
+    padding: 25px;
+    border-radius: 50px;
+    background: var(--target);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    transition: var(--transition-250ms);
+}
+
+.hero-target{
+    width: 100%;
+    background: red;
+    padding: 25px;
+    border-radius: 50px;
+}
+
+.hero-target_1{
+    grid-column: 1/2;
+    grid-row: 1/-1;
+}
+
+.block-container{
+    width: 100%;
+    padding: 10px;
+}
+
+.block-content{
+    margin: auto;
+    width: 100%;
+    padding: 25px;
+    border-radius: 50px;
+    background: var(--target);
+    transition: var(--transition-250ms);
 }
