@@ -36,6 +36,11 @@ body{
     transition: var(--transition-250ms);
 }
 
+.text::selection{
+    background: var(--white);
+    color: var(--black);
+}
+
 header{
     width: 100%;
     height: 60px;
@@ -78,6 +83,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: var(--transition-250ms);
 }
 
 .link h2{
@@ -87,7 +93,6 @@ nav{
 .link span{
     width: 40px;
     height: 40px;
-    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -157,16 +162,20 @@ nav{
     border-radius: 100%;
 }
 
-/**/
+/*Hamburguer-icon*/
 
 .hamburguer{
     display: none;
 }
 
+/*Main compotition*/
+
 main{
     width: 100%;
     position: relative;
 }
+
+/*Hero*/
 
 .hero-container{
     width: 100%;
@@ -244,7 +253,7 @@ h1{
     color: var(--black);
 }
 
-/**/
+/*Blocks*/
 
 .block-container{
     width: 100%;
@@ -261,11 +270,45 @@ h1{
 
 /*About section*/
 
+.about-buttons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 10px;
+}
+
+.about-button{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px solid var(--white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    transition: var(--transition-250ms);
+}
+
+.about-button:hover{
+    background: var(--white);
+}
+
+.about-button span{
+    color: var(--white);
+    transition: var(--transition-250ms);
+}
+
+.about-button:hover span{
+    color: var(--black);
+}
+
 /*Footer*/
 
 .footer{
     background: var(--white);
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 .footer-title{
@@ -373,9 +416,47 @@ h1{
 
 /*Responsive*/
 
+@media screen and (max-width:800px){
+    *{
+        cursor: none;
+    }
+}
+
 @media screen and (max-width:600px){
+    header{
+        padding: 0 10px;
+    }
     nav{
+        position: fixed;
+        right: 0;
+        top: 0;
+        align-items: flex-start;
+        justify-content: unset;
+        flex-direction: column;
+        background: rgba(0 0 0 / 0.1);
+        backdrop-filter: blur(20px);
+        width: 300px;
+        height: 100vh;
+        z-index: 200;
+        gap: 0;
         display: none;
+    }
+    nav li{
+        width: 100%;
+        display: flex;
+    }
+    .link{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .link:hover{
+        background: var(--black);
+    }
+    .link span{
+        display: flex;
     }
     .hamburguer{
         display: block;
@@ -434,32 +515,17 @@ h1{
         width: 100%;
     }
     h1{
-        font-size: 40px;
+        font-size: 50px;
     }
     .networks{
         left: 50%;
         translate: -50% 0;
     }
-    .about{
-        height: auto;
-        max-height: none;
-        flex-direction: column;
-        gap: 20px;
+    .block-container{
+        padding: 0 10px;
     }
-    .about-target{
-        height: 350px;
-    }
-    .about-buttons{
-        position: relative;
-    }
-    .about-button b{
-        display: none;
-    }
-    .about-button span{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--white);
+    .footer{
+        padding: 60px 10px;
     }
     .contact{
         flex-direction: column;
@@ -467,5 +533,8 @@ h1{
     }
     .contact-target{
         width: 100%;
+    }
+    .contact-text{
+        font-size: 50px;
     }
 }
