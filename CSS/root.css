@@ -1,16 +1,16 @@
 :root{
-    --body:#fff;
+    --body:#1a1a1a;
 
     --header:#222;
     --logo:#222;
 
     --one:crimson;
-    --target:rgb(34 34 34 / 0.15);
+    --target: rgba(235 253 235 / 0.1);
 
     --white:#fff;
-    --black:#222;
+    --black:#1a1a1a;
 
-    --text:#222;
+    --text:#fff;
 
     --transition-250ms:all 250ms ease;
 }

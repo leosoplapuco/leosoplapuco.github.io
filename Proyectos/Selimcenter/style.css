@@ -547,7 +547,6 @@ h1{
     outline: 0;
     transition: var(--transition);
     font-size: 15px;
-    border-radius: 10px;
 }
 
 .consult-form-section input:focus, .consult-form-section textarea:focus{
@@ -607,7 +606,6 @@ h1{
     justify-content: center;
     gap: 10px;
     transition: var(--transition);
-    border-radius: 10px;
 }
 
 .form-button:hover{
@@ -752,6 +750,10 @@ h1{
 }
 
 /**/
+
+#Compañias{
+    display: none;
+}
 
 .companies{
     width: 100%;
