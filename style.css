@@ -43,7 +43,7 @@ body{
 
 header{
     width: 100%;
-    height: 60px;
+    height: 80px;
     display: flex;
     padding: 0 20px;
     z-index: 100;
@@ -190,14 +190,92 @@ main{
     margin: auto;
     width: 100%;
     max-width: 1500px;
-    height:100%;
+    height: 100%;
     position: relative;
     display: flex;
+    gap: 20px;
+}
+
+.hero-targets_container{
+    width: 100%;
+    display: flex;
+}
+
+.hero-targets{
+    background: var(--white);
+    margin: auto;
+    width: 100%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-targets_slides{
+    width: 300%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    display: flex;
+    transition: var(--transition-250ms);
+}
+
+
+
+.hero-targets_slide{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.hero-targets_slide p{
+    width: 100%;
+    margin: auto;
+    font-size: 45px;
+    text-align: center;
+    color: var(--black);
+    font-weight: 500;
+    pointer-events: none;
+    user-select: none;
+}
+
+.hero-targets_slide p::selection{
+    background: var(--black);
+    color: var(--white);
+}
+
+.hero-targets_buttons{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 5px;
+    z-index: 1;
+}
+
+.hero-targets_button{
+    width: 40px;
+    height: 5px;
+    background: var(--black);
+    opacity: 0.5;
+    transition: var(--transition-250ms);
+    cursor: pointer;
+}
+
+.hero-targets_button.active, .hero-targets_button:hover{
+    opacity: 1;
 }
 
 .hero-text{
     margin-left: auto;
-    width: 50%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -218,12 +296,14 @@ h1{
 
 .networks{
     position: absolute;
-    left: 0;
+    left: 50%;
+    translate: -50% 0;
     bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    z-index: 5;
 }
 
 .network h2{
@@ -234,23 +314,6 @@ h1{
     border: 0;
     outline: 0;
     cursor: pointer;
-}
-
-.down{
-    position: absolute;
-    right: 0;
-    bottom: 20px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--white);
-}
-
-.down span{
-    margin: auto;
-    color: var(--black);
 }
 
 /*Blocks*/
@@ -276,6 +339,7 @@ h1{
     align-items: center;
     justify-content: right;
     gap: 10px;
+    margin-bottom: 20px;
 }
 
 .about-button{
@@ -291,7 +355,7 @@ h1{
     transition: var(--transition-250ms);
 }
 
-.about-button:hover{
+.about-button:hover, .about-button.active{
     background: var(--white);
 }
 
@@ -300,15 +364,265 @@ h1{
     transition: var(--transition-250ms);
 }
 
-.about-button:hover span{
+.about-button:hover span, .about-button.active:hover span{
     color: var(--black);
 }
+
+.about-button.active span{
+    color: var(--black);
+}
+
+.about-targets{
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+
+.about-target{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-target_1-1{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    transition: all 500ms ease;
+    background: var(--black);
+}
+
+.about-target_1-1 h3{
+    width: 100%;
+    font-size: 70px;
+    font-weight: 500;
+}
+
+.about-target_1-1 p{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.info-list{
+    width: 100%;
+}
+
+.info-list li{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+}
+
+.info-list li b{
+    font-weight: 500;
+}
+
+.info-list li a{
+    text-decoration: underline;
+}
+
+.about-target_1-2{
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    transition: all 500ms ease;
+    background: var(--black);
+}
+
+.about-target_1-2 h3{
+    width: 100%;
+    font-size: 70px;
+    font-weight: 500;
+}
+
+.about-target_1-2 p{
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.formation-list{
+    width: 100%;
+}
+
+.list-link{
+    color: var(--white);
+}
+
+.list-link:hover{
+    text-decoration: underline;
+}
+
+.about-target_2{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.about-target_2-1, .about-target_2-2{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    font-size: 50px;
+    font-weight: 500;
+    background: var(--white);
+    color: var(--black);
+    transition: all 1s ease;
+    padding: 0 20px;
+}
+
+.about-target_2-1::selection, .about-target_2-2::selection{
+    background: var(--black);
+    color: var(--white);
+}
+
+.about-target_2-2{
+    top: 100%;
+}
+
+.about-targets.active .about-target_1 .about-target_1-1{
+    left: -100%;
+}
+
+.about-targets.active .about-target_1 .about-target_1-2{
+    left: 0;
+}
+
+.about-targets.active .about-target_2 .about-target_2-1{
+    top: 100%;
+}
+
+.about-targets.active .about-target_2 .about-target_2-2{
+    top: 0;
+}
+
+/*Proyects*/
+
+.proyects-container{
+    width: 100%;
+    display: flex;
+}
+
+.proyects-text{
+    width: 100%;
+    background: var(--white);
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.proyects-title{
+    font-size: 60px;
+    font-weight: 500;
+    padding: 0 20px;
+}
+
+.proyects-text p{
+    color: var(--black);
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.proyects{
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    overflow-y: scroll;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.proyect{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    position: relative;
+    padding-left: 20px;
+}
+
+.proyect-date{
+    background: var(--white);
+    padding: 10px;
+}
+
+.proyect-date span{
+    color: var(--black);
+    font-weight: 500;
+}
+
+.proyect-date span::selection{
+    background: var(--black);
+    color: var(--white);
+}
+
+.proyect-description{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+}
+
+.proyect-name{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-right: auto;
+}
+
+.proyect-name b{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.proyect-name:hover b{
+    text-decoration: underline;
+}
+
+.proyect-text{
+    margin-bottom: 20px;
+}
+
+.proyect-tech{
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.proyect-tech div{
+    font-size: 14px;
+}
+
+/*Modal resumen*/
 
 /*Footer*/
 
 .footer{
     background: var(--white);
-    padding: 40px 20px;
+    padding: 80px 20px;
 }
 
 .footer-title{
@@ -369,6 +683,7 @@ h1{
     justify-content: left;
     height: 20px;
     color: var(--white);
+    font-size: 14px;
 }
 
 .form-section input, .form-section textarea{
@@ -377,6 +692,11 @@ h1{
     padding: 0 10px;
     border: 0;
     outline: 0;
+}
+
+.form-section input::placeholder, .form-section textarea::placeholder{
+    color: var(--black);
+    font-weight: 500;
 }
 
 .form-section_sms{
@@ -389,6 +709,11 @@ h1{
     resize: none;
 }
 
+.form-section input::selection, .form-section textarea::selection{
+    background: var(--black);
+    color: var(--white);
+}
+
 .contact-submit{
     width: 100%;
     display: flex;
@@ -397,7 +722,11 @@ h1{
     height: 50px;
     cursor: pointer;
     background: var(--white);
-    gap: 10px;
+}
+
+.contact-submit b{
+    font-size: 18px;
+    font-weight: 500;
 }
 
 /*Final*/
@@ -418,7 +747,7 @@ h1{
 
 @media screen and (max-width:800px){
     *{
-        cursor: none;
+        cursor: none !important;
     }
 }
 
@@ -510,6 +839,26 @@ h1{
         top: 50%;
         translate: 50% -50%;
     }
+    .hero-container{
+        padding: 0 10px;
+        margin-top: 80px;
+        height: auto;
+        max-height: none;
+        padding-bottom: 20px;
+    }
+    .hero-content{
+        flex-direction: column-reverse;
+    }
+    .networks{
+        bottom: 0;
+    }
+    .hero-targets{
+        height: 350px;
+        margin-bottom: 50px;
+    }
+    .hero-targets_slide p{
+        font-size: 30px;
+    }
     .hero-text{
         margin: auto;
         width: 100%;
@@ -517,12 +866,27 @@ h1{
     h1{
         font-size: 50px;
     }
-    .networks{
-        left: 50%;
-        translate: -50% 0;
-    }
     .block-container{
         padding: 0 10px;
+    }
+    .about-targets{
+        height: 1000px;
+        flex-direction: column-reverse;
+    }
+    .about-target_1-1, .about-target_1-2{
+        align-items: center;
+        justify-content: center;
+    }
+    .about-target_2-1, .about-target_2-2{
+        padding: 0;
+        text-align: center;
+    }
+    .proyects-container{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .proyect{
+        padding: 0;
     }
     .footer{
         padding: 60px 10px;
@@ -533,8 +897,5 @@ h1{
     }
     .contact-target{
         width: 100%;
-    }
-    .contact-text{
-        font-size: 50px;
     }
 }

@@ -31,36 +31,61 @@ function menuActive(){
 //     notificationContainer.classList.remove('active')
 // }
 
-//About
-const aboutTargetOne = document.querySelector('.about-target_1');
-const aboutTargetTwo = document.querySelector('.about-target_2');
-const aboutTargetThree = document.querySelector('.about-target_3');
+//HeroSlides
+const slideHero = document.querySelector('.hero-targets_slides');
 
+const slideButtonOne = document.querySelector('.hero-targets_button-1');
+slideButtonOne.addEventListener('click', slideOne);
+
+function slideOne(){
+    slideHero.style.marginLeft = 0;
+
+    slideButtonOne.classList.add('active');
+    slideButtonTwo.classList.remove('active');
+    slideButtonThree.classList.remove('active');
+}
+
+const slideButtonTwo = document.querySelector('.hero-targets_button-2');
+slideButtonTwo.addEventListener('click', slideTwo);
+
+function slideTwo(){
+    slideHero.style.marginLeft = '-100%';
+
+    slideButtonOne.classList.remove('active');
+    slideButtonTwo.classList.add('active');
+    slideButtonThree.classList.remove('active');
+}
+
+const slideButtonThree = document.querySelector('.hero-targets_button-3');
+slideButtonThree.addEventListener('click', slideThree);
+
+function slideThree(){
+    slideHero.style.marginLeft = '-200%';
+
+    slideButtonOne.classList.remove('active');
+    slideButtonTwo.classList.remove('active');
+    slideButtonThree.classList.add('active');
+}
+
+//About
 const aboutButtonOne = document.querySelector('.about-button_1');
-aboutButtonOne.addEventListener('click', aboutOne);
+aboutButtonOne.addEventListener('click', aboutOne)
 
 const aboutButtonTwo = document.querySelector('.about-button_2');
-aboutButtonTwo.addEventListener('click', aboutTwo);
+aboutButtonTwo.addEventListener('click', aboutTwo)
 
-const aboutButtonThree = document.querySelector('.about-button_3');
-aboutButtonThree.addEventListener('click', aboutThree);
+const aboutTargets = document.querySelector('.about-targets')
 
 function aboutOne(){
-    aboutTargetOne.classList.add('active')
-    aboutTargetTwo.classList.remove('active')
-    aboutTargetThree.classList.remove('active')
+    aboutTargets.classList.remove('active');
+    aboutButtonOne.classList.add('active');
+    aboutButtonTwo.classList.remove('active');
 }
 
 function aboutTwo(){
-    aboutTargetOne.classList.remove('active')
-    aboutTargetTwo.classList.add('active')
-    aboutTargetThree.classList.remove('active')
-}
-
-function aboutThree(){
-    aboutTargetOne.classList.remove('active')
-    aboutTargetTwo.classList.remove('active')
-    aboutTargetThree.classList.add('active')
+    aboutTargets.classList.add('active');
+    aboutButtonOne.classList.remove('active');
+    aboutButtonTwo.classList.add('active');
 }
 
 //Contact
