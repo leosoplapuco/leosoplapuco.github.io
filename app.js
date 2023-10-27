@@ -10,12 +10,30 @@ const lineFour = document.querySelector('.line-4')
 const nav = document.querySelector('nav')
 
 function menuActive(){
-    lineOne.classList.toggle('active')
-    lineTwo.classList.toggle('active')
-    lineThree.classList.toggle('active')
-    lineFour.classList.toggle('active')
+    lineOne.classList.toggle('active');
+    lineTwo.classList.toggle('active');
+    lineThree.classList.toggle('active');
+    lineFour.classList.toggle('active');
 
-    nav.classList.toggle('active')
+    nav.classList.toggle('active');
+}
+
+const linkOne = document.querySelector('.link-1');
+linkOne.addEventListener('click', menuDesactive);
+
+const linkTwo = document.querySelector('.link-2');
+linkTwo.addEventListener('click', menuDesactive);
+
+const linkFour = document.querySelector('.link-4');
+linkFour.addEventListener('click', menuDesactive);
+
+function menuDesactive(){
+    lineOne.classList.remove('active');
+    lineTwo.classList.remove('active');
+    lineThree.classList.remove('active');
+    lineFour.classList.remove('active');
+
+    nav.classList.remove('active');
 }
 
 //Notification
