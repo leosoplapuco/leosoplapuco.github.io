@@ -7,11 +7,15 @@ const lineTwo = document.querySelector('.line-2')
 const lineThree = document.querySelector('.line-3')
 const lineFour = document.querySelector('.line-4')
 
+const nav = document.querySelector('nav')
+
 function menuActive(){
     lineOne.classList.toggle('active')
     lineTwo.classList.toggle('active')
     lineThree.classList.toggle('active')
     lineFour.classList.toggle('active')
+
+    nav.classList.toggle('active')
 }
 
 //Notification
