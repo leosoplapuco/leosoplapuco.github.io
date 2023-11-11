@@ -1,140 +1,52 @@
-//MenuIconAnimation
-const hamburguer = document.querySelector('.hamburguer')
-hamburguer.addEventListener('click', menuActive)
+//Hero slider
+const heroSlides =  document.querySelector('.hero-slides');
 
-const lineOne = document.querySelector('.line-1')
-const lineTwo = document.querySelector('.line-2')
-const lineThree = document.querySelector('.line-3')
-const lineFour = document.querySelector('.line-4')
-
-const nav = document.querySelector('nav')
-
-function menuActive(){
-    lineOne.classList.toggle('active');
-    lineTwo.classList.toggle('active');
-    lineThree.classList.toggle('active');
-    lineFour.classList.toggle('active');
-
-    nav.classList.toggle('active');
-}
-
-const linkOne = document.querySelector('.link-1');
-linkOne.addEventListener('click', menuDesactive);
-
-const linkTwo = document.querySelector('.link-2');
-linkTwo.addEventListener('click', menuDesactive);
-
-const linkFour = document.querySelector('.link-4');
-linkFour.addEventListener('click', menuDesactive);
-
-function menuDesactive(){
-    lineOne.classList.remove('active');
-    lineTwo.classList.remove('active');
-    lineThree.classList.remove('active');
-    lineFour.classList.remove('active');
-
-    nav.classList.remove('active');
-}
-
-//Notification
-// const notificationButton = document.querySelector('.notification');
-// notificationButton.addEventListener('click', notificationActive)
-
-// const notificationContainer = document.querySelector('.notifications-container')
-
-// function notificationActive(){
-//     notificationContainer.classList.add('active')
-// }
-
-// const notificationCloseButton = document.querySelector('.notification-close');
-// notificationCloseButton.addEventListener('click', notificationDesactive)
-
-// function notificationDesactive(){
-//     notificationContainer.classList.remove('active')
-// }
-
-//HeroSlides
-const slideHero = document.querySelector('.hero-targets_slides');
-
-const slideButtonOne = document.querySelector('.hero-targets_button-1');
-slideButtonOne.addEventListener('click', slideOne);
-
+const heroButtonOne = document.querySelector('.hero-slide_button_1');
+heroButtonOne.addEventListener('click', slideOne);
 function slideOne(){
-    slideHero.style.marginLeft = 0;
+    heroButtonOne.classList.add('active');
+    heroButtonTwo.classList.remove('active');
 
-    slideButtonOne.classList.add('active');
-    slideButtonTwo.classList.remove('active');
-    slideButtonThree.classList.remove('active');
+    heroSlides.style.marginLeft = 0;
 }
 
-const slideButtonTwo = document.querySelector('.hero-targets_button-2');
-slideButtonTwo.addEventListener('click', slideTwo);
-
+const heroButtonTwo = document.querySelector('.hero-slide_button_2');
+heroButtonTwo.addEventListener('click', slideTwo);
 function slideTwo(){
-    slideHero.style.marginLeft = '-100%';
+    heroButtonOne.classList.remove('active');
+    heroButtonTwo.classList.add('active');
 
-    slideButtonOne.classList.remove('active');
-    slideButtonTwo.classList.add('active');
-    slideButtonThree.classList.remove('active');
-}
-
-const slideButtonThree = document.querySelector('.hero-targets_button-3');
-slideButtonThree.addEventListener('click', slideThree);
-
-function slideThree(){
-    slideHero.style.marginLeft = '-200%';
-
-    slideButtonOne.classList.remove('active');
-    slideButtonTwo.classList.remove('active');
-    slideButtonThree.classList.add('active');
+    heroSlides.style.marginLeft = '-100%';
 }
 
 //About
+const aboutTextOne =  document.querySelector('.about-target_text_1');
+const aboutTextTwo =  document.querySelector('.about-target_text_2');
+
 const aboutButtonOne = document.querySelector('.about-button_1');
-aboutButtonOne.addEventListener('click', aboutOne)
-
-const aboutButtonTwo = document.querySelector('.about-button_2');
-aboutButtonTwo.addEventListener('click', aboutTwo)
-
-const aboutTargets = document.querySelector('.about-targets')
+aboutButtonOne.addEventListener('click', aboutOne);
 
 function aboutOne(){
-    aboutTargets.classList.remove('active');
     aboutButtonOne.classList.add('active');
+    aboutTextOne.classList.add('active');
+
+    aboutTextTwo.classList.remove('active');
     aboutButtonTwo.classList.remove('active');
+
+    aboutSlide.style.marginLeft = 0;
 }
+
+const aboutButtonTwo = document.querySelector('.about-button_2');
+aboutButtonTwo.addEventListener('click', aboutTwo);
 
 function aboutTwo(){
-    aboutTargets.classList.add('active');
     aboutButtonOne.classList.remove('active');
+    aboutTextOne.classList.remove('active');
+
+    aboutTextTwo.classList.add('active');
     aboutButtonTwo.classList.add('active');
+
+    aboutSlide.style.marginLeft = '-100%';
 }
 
-//Contact
-// const modalThanks = document.querySelector('.thanksContainer')
-// function thanksActive(){
-//     thanks.classList.add('thanksContainer__active')
-// }
-
-// closeThanks = document.querySelector('.closeThanks')
-// closeThanks.addEventListener('click', function(){
-//     thanks.classList.remove('thanksContainer__active')
-// })
-
-// const $form = document.querySelector('#form')
-// $form.addEventListener('submit', handleSubmit)
-// async function handleSubmit(event){
-//     event.preventDefault()
-//     const form = new FormData(this)
-//     const response = await fetch(this.action, {
-//         method: this.method,
-//         body: form,
-//         headers:{
-//             'Accept': 'aplication/json'
-//         }
-//     })
-//     if (response.ok){
-//         this.reset()
-//         thanksActive()
-//     }
-// }
+const aboutSlide =  document.querySelector('.block-content_2_targets');
