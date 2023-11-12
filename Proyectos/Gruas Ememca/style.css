@@ -179,6 +179,11 @@ nav > li:hover::before{
     align-items: center;
     justify-content: center;
     color: var(--white);
+    transition: var(--transition-250ms);
+}
+
+.link:hover{
+    color: var(--primary);
 }
 
 .sub-menu{
@@ -258,8 +263,8 @@ nav > li:hover::before{
     max-width: 1600px;
     height: 400px;
     padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    position: relative;
 }
 
 .hero-1{
@@ -271,6 +276,12 @@ nav > li:hover::before{
     flex-direction: column;
     color: var(--white);
     gap: 10px;
+    transition: var(--transition-250ms);
+    opacity: 1;
+}
+
+.hero-1.active{
+    opacity: 0;
 }
 
 h1{
@@ -303,7 +314,7 @@ h1{
 .whatsapp{
     position: fixed;
     right: 10px;
-    bottom: 10px;
+    bottom: 90px;
     z-index: 101;
     width: 60px;
     height: 60px;
@@ -312,6 +323,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none !important;
 }
 
 .whatsapp span{
@@ -333,7 +345,7 @@ main{
 
 .block-container{
     width: 100%;
-    padding: 50px 20px;
+    padding: 20px;
     margin: auto;
     display: flex;
 }
@@ -349,7 +361,11 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.block-title span{
+    text-align: center;
 }
 
 .block-title span, .block-title span b{
@@ -365,7 +381,9 @@ main{
 /**/
 
 .about-us{
+    margin: auto;
     width: 100%;
+    max-width: 900px;
     display: flex;
     align-items: flex-start;
     gap: 10px;
@@ -412,22 +430,20 @@ main{
 
 .about-target_title{
     width: 100%;
-    height: 90px;
+    height: auto;
+    padding: 20px 10px;
     background: var(--black);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-.about-target_title span{
     color: var(--white);
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 600;
 }
 
 .about-target p{
-    padding: 10px;
+    padding: 20px 10px;
 }
 
 /**/
@@ -537,27 +553,19 @@ main{
     max-width: 1200px;
 }
 
-.proyects-container{
+.swipper{
     width: 100%;
-    overflow: hidden;
+    height: 350px;
 }
 
-.proyects{
-    width: 200%;
-    display: flex;
-    transition: all 500ms ease;
-}
-
-.proyects > div{
+.swiper-wrapper{
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    height: 100%;
 }
 
 .proyect{
     width: 100%;
-    height: 350px;
+    height: 350px !important;
     position: relative;
     overflow: hidden;
 }
@@ -565,12 +573,12 @@ main{
 .proyect::before{
     content: '';
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: 0;
     width: 0;
     height: 5px;
+    transition: all 500ms ease;
     background: var(--primary);
-    transition: var(--transition-250ms);
     z-index: 2;
 }
 
@@ -586,7 +594,6 @@ main{
     height: 100%;
     object-fit: cover;
     z-index: 0;
-    transition: var(--transition-250ms);
 }
 
 .proyect-layer{
@@ -595,22 +602,21 @@ main{
     top: 0;
     width: 100%;
     height: 100%;
-    background: transparent;
+    background: rgba(0 0 0 / 0.25);
     z-index: 1;
     transition: var(--transition-250ms);
 }
 
 .proyect:hover .proyect-layer{
-    background: rgba(0 0 0 / 0.5);
+    background: rgba(0 0 0 / 0.75);
 }
 
 .proyect-text{
     position: absolute;
-    width: calc(100% - 20px);
     left: -100%;
-    bottom: 65px;
-    color: var(--white);
-    z-index: 3;
+    bottom: 45px;
+    width: calc(100% - 20px);
+    z-index: 2;
     transition: var(--transition-250ms);
 }
 
@@ -628,29 +634,37 @@ main{
     color: var(--white);
 }
 
-.proyects-buttons{
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/**/
+
+#Empresas{
+    background: var(--primary);
+}
+
+#Empresas .block-content{
+    max-width: 1600px;
+}
+
+#Empresas .block-content .block-title b{
+    color: var(--white);
+}
+
+.companies{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
 }
 
-.proyects-button{
-    width: 50px;
-    height: 10px;
-    background: var(--primary);
-    opacity: 0.5;
-    cursor: pointer;
-    transition: var(--transition-250ms);
+.companie{
+    width: 100%;
+    display: flex;
 }
 
-.proyects-button:hover, .proyects-button.active{
-    opacity: 1;
-}
-
-.proyects-button_3{
-    display: none;
+.companie img{
+    margin: auto;
+    width: 80%;
+    height: auto;
+    object-fit: cover;
 }
 
 /**/
@@ -667,7 +681,7 @@ main{
 .gallery-item{
     width: 100%;
     height: 100%;
-    cursor: zoom-in;
+    cursor: pointer;
 }
 
 .gallery-item_3{
@@ -686,6 +700,7 @@ main{
 footer{
     background: rgba(0 0 0 / 0.75);
     padding: 50px 20px;
+    padding-bottom: 0;
 }
 
 .footer{
@@ -782,6 +797,44 @@ footer{
     color: var(--primary);
 }
 
+.footer-bottom_container{
+    height: 80px;
+    background: #000;
+    padding: 10px;
+    display: flex;
+}
+
+.footer-bottom_content{
+    max-width: 1600px;
+}
+
+.footer-bottom_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-bottom_content p{
+    color: var(--white);
+}
+
+.footer-bottom_content div{
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.footer-bottom_link{
+    color: var(--white);
+    transition: var(--transition-250ms);
+}
+
+.footer-bottom_link:hover{
+    color: var(--primary);
+}
+
 /**/
 
 @media screen and (max-width:800px){
@@ -794,6 +847,9 @@ footer{
 }
 
 @media screen and (max-width:600px){
+    html{
+        scroll-padding: 80px;
+    }
     header{
         height: 80px;
     }
@@ -865,6 +921,15 @@ footer{
         width: 100%;
         height: 60px;
     }
+    .hero{
+        flex-direction: column;
+    }
+    .about-us{
+        flex-direction: column;
+    }
+    .about-targets{
+        grid-template-columns: 1fr;
+    }
     .services{
         grid-template-columns: 1fr;
     }
@@ -891,5 +956,16 @@ footer{
     }
     .contact-target{
         padding: 0;
+    }
+    .footer-bottom_container{
+        height: auto;
+        padding: 30px 10px;
+    }
+    .footer-bottom_content{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-bottom_link{
+        text-align: center;
     }
 }

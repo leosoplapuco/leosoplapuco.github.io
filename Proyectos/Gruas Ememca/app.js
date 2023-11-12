@@ -26,6 +26,7 @@ ubicationTags.forEach((ubicationTags) => {
 
 //HeaderScrollAnimation
 const header =  document.querySelector('header');
+const heroOne = document.querySelector('.hero-1');
 
 window.addEventListener('scroll', Scroll);
 function Scroll(){
@@ -33,8 +34,10 @@ function Scroll(){
     
     if (ypos > 200){
         header.classList.add('active');
+        heroOne.classList.add('active');
     }else{
         header.classList.remove('active');
+        heroOne.classList.remove('active');
     }
 }
 
@@ -59,60 +62,29 @@ function menuActive(){
 }
 
 //ProyectsSlider
-const proyects = document.querySelector('.proyects')
-const proyectButtonOne = document.querySelector('.proyects-button_1');
-proyectButtonOne.addEventListener('click', proyectsOne);
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
 
-function proyectsOne(){
-    proyects.style.marginLeft = 0;
-    proyectButtonOne.classList.add('active');
-    proyectButtonTwo.classList.remove('active');
-    proyectButtonThree.classList.remove('active');
-}
+    breakpoints: {
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
 
-const proyectButtonTwo = document.querySelector('.proyects-button_2');
-proyectButtonTwo.addEventListener('click', proyectsTwo);
-
-function proyectsTwo(){
-    proyects.style.marginLeft = '-100%';
-    proyectButtonOne.classList.remove('active');
-    proyectButtonTwo.classList.add('active');
-    proyectButtonThree.classList.remove('active');
-}
-
-const proyectButtonThree = document.querySelector('.proyects-button_3');
-proyectButtonThree.addEventListener('click', proyectsThree);
-
-function proyectsThree(){
-    proyects.style.marginLeft = '-200%';
-    proyectButtonOne.classList.remove('active');
-    proyectButtonTwo.classList.remove('active');
-    proyectButtonThree.classList.add('active');
-}
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+        1024: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+        },
+    },
+});
 
 //GalleryApp
-// const gallery = document.querySelector('.gallery');
-// const modal = document.querySelector('.modal');
-// const modalImg = document.querySelector('.modal-content');
-// const closeBtn = document.querySelector('.close');
-
-// gallery.addEventListener('click', e => {
-//     if (e.target.tagName === 'IMG') {
-//         modal.style.display = 'block';
-//         modalImg.src = e.target.src;
-//     }
-// });
-
-// closeBtn.addEventListener('click', () => {
-//   modal.style.display = 'none';
-// });
-
-//Menu
-// let linkService = document.querySelector('.nav-li_submenu-1');
-// linkService.addEventListener('mouseover', serviceSubMenu);
-
-// let subMenuService = document.querySelector('.sub-menu')
-
-// function serviceSubMenu(){
-//     subMenuService.classList.add('active')
-// }
