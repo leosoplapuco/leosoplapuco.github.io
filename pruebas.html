@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slider tipo swiper</title>
+</head>
+<body>
+  <div class="container">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+      </div>
+      <div class="swiper-button-prev" id="swiper-button-prev"></div>
+      <div class="swiper-button-next" id="swiper-button-next"></div>
+    </div>
+  </div>
+
+  <style>
+    .container {
+  width: 500px;
+  height: 300px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  height: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #000;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-prev.disabled,
+.swiper-button-next.disabled {
+  background-color: #ccc;
+  cursor: default;
+}
+
+  </style>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper-container", {
+      direction: "horizontal",
+      loop: true,
+
+      // Eventos
+      onSlideChange: function (swiper) {
+        // Actualizamos el texto de los botones
+        const currentSlide = swiper.activeIndex;
+        if (currentSlide === 0) {
+          $("#swiper-button-prev").addClass("disabled");
+        } else {
+          $("#swiper-button-prev").removeClass("disabled");
+        }
+        if (currentSlide === swiper.slides.length - 1) {
+          $("#swiper-button-next").addClass("disabled");
+        } else {
+          $("#swiper-button-next").removeClass("disabled");
+        }
+      },
+    });
+
+    // Eventos de los botones
+    $("#swiper-button-prev").on("click", function () {
+      swiper.slidePrev();
+    });
+    $("#swiper-button-next").on("click", function () {
+      swiper.slideNext();
+    });
+  </script>
+</body>
+</html>
