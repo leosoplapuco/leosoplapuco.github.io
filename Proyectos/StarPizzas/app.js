@@ -1,12 +1,12 @@
-modalButton = document.querySelector('.modalButton-2')
-modalButton.addEventListener('click', modalAccept)
-modal = document.querySelector('.modal')
-layer = document.querySelector('.layer')
+// modalButton = document.querySelector('.modalButton-2')
+// modalButton.addEventListener('click', modalAccept)
+// modal = document.querySelector('.modal')
+// layer = document.querySelector('.layer')
 
-function modalAccept(){
-    modal.classList.add('accept')
-    layer.classList.add('accept')
-}
+// function modalAccept(){
+//     modal.classList.add('accept')
+//     layer.classList.add('accept')
+// }
 
 hamburguer = document.querySelector('.hamburguer')
 hamburguer.addEventListener('click', menuOpen)
