@@ -453,6 +453,10 @@ header.active .link:hover{
 
 /**/
 
+#Ubicanos .block-content{
+    max-width: 1440px;
+}
+
 .ubications{
     width: 100%;
     display: flex;
