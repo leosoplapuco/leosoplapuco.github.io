@@ -1,3 +1,17 @@
+//Header animation
+const header = document.querySelector('header');
+window.addEventListener('scroll', Scroll);
+
+function Scroll(){
+    var ypos=window.pageYOffset;
+    if (ypos > 50){
+        header.classList.add('active');
+    }
+    else{
+        header.classList.remove('active');
+    }
+}
+
 //Customers
 const customers = document.querySelector('.customers');
 
@@ -25,3 +39,22 @@ customerButtonThree.addEventListener('click', function(){
     customerButtonThree.classList.add('active');
 })
 
+//Maps
+const mapButtonOne = document.querySelector('.ubication-button_1');
+mapButtonOne.addEventListener('click', function(){
+    mapButtonOne.classList.add('active');
+    mapButtonTwo.classList.remove('active');
+    mapOne.classList.add('active');
+    mapTwo.classList.remove('active');
+})
+
+const mapButtonTwo = document.querySelector('.ubication-button_2');
+mapButtonTwo.addEventListener('click', function(){
+    mapButtonOne.classList.remove('active');
+    mapButtonTwo.classList.add('active');
+    mapOne.classList.remove('active');
+    mapTwo.classList.add('active');
+})
+
+const mapOne = document.querySelector('.map-1');
+const mapTwo = document.querySelector('.map-2')
