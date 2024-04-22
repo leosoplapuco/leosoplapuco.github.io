@@ -158,7 +158,9 @@ header.active .header{
 }
 
 .logo{
+    width: auto;
     height: calc(100% - 20px);
+    object-fit: contain;
     transition: var(--transition-250ms);
 }
 
@@ -218,6 +220,42 @@ header.active .link:hover{
 
 .link-5::before{
     display: none;
+}
+
+/**/
+
+.hamburguer-icon{
+    background: var(--red);
+    width: 45px;
+    height: 45px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 3px;
+    display: none;
+}
+
+.hamburguer-icon img{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    transition: var(--transition-250ms);
+}
+
+.hamburguer-icon.active .hamburguer{
+    scale: 0;
+}
+
+.close{
+    scale: 0;
+    width: 19px !important;
+    height: 19px !important;
+}
+
+.hamburguer-icon.active .close{
+    scale: 1;
 }
 
 /**/
@@ -891,8 +929,25 @@ footer{
     .networks{
         display: none;
     }
+    .hamburguer-icon.mobile-active{
+        display: block;
+    }
     .menu{
-        display: none;
+        position: fixed;
+        left: -100%;
+        top: 140px;
+        width: 100%;
+        padding: 20px;
+        height: calc(100vh - 140px);
+        background: var(--white);
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        transition: var(--transition-250ms);
+        z-index: 100;
+    }
+    .menu.active{
+        left: 0;
     }
     .block-title{
         margin-bottom: 20px;

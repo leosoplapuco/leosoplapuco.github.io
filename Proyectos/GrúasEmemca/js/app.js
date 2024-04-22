@@ -9,11 +9,29 @@ function Scroll(){
     if (ypos > 50){
         header.classList.add('active');
         whatsapp.classList.add('active');
+        hamburguerIcon.classList.add('mobile-active')
     }
     else{
         header.classList.remove('active');
         whatsapp.classList.remove('active');
+        hamburguerIcon.classList.remove('mobile-active')
+        menuDesactive();
     }
+}
+
+const menu = document.querySelector('.menu');
+
+const hamburguerIcon = document.querySelector('.hamburguer-icon');
+hamburguerIcon.addEventListener('click', menuActive);
+
+function menuActive(){
+    hamburguerIcon.classList.toggle('active');
+    menu.classList.toggle('active');
+}
+
+function menuDesactive(){
+    hamburguerIcon.classList.remove('active');
+    menu.classList.remove('active')
 }
 
 //Customers
