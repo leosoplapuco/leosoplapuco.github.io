@@ -62,3 +62,41 @@ mapButtonTwo.addEventListener('click', function(){
 
 const mapOne = document.querySelector('.map-1');
 const mapTwo = document.querySelector('.map-2')
+
+//Form
+let Cellphone = document.getElementById("Teléfono");
+
+Cellphone.addEventListener("input", (event) => {
+    if (event.target.value.length > 9) {
+        event.target.value = event.target.value.substring(0, 9);
+    }
+});
+
+const $form = document.querySelector('#form');
+const formModalLayer = document.querySelector('.modal-layer');
+const formModal = document.querySelector('.modal');
+
+$form.addEventListener('submit', handleSubmit)
+async function handleSubmit(event){
+    event.preventDefault()
+    const form = new FormData(this)
+    const response = await fetch(this.action, {
+        method: this.method,
+        body: form, headers:{'Accept': 'aplication/json'}
+    })
+    if (response.ok){
+        this.reset();
+        formSend();
+    }
+}
+
+function formSend(){
+    formModalLayer.classList.add('active');
+    formModal.classList.add('active');
+}
+
+const formModalClose = document.querySelector('.modal-close');
+formModalClose.addEventListener('click', function(){
+    formModalLayer.classList.remove('active');
+    formModal.classList.remove('active');
+})

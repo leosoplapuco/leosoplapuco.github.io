@@ -35,7 +35,7 @@
         </div>
         <div class="header">
             <img src="./media/img/logo-original-sin-fondo.webp" alt="Grúas Ememca" class="logo">
-            <nav class="menu">
+            <ul class="menu">
                 <li><a href="index.html" title="Grúas Ememca" class="link link-1"><h2>Inicio</h2></a></li>
                 <li><a href="#Nosotros" title="Grúas Ememca | Nosotros" class="link link-2"><h2>Nosotros</h2></a></li>
                 <li><a href="#Servicios" title="Grúas Ememca | Servicios" class="link link-3"><h2>Servicios</h2></a></li>
@@ -44,7 +44,7 @@
                     <img src="./media/img/icons/right-large.webp" alt="right-button" class="button-link_first_icon" width="30px" height="16px">
                     <h2 class="button-link_text">Cotizar servicio</h2>
                 </a>
-            </nav>
+            </ul>
         </div>
     </header>
 
@@ -108,7 +108,10 @@
             <div class="us">
                 <div class="us-target_content us-target_content_1">
                     <div class="us-target us-target_1_1">
-                        <video src="./media/videos/video-1.webm" controls></video>
+                        <video controls>
+                            <source src="./media/videos//video-1.webm">
+                            <track src="captions_es.vtt" kind="captions" srclang="es" label="spanish_captions">
+                        </video>
                     </div>
                     <div class="us-target us-target_1_2">
                         <p class="us-target_title">Grúas Ememca SAC</p>
@@ -270,26 +273,26 @@
             </div>
 
             <section class="contact">
-                <form action="" class="form" id="form">
+                <form action="https://formspree.io/f/maygzoze" method="post" class="form" id="form">
                     <fieldset class="form-target">
-                        <span>Empresa</span>
-                        <input type="text" name="Empresa" pattern="[a-Z]*" minlength="3" maxlength="100">
+                        <label for="Empresa">Empresa</label>
+                        <input id="Empresa" type="text" name="Empresa" pattern="[a-Z]*" minlength="3" maxlength="100">
                     </fieldset>
                     <fieldset class="form-target">
-                        <span>Nombres</span>
-                        <input type="text" name="Nombres" pattern="[a-Z]*" minlength="3" maxlength="100">
+                        <label for="Nombres">Nombres</label>
+                        <input id="Nombres" type="text" name="Nombres" pattern="[a-Z]*" minlength="3" maxlength="100">
                     </fieldset>
                     <fieldset class="form-target">
-                        <span>Teléfono</span>
-                        <input type="number" name="Teléfono">
+                        <label for="Teléfono">Teléfono</label>
+                        <input id="Teléfono" type="number" name="Teléfono">
                     </fieldset>
                     <fieldset class="form-target">
-                        <span>Capacidad de carga</span>
-                        <input type="number" name="Capacidad de carga">
+                        <label for="Capacidad de carga">Capacidad de carga</label>
+                        <input id="Capacidad de carga" type="number" name="Capacidad de carga">
                     </fieldset>
                     <fieldset class="form-target form-target_5">
-                        <span>Mensaje</span>
-                        <textarea type="text" name="Mensaje" id="Mensaje"  minlength="3" maxlength="500"></textarea>
+                        <label for="Mensaje">Mensaje</label>
+                        <textarea id="Mensaje" type="text" name="Mensaje"  minlength="3" maxlength="500"></textarea>
                     </fieldset>
                     <fieldset class="form-target form-target_6">
                         <button class="button-link" type="submit">
@@ -303,6 +306,23 @@
     </div>
 
     <footer></footer>
+
+    <div class="modal-layer"></div>
+
+    <div class="modal">
+        <div class="modal-title">Datos enviados</div>
+        <div class="modal-text">Gracias por el interés, en breve el equipo de Grúas Ememca se pondrá en contacto contigo.</div>
+        <div class="modal-links">
+            <a href="https://wa.link/wf378e" class="modal-link_whatsapp">
+                <span class="button-link_text">WhatsApp</span>
+                <img src="./media/img/icons/whatsapp.webp" width="40px" height="40px" alt="WhatsApp | Grúas Ememca SAC">
+            </a>
+
+            <button class="button-link modal-close">
+                <div class="button-link_text">Cerrar</div>
+            </button>
+        </div>
+    </div>
 
     <script src="./js/app.js"></script>
 </body>
