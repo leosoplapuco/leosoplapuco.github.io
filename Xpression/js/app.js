@@ -16,3 +16,9 @@ function menuDesactive(){
     menu.classList.remove('active');
     closeMenu.classList.remove('active');
 }
+
+const links = document.querySelectorAll('.link');
+
+links.forEach(link => {
+  link.addEventListener('click', menuDesactive);
+});
