@@ -848,10 +848,8 @@ form fieldset textarea{
         display: none;
     }
     .link:hover{
-        background: var(--red);
-    }
-    .link:hover .button-link-text{
-        color: var(--white);
+        background: var(--gray);
+        color: var(--text);
     }
     .link-6{
         display: none;
