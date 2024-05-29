@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alquiler de grúas telescópicas | Grúas Ememca SAC</title>
     <link rel="stylesheet" href="./style.css">
-
-    <link rel="stylesheet" href="./icons/css/fontawesome.css">
-    <link rel="stylesheet" href="./icons/css/brands.css">
-    <link rel="stylesheet" href="./icons/css/solid.css">
 </head>
 <body>
 
@@ -313,27 +309,42 @@
             <h2 class="block-title">Contáctanos</h2>
 
             <div class="contact">
-                <form action="" method="post" class="form" id="form">
+                <form action="https://formspree.io/f/maygzoze" method="post" class="form" id="form">
                     <fieldset>
-                        <label for=""></label>
-                        <input type="text">
+                        <label for="Empresa">Empresa</label>
+                        <input id="Empresa" name="Empresa" type="text" minlength="3" maxlength="50" pattern="[a-Z]*" autocomplete="false" required>
                     </fieldset>
                     <fieldset>
-                        <label for=""></label>
-                        <input type="text">
+                        <label for="Nombre">Nombre</label>
+                        <input id="Nombre" name="Nombre" type="text" minlength="3" maxlength="50" pattern="[a-Z]*" autocomplete="false" required>
                     </fieldset>
                     <fieldset>
-                        <label for=""></label>
-                        <input type="text">
+                        <label for="Teléfono / Celular">Teléfono / Celular</label>
+                        <input id="Teléfono / Celular" name="Teléfono / Celular" type="text">
                     </fieldset>
                     <fieldset>
-                        <label for=""></label>
-                        <input type="text">
+                        <select name="Tipo de servicio" id="">
+                            <option name="Tipo de servicio" value="Tipo de servicio">Tipo de servicio</option>
+                            <option name="Alquiler de grúa telescópica" value="Alquiler de grúa telescópica">Alquiler de grúa telescópica</option>
+                            <option name="Alquiler de camión grúa" value="Alquiler de camión grúa">Alquiler de camión grúa</option>
+                            <option name="Servicio de izaje" value="Servicio de izaje">Servicio de izaje</option>
+                            <option name="Eliminación de tierra" value="Eliminación de tierra">Eliminación de tierra</option>
+                        </select>
                     </fieldset>
-                    <button type="submit">
-                        <span>Enviar datos</span>
+                    <fieldset>
+                        <label for="Mensaje">Mensaje</label>
+                        <textarea name="Mensaje" id="Mensaje"></textarea>
+                    </fieldset>
+                    <button type="submit" class="submit">
+                        <span>Contactar</span>
                     </button>
                 </form>
+
+                <div class="contact-target">
+                    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam impedit dignissimos quas, nostrum vero nobis ab ipsam beatae possimus itaque! Nobis, aliquid rem dicta quidem rerum cum alias doloribus? Sunt reiciendis ratione eos ducimus qui laborum, porro provident, dolore fugiat perferendis nesciunt numquam ipsam impedit, ipsum eius obcaecati assumenda facere.</p>
+                </div>
+
+                <p class="copy">&copy; 2024 Grúas Ememca SAC</p>
             </div>
         </div>
     </footer>
