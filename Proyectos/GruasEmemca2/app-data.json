@@ -4,31 +4,36 @@
             "id": 1,
             "machine-name": "Maquina 1 | Modelo | Cap. Carga | Etc",
             "machine-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
-            "machine-img": "./media/img/gruas/grua-1.png"
+            "machine-img": "./media/img/gruas/grua-1.png",
+            "machine-label": "Telescópicas"
         },
         {
             "id": 2,
             "machine-name": "Maquina 2 | Modelo | Cap. Carga | Etc",
             "machine-description": "Descripción de maquina 2 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
-            "machine-img": "./media/img/gruas/grua-1.png"
+            "machine-img": "./media/img/gruas/grua-1.png",
+            "machine-label": "Camiones"
         },
         {
             "id": 3,
             "machine-name": "Maquina 3 | Modelo | Cap. Carga | Etc",
             "machine-description": "Descripción de maquina 3 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
-            "machine-img": "./media/img/gruas/grua-1.png"
+            "machine-img": "./media/img/gruas/grua-1.png",
+            "machine-label": "Montacargas"
         },
         {
             "id": 4,
             "machine-name": "Maquina 4 | Modelo | Cap. Carga | Etc",
             "machine-description": "Descripción de maquina 4 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
-            "machine-img": "./media/img/gruas/grua-1.png"
+            "machine-img": "./media/img/gruas/grua-1.png",
+            "machine-label": "Excavadoras"
         },
         {
             "id": 5,
             "machine-name": "Maquina 5 | Modelo | Cap. Carga | Etc",
             "machine-description": "Descripción de maquina 5 - leosoplapuco - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
-            "machine-img": "./media/img/gruas/grua-1.png"
+            "machine-img": "./media/img/gruas/grua-1.png",
+            "machine-label": "Telescópicas"
         }
     ],
 
@@ -38,21 +43,21 @@
             "work-img": "./media/img/gallery-7.webp",
             "work-title": "Trabajo reciente 1 | Empresa contratista | Lugar",
             "work-resume": "Trabajo reciente 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
-            "work-date": "10/24"
+            "work-date": "Enero/24"
         },
         {
             "id": 2,
             "work-img": "./media/img/gallery-7.webp",
             "work-title": "Trabajo reciente 2 | Empresa contratista | Lugar",
             "work-resume": "Trabajo reciente 2 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
-            "work-date": "11/24"
+            "work-date": "Febrero/24"
         },
         {
             "id": 3,
             "work-img": "./media/img/gallery-4.webp",
             "work-title": "Trabajo reciente 3 | Empresa contratista | Lugar",
             "work-resume": "Trabajo reciente 3 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
-            "work-date": "09/24"
+            "work-date": "Mayo/24"
         }
     ]
 }
