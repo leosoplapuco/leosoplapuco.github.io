@@ -48,8 +48,8 @@ fetch('app-data.json')
         machineElement.className = `machine machine-${machine.id} ${machine['machine-label']}`;
         machineElement.dataset.filter = machine['machine-label'];
         machineElement.innerHTML = `
-            <div class="mahine-photo">
-                <img src="${machine['machine-img']}" alt="Grúas Ememca">
+            <div class="machine-photo">
+                <img src="${machine['machine-img']}" alt="Grúas Ememca SAC">
             </div>
             <h3 class="machine-name">${machine['machine-name']}</h3>
             <p class="text machine-description">${machine['machine-description']}</p>
@@ -95,7 +95,7 @@ fetch('app-data.json')
         workElement.href = `#Trabajo-${work.id}`;
         workElement.className = `work work-${work.id}`;
         workElement.innerHTML = `
-            <img src="${work['work-img']}" alt="">
+            <img src="${work['work-img']}" alt="Grúas Ememca SAC">
             <div class="work-info">
                 <h3 class="work-title">${work['work-title']}</h3>
                 <span class="work-date">${work['work-date']}</span>
@@ -129,3 +129,25 @@ MapTwoButton.addEventListener('click', function(){
     MapTwoButton.classList.add('active');
     MapTwo.classList.add('active');
 })
+
+//Form
+const select = document.querySelector(".select");
+const options_list = document.querySelector(".options-list");
+const options = document.querySelectorAll(".option");
+
+//show & hide options list
+// select.addEventListener("click", () => {
+//   options_list.classList.toggle("active");
+//   select.querySelector(".fa-angle-down").classList.toggle("fa-angle-up");
+// });
+
+//select option
+// options.forEach((option) => {
+//   option.addEventListener("click", () => {
+//     options.forEach((option) => {option.classList.remove('selected')});
+//     select.querySelector("span").innerHTML = option.innerHTML;
+//     option.classList.add("selected");
+//     options_list.classList.toggle("active");
+//     select.querySelector(".fa-angle-down").classList.toggle("fa-angle-up");
+//   });
+// });

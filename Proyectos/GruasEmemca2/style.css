@@ -545,13 +545,13 @@ h1{
     display: flex;
 }
 
-.mahine-photo{
+.machine-photo{
     width: 100%;
     height: 300px;
     position: relative;
 }
 
-.mahine-photo img{
+.machine-photo img{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -713,81 +713,114 @@ h1{
 /*Contact's style*/
 
 footer{
-    background: #F7F7F7;
+    background: #222;
+}
+
+footer .block-content .block-title{
+    color: var(--white);
 }
 
 .contact{
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    align-items: flex-start;
     gap: 20px;
-    color: var(--black);
 }
 
-form{
+.contact-target{
+    width: 100%;
+}
+
+.contact-list{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-list li{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+}
+
+.contact-list li i{
+    color: var(--white);
+}
+
+.contact-list li a{
+    color: var(--white);
+}
+
+.contact-list li a:hover{
+    text-decoration: underline;
+}
+
+.form{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 10px;
 }
 
-form fieldset{
-    display: flex;
-    flex-direction: column;
-    border: 0;
-}
-
-form fieldset label{
-    color: var(--black);
-    margin-bottom: 5px;
-    font-size: 16px;
-}
-
-form fieldset input{
-    width: 100%;
-    height: 40px;
-    background: transparent;
+.form fieldset{
     border: 0;
     outline: 0;
-    border-bottom: 2px solid var(--black);
-    color: var(--black);
+    width: 100%;
 }
 
-form fieldset select{
-    width: 100%;
-    height: 40px;
-    background: var(--gray);
-    border: 0;
-    outline: 0;
-    cursor: pointer;
-    padding: 0 20px;
-}
-
-form fieldset textarea{
-    width: 100%;
-    height: 150px;
-    border: 0;
-    outline: 0;
-    resize: none;
-    background: transparent;
-    color: var(--black);
-    border-bottom: 2px solid var(--black);
-}
-
-.submit{
-    width: 100%;
-    height: 40px;
-    background: var(--red);
+.form fieldset legend label{
     color: var(--white);
-    border-radius: 5px;
 }
 
-.footer-bottom{
+.form fieldset input,
+.form fieldset textarea{
     width: 100%;
-    grid-column: 1/-1;
+    height: 42.5px;
+    color: var(--text);
+    padding: 10px;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+}
+
+.form fieldset textarea{
+    height: 150px;
+    resize: none;
+}
+
+.form-buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.form-buttons legend{
+    color: var(--white);
+}
+
+.form-button{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 5px;
+    color: var(--white);
+}
+
+.form-button-1{
+    background: #25D366;
+}
+
+.form-button-1 i{
+    font-size: 22.5px;
+}
+
+.form-button-2{
+    background: var(--red);
 }
 
 /*Responsive*/
@@ -981,10 +1014,6 @@ form fieldset textarea{
     /**/
 
     .contact{
-        grid-template-columns: 1fr;
-    }
-    .footer-bottom{
-        gap: 10px;
         flex-direction: column;
     }
 }

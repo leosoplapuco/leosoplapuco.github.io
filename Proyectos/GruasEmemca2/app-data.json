@@ -40,21 +40,21 @@
     "Trabajos": [
         {
             "id": 1,
-            "work-img": "./media/img/gallery-7.webp",
+            "work-img": "./media/img/gallery-1.webp",
             "work-title": "Trabajo reciente 1 | Empresa contratista | Lugar",
             "work-resume": "Trabajo reciente 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "work-date": "Enero/24"
         },
         {
             "id": 2,
-            "work-img": "./media/img/gallery-7.webp",
+            "work-img": "./media/img/gallery-2.webp",
             "work-title": "Trabajo reciente 2 | Empresa contratista | Lugar",
             "work-resume": "Trabajo reciente 2 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "work-date": "Febrero/24"
         },
         {
             "id": 3,
-            "work-img": "./media/img/gallery-4.webp",
+            "work-img": "./media/img/gallery-3.webp",
             "work-title": "Trabajo reciente 3 | Empresa contratista | Lugar",
             "work-resume": "Trabajo reciente 3 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "work-date": "Mayo/24"
