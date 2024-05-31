@@ -52,7 +52,7 @@ fetch('app-data.json')
                 <img src="${machine['machine-img']}" alt="Grúas Ememca SAC">
             </div>
             <h3 class="machine-name">${machine['machine-name']}</h3>
-            <p class="text machine-description">${machine['machine-description']}</p>
+            <p class="text machine-description">${machine['machine-short-description']}</p>
         `;
         MachinesContainer.appendChild(machineElement);
     });
@@ -80,6 +80,45 @@ fetch('app-data.json')
                 }
             });
         });
+    });
+})
+.catch(error => console.error('Error fetching data:', error));
+
+//Machine-active
+
+fetch('app-data.json')
+.then(response => response.json())
+.then(data => {
+    const MachinesSelectContainer = document.querySelector('.machines-select-container');
+    data.Maquinas.forEach(machineSelect => {
+        const machineSelectContainer = document.createElement('div');
+        machineSelectContainer.id = `Maquina-${machineSelect.id}`;
+        machineSelectContainer.className = 'machine-select-container';
+        machineSelectContainer.innerHTML = `
+            <div class="machine-select">
+                <div>
+                    <a href="#Maquinas" class="button-link close-machine">
+                        <i class="fa-solid fa-xmark"></i>
+                    </a>
+                    
+                    <div class="machine-principal-image">
+                        <img class="machine-principal-image-bg" src="${machineSelect['machine-img-bg']}" alt="Grúas Ememca SAC">
+                        <div class="layer"></div>
+                        <img class="machine-principal-image-machine" src="${machineSelect['machine-img']}" alt="Grúas Ememca SAC">
+                    </div>
+
+                    <h3>${machineSelect['machine-name']}</h3>
+                    <p class="text">${machineSelect['machine-large-description']}</p>
+                    
+                    <div class="machine-select-buttons">
+                        <a href="">1</a>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                    </div>
+                </div>
+            </div>
+        `;
+        MachinesSelectContainer.appendChild(machineSelectContainer);
     });
 })
 .catch(error => console.error('Error fetching data:', error));

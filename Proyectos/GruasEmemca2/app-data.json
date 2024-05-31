@@ -2,37 +2,82 @@
     "Maquinas": [
         {
             "id": 1,
-            "machine-name": "Maquina 1 | Modelo | Cap. Carga | Etc",
-            "machine-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
+            "machine-name": "Maquina Telescópica 1 | Modelo | Cap. Carga | Etc",
+            "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
+            "machine-img-bg": "./media/img/gallery-1.webp",
             "machine-img": "./media/img/gruas/grua-1.png",
+            "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
+            "machine-characteristics": [
+                {
+                    "characteristic-1": "Año 2018",
+                    "characteristic-2": "200TN",
+                    "characteristic-3": "Petroleo"
+                }
+            ],
             "machine-label": "Telescópicas"
         },
         {
             "id": 2,
-            "machine-name": "Maquina 2 | Modelo | Cap. Carga | Etc",
-            "machine-description": "Descripción de maquina 2 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
+            "machine-name": "Maquina Camiones 2 | Modelo | Cap. Carga | Etc",
+            "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
+            "machine-img-bg": "./media/img/gallery-2.webp",
             "machine-img": "./media/img/gruas/grua-1.png",
+            "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
+            "machine-characteristics": [
+                {
+                    "characteristic-1": "Año 2018",
+                    "characteristic-2": "200TN",
+                    "characteristic-3": "Petroleo"
+                }
+            ],
             "machine-label": "Camiones"
         },
         {
             "id": 3,
-            "machine-name": "Maquina 3 | Modelo | Cap. Carga | Etc",
-            "machine-description": "Descripción de maquina 3 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
+            "machine-name": "Maquina Montacargas 3 | Modelo | Cap. Carga | Etc",
+            "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
+            "machine-img-bg": "./media/img/gallery-3.webp",
             "machine-img": "./media/img/gruas/grua-1.png",
+            "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
+            "machine-characteristics": [
+                {
+                    "characteristic-1": "Año 2018",
+                    "characteristic-2": "200TN",
+                    "characteristic-3": "Petroleo"
+                }
+            ],
             "machine-label": "Montacargas"
         },
         {
             "id": 4,
-            "machine-name": "Maquina 4 | Modelo | Cap. Carga | Etc",
-            "machine-description": "Descripción de maquina 4 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
+            "machine-name": "Maquina Excavadoras 4 | Modelo | Cap. Carga | Etc",
+            "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
+            "machine-img-bg": "./media/img/gallery-4.webp",
             "machine-img": "./media/img/gruas/grua-1.png",
+            "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
+            "machine-characteristics": [
+                {
+                    "characteristic-1": "Año 2018",
+                    "characteristic-2": "200TN",
+                    "characteristic-3": "Petroleo"
+                }
+            ],
             "machine-label": "Excavadoras"
         },
         {
             "id": 5,
-            "machine-name": "Maquina 5 | Modelo | Cap. Carga | Etc",
-            "machine-description": "Descripción de maquina 5 - leosoplapuco - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
+            "machine-name": "Maquina Telescópicas 5 | Modelo 2000 - 2019 | Cap. Carga | Etc",
+            "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
+            "machine-img-bg": "./media/img/gallery-5.webp",
             "machine-img": "./media/img/gruas/grua-1.png",
+            "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
+            "machine-characteristics": [
+                {
+                    "characteristic-1": "Año 2018",
+                    "characteristic-2": "200TN",
+                    "characteristic-3": "Petroleo"
+                }
+            ],
             "machine-label": "Telescópicas"
         }
     ],
