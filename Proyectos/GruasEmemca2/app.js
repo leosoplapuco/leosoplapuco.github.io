@@ -94,6 +94,15 @@ fetch('app-data.json')
         const machineSelectContainer = document.createElement('div');
         machineSelectContainer.id = `Maquina-${machineSelect.id}`;
         machineSelectContainer.className = 'machine-select-container';
+
+        // Crear la lista de características
+        let characteristicsList = '';
+        machineSelect['machine-characteristics'].forEach(characteristic => {
+            Object.values(characteristic).forEach(value => {
+                characteristicsList += `<li>${value}</li>`;
+            });
+        });
+
         machineSelectContainer.innerHTML = `
             <div class="machine-select">
                 <div>
@@ -108,7 +117,14 @@ fetch('app-data.json')
                     </div>
 
                     <h3>${machineSelect['machine-name']}</h3>
-                    <p class="text">${machineSelect['machine-large-description']}</p>
+                    
+                    <div class="machine-general-description">
+                        <p class="text">${machineSelect['machine-large-description']}</p>
+                        <ul class="machine-characteristics">
+                            <p class="text">Características</p>
+                            ${characteristicsList}
+                        </ul>
+                    </div>
                     
                     <div class="machine-select-buttons">
                         <a href="">1</a>
@@ -122,6 +138,7 @@ fetch('app-data.json')
     });
 })
 .catch(error => console.error('Error fetching data:', error));
+
 
 //Recent works
 
@@ -146,7 +163,47 @@ fetch('app-data.json')
 })
 .catch(error => console.error('Error fetching data:', error));
 
+//Recent works-active
+
+// fetch('app-data.json')
+// .then(response => response.json())
+// .then(data => {
+//     const MachinesSelectContainer = document.querySelector('.machines-select-container');
+//     data.Maquinas.forEach(machineSelect => {
+//         const machineSelectContainer = document.createElement('div');
+//         machineSelectContainer.id = `Maquina-${machineSelect.id}`;
+//         machineSelectContainer.className = 'machine-select-container';
+//         machineSelectContainer.innerHTML = `
+//             <div class="machine-select">
+//                 <div>
+//                     <a href="#Maquinas" class="button-link close-machine">
+//                         <i class="fa-solid fa-xmark"></i>
+//                     </a>
+                    
+//                     <div class="machine-principal-image">
+//                         <img class="machine-principal-image-bg" src="${machineSelect['machine-img-bg']}" alt="Grúas Ememca SAC">
+//                         <div class="layer"></div>
+//                         <img class="machine-principal-image-machine" src="${machineSelect['machine-img']}" alt="Grúas Ememca SAC">
+//                     </div>
+
+//                     <h3>${machineSelect['machine-name']}</h3>
+//                     <p class="text">${machineSelect['machine-large-description']}</p>
+                    
+//                     <div class="machine-select-buttons">
+//                         <a href="">1</a>
+//                         <a href="">2</a>
+//                         <a href="">3</a>
+//                     </div>
+//                 </div>
+//             </div>
+//         `;
+//         MachinesSelectContainer.appendChild(machineSelectContainer);
+//     });
+// })
+// .catch(error => console.error('Error fetching data:', error));
+
 //Maps
+
 const MapOneButton = document.querySelector('.map-list-button-1');
 const MapOne = document.querySelector('.map-1');
 
@@ -170,23 +227,39 @@ MapTwoButton.addEventListener('click', function(){
 })
 
 //Form
-const select = document.querySelector(".select");
-const options_list = document.querySelector(".options-list");
-const options = document.querySelectorAll(".option");
 
-//show & hide options list
-// select.addEventListener("click", () => {
-//   options_list.classList.toggle("active");
-//   select.querySelector(".fa-angle-down").classList.toggle("fa-angle-up");
-// });
+let Teléfono = document.getElementById("Teléfono");
 
-//select option
-// options.forEach((option) => {
-//   option.addEventListener("click", () => {
-//     options.forEach((option) => {option.classList.remove('selected')});
-//     select.querySelector("span").innerHTML = option.innerHTML;
-//     option.classList.add("selected");
-//     options_list.classList.toggle("active");
-//     select.querySelector(".fa-angle-down").classList.toggle("fa-angle-up");
-//   });
-// });
+Teléfono.addEventListener("input", (event) => {
+    if (event.target.value.length > 9) {
+        event.target.value = event.target.value.substring(0, 9);
+    }
+});
+
+const $form = document.querySelector('#form');
+$form.addEventListener('submit', handleSubmit)
+async function handleSubmit(event){
+    event.preventDefault()
+    const form = new FormData(this)
+    const response = await fetch(this.action, {
+        method: this.method,
+        body: form, headers:{'Accept': 'aplication/json'}
+    })
+    if (response.ok){
+        this.reset();
+        FormSended();
+    }
+}
+
+const FormSend = document.querySelector('.form-send-container');
+const WhatsApp = document.querySelector('.whatsApp');
+
+function FormSended(){
+    FormSend.classList.add('active');
+    WhatsApp.classList.add('form-sended');
+    
+    setTimeout(() => {
+        FormSend.classList.remove('active');
+        WhatsApp.classList.remove('form-sended');
+    }, 3000);
+}
