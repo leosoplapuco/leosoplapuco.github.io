@@ -1,43 +1,69 @@
 //Header
 const Header = document.querySelector('header');
-window.addEventListener('scroll', Scroll);
 
+window.addEventListener('scroll', Scroll);
 function Scroll(){
     var ypos=window.pageYOffset;
-    
     if (ypos > 50){
-        Header.classList.add('active');
+        HeaderActive();
     }else{
-        Header.classList.remove('active');
+        HeaderDesactive();
     }
+}
+
+function HeaderActive(){
+    Header.classList.add('active');
+}
+
+function HeaderDesactive(){
+    Header.classList.remove('active');
 }
 
 //SubHeader
 const LinkUs = document.querySelector('.link-2');
+LinkUs.addEventListener('click', LinkUsActive);
+
 const LinkServices = document.querySelector('.link-3');
+LinkServices.addEventListener('click', LinkServicesActive);
 
 const SubHeaderContainerUs = document.querySelector('.sub-header-container-1');
 const SubHeaderContainerServices = document.querySelector('.sub-header-container-2')
 
-LinkUs.addEventListener('click', function(){
-    Header.classList.add('active');
+function LinkUsActive(){
+    HeaderActive();
 
     LinkUs.classList.toggle('active');
     SubHeaderContainerUs.classList.toggle('active');
 
     LinkServices.classList.remove('active');
     SubHeaderContainerServices.classList.remove('active');
-})
+}
 
-LinkServices.addEventListener('click', function(){
-    Header.classList.add('active');
+function LinkUsDesactive(){
+    HeaderActive();
 
+    LinkUs.classList.remove('active');
+    SubHeaderContainerUs.classList.remove('active');
+
+    LinkServices.classList.remove('active');
+    SubHeaderContainerServices.classList.remove('active');
+}
+
+function LinkServicesActive(){
     LinkUs.classList.remove('active');
     SubHeaderContainerUs.classList.remove('active');
 
     LinkServices.classList.toggle('active');
     SubHeaderContainerServices.classList.toggle('active');
-})
+}
+
+function LinkServicesDesactive(){
+    LinkUs.classList.remove('active');
+    SubHeaderContainerUs.classList.remove('active');
+
+    LinkServices.classList.remove('active');
+    SubHeaderContainerServices.classList.remove('active');
+}
 
 //ResumenServices
 const ResumenServiceTitleOne = document.querySelector('.resumen-service-target-title-1');

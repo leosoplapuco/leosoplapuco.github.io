@@ -288,7 +288,7 @@ header.active .link-6 span{
 
 .link-6:hover h2,
 .link-6:hover span{
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 .link-6:hover span{
@@ -323,16 +323,17 @@ header.active .link-6 span{
 .sub-header-container{
     position: fixed;
     left: 0;
-    top: 100px;
+    top: 0;
     /* height: calc(100vh - 100px); */
     width: 100%;
     background: var(--white);
     padding: 20px;
-    z-index: 100;
+    z-index: -1;
     opacity: 0;
     pointer-events: none;
     user-select: none;
     transition: var(--transition-250ms);
+    padding-top: 100px;
 }
 
 .sub-header-container.active{
@@ -547,7 +548,7 @@ header.active .link-6 span{
 
 /*Resumen*/
 
-#Resumen .block-content{
+#Nosotros .block-content{
     max-width: 800px;
 }
 
@@ -847,7 +848,7 @@ header.active .link-6 span{
 }
 
 .resumen-service-target-title h4{
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .resumen-service-target-title span{
@@ -970,7 +971,7 @@ header.active .link-6 span{
     gap: 5px;
 }
 
-.index-testimonials-buttons button{
+.index-testimonial-button{
     width: 40px;
     height: 40px;
     border-radius: 100%;
@@ -979,17 +980,19 @@ header.active .link-6 span{
     background: var(--white);
 }
 
-.index-testimonials-buttons button:hover{
+.index-testimonial-button:hover,
+.index-testimonial-button.active{
     background: var(--red);
 }
 
-.index-testimonials-buttons button span{
+.index-testimonial-button span{
     margin: auto;
     color: var(--red);
     transition: var(--transition-250ms);
 }
 
-.index-testimonials-buttons button:hover span{
+.index-testimonial-button:hover span,
+.index-testimonial-button.active span{
     color: var(--white);
 }
 
@@ -1046,13 +1049,18 @@ header.active .link-6 span{
 /*Suscribete*/
 
 #Suscribete{
-    width: 100%;
     height: 350px;
-    background: url('./media/img/gallery-6.webp');
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
     position: relative;
+}
+
+.sus-img-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
 }
 
 #Suscribete .layer{
@@ -1062,7 +1070,7 @@ header.active .link-6 span{
     width: 100%;
     height: 100%;
     background: #00000090;
-    z-index: 0;
+    z-index: -1;
 }
 
 .form-suscribe{
@@ -1083,7 +1091,8 @@ header.active .link-6 span{
     height: 40px;
     padding: 0 10px;
     border-radius: 2.5px;
-    width: 350px;
+    width: calc(100% - 112px);
+    max-width: 350px;
     border: 0;
     outline: 0;
 }
@@ -1166,25 +1175,14 @@ footer .block-content .block-title h2{
 
 .footer{
     width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: left;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-}
-
-/* .footer-target{
-    width: 100%;
-    max-width: 200px;
-} */
-
-.footer-target-1{
-    width: 100%;
-    max-width: 400px;
 }
 
 .footer-target-title{
     color: var(--white);
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .footer-target ul li a{
@@ -1196,7 +1194,7 @@ footer .block-content .block-title h2{
     display: flex;
     align-items: center;
     justify-content: left;
-    gap: 5px;
+    gap: 10px;
 }
 
 .networks li a h2{
@@ -1207,6 +1205,15 @@ footer .block-content .block-title h2{
     display: flex;
     align-items: center;
     justify-content: right;
+}
+
+.footer-dev .text,
+.footer-dev .text a{
+    color: var(--white);
+}
+
+.footer-dev .text a{
+    text-decoration: underline;
 }
 
 .copy{
@@ -1245,6 +1252,7 @@ footer .block-content .block-title h2{
         justify-content: flex-start;
         overflow-y: auto;
         /* background: blue; */
+        display: none;
     }
     .menu li{
         width: 100%;
@@ -1371,6 +1379,12 @@ footer .block-content .block-title h2{
         display: flex;
         flex-direction: column;
     }
+
+    /**/
+
+    .machinerys{
+        grid-template-columns: 1fr;
+    }
     .machinery-container{
         display: flex;
         flex-direction: column;
@@ -1380,35 +1394,23 @@ footer .block-content .block-title h2{
     }
 
     /**/
-    
-    .relleno{
-        /* overflow: unset; */
-        height: auto;
-    }
-    .relleno-p{
-        width: 100%;
-    }
-    .machine-select-container{
-        overflow-y: auto;
-    }
-    .machine-select-content{
-        display: flex;
+
+    /**/
+
+    .resume-services{
         flex-direction: column;
     }
-    .machine-select-content-target{
-        height: auto;
-    }
-    .machine-select-slider-content li{
-        width: 100%;
-        height: 200px;
-    }
+
+    /**/
     
-    .machine-select-content-target-2{
-        /* background: red; */
-        overflow-x: auto;
+    .index-works{
+        grid-template-columns: 1fr;
     }
-    .machine-select-maquinas section{
-        width: 250%;
-        flex-direction: row;
+    .contact{
+        grid-template-columns: 1fr;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
     }
 }
