@@ -106,3 +106,16 @@ function VideoDemoDesactive(){
     VideoLayer.classList.remove('active');
     VideoDemo.classList.remove('active');
 }
+
+//Testimonials
+// const TestimonialButtonRightToLeft = document.querySelector('.testimonial-button-2');
+// TestimonialButtonRightToLeft.addEventListener('click', TestimonialRightToLeft);
+
+// // const TestimonialButtonLeftToRight = document.querySelector('.testimonial-button-1');
+// // TestimonialButtonLeftToRight.addEventListener('click', TestimonialLeftToRight);
+
+// const Testimonials = document.querySelector('.testimonials-slider');
+
+// function TestimonialRightToLeft(){
+//     Testimonials.style.marginLeft = '-100%'
+// }

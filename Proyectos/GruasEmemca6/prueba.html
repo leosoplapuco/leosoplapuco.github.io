@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Example</title>
+    <style>
+        #scrollable-element {
+            width: 700px;
+            border: 1px solid black;
+            display: flex;
+            overflow-x: auto;
+        }
+
+        #content {
+            width: auto;
+            height: auto;
+            display: flex;
+            gap: 10px; /* Suficiente contenido para que haya un scroll */
+        }
+
+        p {
+            height: 300px;
+            width: 300px;
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <button id="scroll-button">Scroll to End</button>
+    <div id="scrollable-element">
+        <div id="content">
+            <!-- Contenido grande aquí -->
+            <p>Contenido 1</p>
+            <p>Contenido 2</p>
+            <p>Contenido 3</p>
+            <p>Contenido 4</p>
+            <p>Contenido 5</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('scroll-button').addEventListener('click', function() {
+            var element = document.getElementById('scrollable-element');
+            var start = element.scrollLeft;
+            var end = element.scrollWidth;
+            var change = end - start;
+            var duration = 1000; // Duración de la animación en milisegundos
+            var startTime = null;
+
+            function animateScroll(timestamp) {
+                if (!startTime) startTime = timestamp;
+                var progress = timestamp - startTime;
+                var val = Math.min(progress / duration, 1);
+                element.scrollLeft = start + change * val;
+                if (progress < duration) {
+                    window.requestAnimationFrame(animateScroll);
+                }
+            }
+
+            window.requestAnimationFrame(animateScroll);
+        });
+    </script>
+</body>
+</html>
