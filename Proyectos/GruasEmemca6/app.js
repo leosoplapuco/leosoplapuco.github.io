@@ -107,15 +107,38 @@ function VideoDemoDesactive(){
     VideoDemo.classList.remove('active');
 }
 
-//Testimonials
-// const TestimonialButtonRightToLeft = document.querySelector('.testimonial-button-2');
-// TestimonialButtonRightToLeft.addEventListener('click', TestimonialRightToLeft);
+//Form
+const PersonCellphone = document.getElementById("person-cellphone");
+PersonCellphone.addEventListener("input", (event) => {
+    if (event.target.value.length > 9) {
+        event.target.value = event.target.value.substring(0, 9);
+    }
+});
 
-// // const TestimonialButtonLeftToRight = document.querySelector('.testimonial-button-1');
-// // TestimonialButtonLeftToRight.addEventListener('click', TestimonialLeftToRight);
+const CompanyCellphone = document.getElementById("company-cellphone");
+CompanyCellphone.addEventListener("input", (event) => {
+    if (event.target.value.length > 9) {
+        event.target.value = event.target.value.substring(0, 9);
+    }
+});
 
-// const Testimonials = document.querySelector('.testimonials-slider');
+const ContactForm = document.querySelector('#form-contact');
+const ContactFormMessage = document.querySelector('.contact-form-send');
 
-// function TestimonialRightToLeft(){
-//     Testimonials.style.marginLeft = '-100%'
-// }
+ContactForm.addEventListener('submit', handleSubmit)
+async function handleSubmit(event){
+    event.preventDefault()
+    const form = new FormData(this)
+    const response = await fetch(this.action, {
+        method: this.method,
+        body: form, headers:{'Accept': 'aplication/json'}
+    })
+    if (response.ok){
+        this.reset();
+        formSend();
+    }
+}
+
+function formSend(){
+    ContactFormMessage.classList.add('active');
+}
