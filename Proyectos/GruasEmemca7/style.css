@@ -149,6 +149,10 @@ button{
     border-radius: 2.5px;
 }
 
+.button-link-text{
+    text-align: center;
+}
+
 .button-link-principal{
     background: var(--red);
 }
@@ -170,6 +174,22 @@ button{
 .button-link-secondary .button-link-text,
 .button-link-secondary span{
     color: var(--black-2);
+}
+
+video::-webkit-media-controls-fullscreen-button{
+    display: none;
+}
+
+video::-moz-fullscreen-button{
+    display: none;
+}
+
+video::-ms-fullscreen-button{
+    display: none;
+}
+
+video::media-controls-fullscreen-button{
+    display: none;
 }
 
 /*Body*/
@@ -457,7 +477,7 @@ header{
     padding: 20px;
 }
 
-.hero-container video{
+.hero-container > video{
     position: absolute;
     left: 10px;
     top: 10px;
@@ -474,7 +494,7 @@ header{
     top: 10px;
     width: calc(100% - 20px);
     height: calc(100% - 20px);
-    background: #00000075;
+    background: #00000090;
     border-radius: 5px;
     z-index: -1;
 }
@@ -499,6 +519,48 @@ h1{
     text-align: center;
     margin-bottom: 30px;
     color: var(--white);
+}
+
+/*Video demo*/
+
+.body-layer{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #00000090;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    z-index: 101;
+}
+
+.body-layer.active{
+    opacity: 1;
+    pointer-events: unset;
+    user-select: unset;
+}
+
+.video-demo{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    width: calc(100% - 20px);
+    max-width: 800px;
+    object-fit: cover;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    z-index: 102;
+}
+
+.video-demo.active{
+    opacity: 1;
+    pointer-events: unset;
+    user-select: unset;
 }
 
 /*Contenedores*/
@@ -620,6 +682,9 @@ h1{
 .companys{
     width: 100%;
     /* gap: 10px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -877,10 +942,10 @@ select{
     bottom: 60px;
     width: calc(100% - 20px);
     max-width: 350px;
-    background: var(--body);
+    background: var(--target);
     padding: 20px;
     border-radius: 5px;
-    border: 1px solid var(--target);
+    border: 1px solid var(--black-2);
     transition: var(--transition-250ms-linear);
     /* border-left: 4px solid var(--red); */
     z-index: 99;
@@ -905,13 +970,19 @@ select{
 .whatsapp{
     background: #25d366;
     position: fixed;
-    right: 10px;
-    bottom: 10px;
+    right: 20px;
+    bottom: 20px;
     height: 40px;
     padding: 0 20px;
     border-radius: 2.5px;
     gap: 5px;
+    transition: var(--transition-250ms-linear);
     z-index: 99;
+}
+
+.whatsapp.active{
+    bottom: 10px;
+    right: 10px;
 }
 
 .whatsapp img{
@@ -977,8 +1048,8 @@ footer .footer .block-title-title{
 
 @media screen and (max-width:600px){
     .button-link{
-        /* height: 35px; */
         padding: 0 15px;
+        gap: 5px;
     }
 
     .networks{
@@ -1064,14 +1135,29 @@ footer .footer .block-title-title{
         max-height: none;
     }
 
-    .phrase{
-        grid-template-columns: 1fr;
+    .companys-title .text{
+        margin-left: 10px;
     }
-
     .companys li img{
         object-fit: contain;
         width: 120px;
-        height: auto;
+        height: 50px;
+    }
+
+    .index-services-target-links{
+        justify-content: right;
+    }
+
+    .phrase{
+        grid-template-columns: 1fr;
+    }
+    .phrase-link{
+        margin-right: unset;
+        margin-left: auto;
+    }
+
+    .maps{
+        height: 200px;
     }
 
     .footer-targets{
