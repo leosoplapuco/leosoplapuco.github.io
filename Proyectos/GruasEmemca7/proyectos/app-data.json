@@ -2,28 +2,28 @@
     "Proyectos": [
         {
             "id": 1,
-            "project-img": "../media/img/gallery-1.webp",
+            "project-img": "./media/img/gallery-1.webp",
             "project-title": "Nombre de proyecto 1 | Izaje de estructura Respsol",
             "project-short-description": "Breve descripción del proyecto 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "project-large-description": "Descripción completa del proyecto 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero."
         },
         {
             "id": 2,
-            "project-img": "../media/img/gallery-2.webp",
+            "project-img": "./media/img/gallery-2.webp",
             "project-title": "Nombre de proyecto 2 | Izaje de estructura Respsol",
             "project-short-description": "Breve descripción del proyecto 2 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "project-large-description": "Descripción completa del proyecto 2 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero."
         },
         {
             "id": 3,
-            "project-img": "../media/img/gallery-7.webp",
+            "project-img": "./media/img/gallery-7.webp",
             "project-title": "Nombre de proyecto 3 | Izaje de estructura Respsol",
             "project-short-description": "Breve descripción del proyecto 3 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "project-large-description": "Descripción completa del proyecto 3 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero."
         },
         {
             "id": 4,
-            "project-img": "../media/img/gallery-4.webp",
+            "project-img": "./media/img/gallery-4.webp",
             "project-title": "Nombre de proyecto 4 | Izaje de estructura Respsol",
             "project-short-description": "Breve descripción del proyecto 4 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "project-large-description": "Descripción completa del proyecto 4 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero."
