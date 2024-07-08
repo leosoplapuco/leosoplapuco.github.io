@@ -1,1 +1,124 @@
-@import url('../style.css')
+@import url('../style.css');
+
+/*Us*/
+
+.video-us{
+    width: 100%;
+    height: 400px;
+}
+
+.us-target-2 img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/*Vision y mision*/
+
+#vision-mision{
+    /* background: var(--red); */
+    padding: 30px 10px;
+    position: relative;
+}
+
+#vision-mision::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--black-2);
+    z-index: -1;
+}
+
+#vision-mision::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--red);
+    z-index: -2;
+}
+
+.vision-mission-target{
+    padding: 20px;
+    /* background: #FFFFFF25; */
+    border-radius: 5px;
+}
+
+.vision-mission-target .block-title-title,
+.vision-mission-target .text{
+    color: var(--white);
+}
+
+/*Certifications*/
+
+.certifications{
+    display: grid;
+    grid-template-columns: 1fr 350px;
+}
+
+.certification img{
+    width: 100px;
+}
+
+.certification{
+    padding: 20px;
+    background: var(--target);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.certifications-target-2 video{
+    width: 100%;
+    height: 450px;
+}
+
+/*Machines*/
+
+.machines{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.machine{
+    width: 100%;
+    background: var(--target);
+    border-radius: 5px;
+}
+
+.machine-img{
+    width: 100%;
+    height: 220px;
+    position: relative;
+}
+
+.machine-img img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    width: calc(80% - 20px);
+    height: auto;
+}
+
+.machine-description{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+/*Responsive*/
+
+@media screen and (max-width:600px){
+    .certifications{
+        grid-template-columns: 1fr;
+    }
+}
