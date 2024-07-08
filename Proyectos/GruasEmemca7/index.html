@@ -689,8 +689,8 @@
                 const IndexProjectsContainer = document.querySelector('.index-projects');
                 data.Proyectos.forEach(proyecto => {
                     const projectElement = document.createElement('a');
-                    projectElement.href = `./proyectos/index.html#proyecto-${proyecto.id}`;
-                    projectElement.className = `index-project index-project-${proyecto.id} flex-column gap-10`;
+                    projectElement.href = `./proyectos/index.html`;
+                    projectElement.className = `index-project flex-column gap-10`;
                     projectElement.innerHTML = `
                         <img class="index-project-img" src="${proyecto['project-img']}" alt="Grúas Ememca SAC">
                         <p class="text-title">${proyecto['project-title']}</p>
