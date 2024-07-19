@@ -88,6 +88,14 @@
     gap: 10px;
 } */
 
+.machine-list{
+    flex-wrap: wrap;
+}
+
+/* .machine-button.active{
+    background: var(--red);
+} */
+
 .machine{
     width: 100%;
     /* flex: 2; */

@@ -23,7 +23,6 @@ fetch('../maquinaria/app-data.json')
             </div>
             <div class="machine-description flex-column gap-10">
                 <h3 class="machine-name text-title">${machine['machine-name']}</h3>
-                <p class="text">${machine['machine-short-description']}</p>
                 <p class="text-sub-title">Especificaciones:</p>
                 ${characteristicsHTML}
                 <a href="#contacto" class="button-link button-link-principal margin-left-auto">
@@ -33,6 +32,8 @@ fetch('../maquinaria/app-data.json')
         `;
         MachinesContainer.appendChild(machineElement);
     });
+
+    // <p class="text">${machine['machine-short-description']}</p>
 
     const Machine = document.querySelectorAll('.machine');
     Machine.forEach(machine => {

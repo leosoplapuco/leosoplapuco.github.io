@@ -25,7 +25,7 @@
             "machine-name": "Grove TMS 875",
             "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-img-bg": "./media/img/gallery-2.webp",
-            "machine-img": "../media/img/gruas/GROVE_TMS_875.png",
+            "machine-img": "../media/img/gruas/GROVE_TMS_875.jpg",
             "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-characteristics": [
                 {
@@ -42,48 +42,80 @@
         },
         {
             "id": 3,
-            "machine-name": "Maquina Montacargas 3 | Modelo | Cap. Carga | Etc",
+            "machine-name": "PHT300A",
             "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-img-bg": "./media/img/gallery-3.webp",
             "machine-img": "../media/img/gruas/GROVE_TMS_875.png",
             "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-characteristics": [
                 {
-                    "characteristic-1": "Año 2018",
-                    "characteristic-2": "200TN",
-                    "characteristic-3": "Petroleo"
+                    "characteristic-1": "Año: 1988",
+                    "characteristic-2": "Caja: Fuller",
+                    "characteristic-3": "Medidas: 9 x 2.40 metros",
+                    "characteristic-4": "Pluma: 27 metros",
+                    "characteristic-5": "Motor: Diesel Detroid",
+                    "characteristic-6": "Nacionalidad: Americana",
+                    "characteristic-7": "Combustible: Petróleo"
                 }
             ],
             "machine-label": "Montacargas"
         },
         {
             "id": 4,
-            "machine-name": "Maquina Excavadoras 4 | Modelo | Cap. Carga | Etc",
+            "machine-name": "PHT500",
             "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-img-bg": "./media/img/gallery-4.webp",
             "machine-img": "../media/img/gruas/GROVE_TMS_875.png",
             "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-characteristics": [
                 {
-                    "characteristic-1": "Año 2018",
-                    "characteristic-2": "200TN",
-                    "characteristic-3": "Petroleo"
+                    "characteristic-1": "Año: 1986",
+                    "characteristic-2": "Caja: Fuller",
+                    "characteristic-3": "Medidas: 11 x 3 metros",
+                    "characteristic-4": "Pluma: 33 metros",
+                    "characteristic-5": "Motor: Diesel Detroit",
+                    "characteristic-6": "Nacionalidad: Americana",
+                    "characteristic-7": "Combustible: Petróleo"
                 }
             ],
             "machine-label": "Excavadoras"
         },
         {
             "id": 5,
-            "machine-name": "Maquina Telescópicas 5 | Modelo 2000 - 2019 | Cap. Carga | Etc",
+            "machine-name": "Pettibone",
             "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-img-bg": "./media/img/gallery-5.webp",
             "machine-img": "../media/img/gruas/GROVE_TMS_875.png",
             "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-characteristics": [
                 {
-                    "characteristic-1": "Año 2018",
-                    "characteristic-2": "200TN",
-                    "characteristic-3": "Petroleo"
+                    "characteristic-1": "Año: 1988",
+                    "characteristic-2": "Caja: Fuller",
+                    "characteristic-3": "Medidas: 12 x 3.20 metros",
+                    "characteristic-4": "Pluma: 33 metros",
+                    "characteristic-5": "Motor: Cummis Americano",
+                    "characteristic-6": "Nacionalidad: Americana",
+                    "characteristic-7": "Combustible: Petróleo"
+                }
+            ],
+            "machine-label": "Telescópicas"
+        },
+        {
+            "id": 6,
+            "machine-name": "AC-205",
+            "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
+            "machine-img-bg": "./media/img/gallery-5.webp",
+            "machine-img": "../media/img/gruas/GROVE_TMS_875.png",
+            "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
+            "machine-characteristics": [
+                {
+                    "characteristic-1": "Año: 2010",
+                    "characteristic-2": "Caja: Alison",
+                    "characteristic-3": "Medidas: 3.6 x 2.60 metros",
+                    "characteristic-4": "Pluma: 50 metros",
+                    "characteristic-5": "Motor: Mercedes Benz",
+                    "characteristic-6": "Nacionalidad: Europea",
+                    "characteristic-7": "Combustible: Petróleo"
                 }
             ],
             "machine-label": "Telescópicas"
