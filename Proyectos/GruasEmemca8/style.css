@@ -27,8 +27,20 @@ body::-webkit-scrollbar{
     --black-2: #222222;
     --target: #E7E7E7;
     --white: #FFFFFF;
+    --footer: #222222;
 
     --transition-250ms-linear: all 250ms linear;
+}
+
+.dark-mode{
+    --body: #222222;
+    --header: #111111;
+    --red: #DA111D;
+    --text: #FFFFFF;
+    --black-2: #999999;
+    --target: #555555;
+    --white: #FFFFFF;
+    --footer: #000000;
 }
 
 /* .dark-mode{
@@ -189,7 +201,7 @@ button{
 }
 
 video{
-    border-radius: 5px;
+    /* border-radius: 5px; */
     object-fit: cover;
 }
 
@@ -275,6 +287,9 @@ header{
 .header{
     width: 100%;
     height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     /* background: orange; */
 }
 
@@ -287,6 +302,10 @@ header{
     width: auto;
     height: 100%;
     object-fit: cover;
+}
+
+.menu-container{
+    margin-left: auto;
 }
 
 .link{
@@ -485,35 +504,34 @@ header{
     margin: auto;
     margin-top: 140px;
     width: 100%;
-    max-width: 2000px;
+    /* max-width: 2000px; */
     height: calc(100vh - 140px);
     max-height: 700px;
     position: relative;
     overflow: hidden;
     display: flex;
     padding: 20px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .hero-container > video{
     position: absolute;
-    left: 10px;
-    top: 10px;
-    width: calc(100% - 20px);
-    height: calc(100% - 20px);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 5px;
     z-index: -2;
 }
 
 .hero-layer{
     position: absolute;
-    left: 10px;
-    top: 10px;
-    width: calc(100% - 20px);
-    height: calc(100% - 20px);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     background: #00000090;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     z-index: -1;
 }
 
@@ -930,10 +948,13 @@ h1{
     height: 40px;
     z-index: 2;
     display: flex;
+    /* background: var(--red); */
+    /* border-radius: 2.5px 0 0 2.5px; */
 }
 
 .contact-form-target-input-container label span{
     margin: auto;
+    color: var(--text);
 }
 
 .contact-form-target-input-container input{
@@ -954,7 +975,7 @@ h1{
 }
 
 input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button {
+input[type=number]::-webkit-outer-spin-button{
     -webkit-appearance: none; 
     margin: 0; 
 }
@@ -1047,19 +1068,23 @@ select{
 .whatsapp{
     background: #25d366;
     position: fixed;
-    right: 20px;
-    bottom: 20px;
+    right: 10px;
+    bottom: 10px;
     height: 40px;
     padding: 0 20px;
     border-radius: 2.5px;
     gap: 5px;
     transition: var(--transition-250ms-linear);
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
     z-index: 99;
 }
 
 .whatsapp.active{
-    bottom: 10px;
-    right: 10px;
+    opacity: 1;
+    pointer-events: unset;
+    user-select: unset;
 }
 
 .whatsapp img{
@@ -1075,7 +1100,7 @@ select{
 /*Footer*/
 
 footer{
-    background: var(--black-2);
+    background: var(--footer);
     padding-bottom: 60px !important;
 }
 

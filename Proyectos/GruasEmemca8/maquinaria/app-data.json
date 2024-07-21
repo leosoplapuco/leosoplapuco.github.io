@@ -5,7 +5,8 @@
             "machine-name": "PPM ATT 400",
             "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-img-bg": "../media/img/GROVE_TMS_875.png",
-            "machine-img": "../media/img/gruas/GROVE TMS 875.jpg",
+            "machine-img": "../media/img/gruas/PPM_ATT_400.jpg",
+            "machine-alt": "PPM ATT 400",
             "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-characteristics": [
                 {
@@ -26,6 +27,7 @@
             "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-img-bg": "./media/img/gallery-2.webp",
             "machine-img": "../media/img/gruas/GROVE_TMS_875.jpg",
+            "machine-alt": "Grove TMS 875",
             "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-characteristics": [
                 {
@@ -45,7 +47,8 @@
             "machine-name": "PHT300A",
             "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-img-bg": "./media/img/gallery-3.webp",
-            "machine-img": "../media/img/gruas/GROVE_TMS_875.png",
+            "machine-img": "../media/img/gruas/PETTIBONE.png",
+            "machine-alt": "PHT300A",
             "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-characteristics": [
                 {
@@ -66,6 +69,7 @@
             "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-img-bg": "./media/img/gallery-4.webp",
             "machine-img": "../media/img/gruas/GROVE_TMS_875.png",
+            "machine-alt": "PHT500",
             "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-characteristics": [
                 {
@@ -85,7 +89,8 @@
             "machine-name": "Pettibone",
             "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-img-bg": "./media/img/gallery-5.webp",
-            "machine-img": "../media/img/gruas/GROVE_TMS_875.png",
+            "machine-img": "../media/img/gruas/PETTIBONE.png",
+            "machine-alt": "Pettibone",
             "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-characteristics": [
                 {
@@ -105,7 +110,8 @@
             "machine-name": "AC-205",
             "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-img-bg": "./media/img/gallery-5.webp",
-            "machine-img": "../media/img/gruas/GROVE_TMS_875.png",
+            "machine-img": "../media/img/gruas/AC_205.jpg",
+            "machine-alt": "AC-205",
             "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-characteristics": [
                 {

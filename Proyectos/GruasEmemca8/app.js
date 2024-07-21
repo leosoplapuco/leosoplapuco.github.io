@@ -1,3 +1,22 @@
+//DarkMode
+const DarkMode = document.querySelector('.dark-button');
+
+DarkMode.addEventListener('click', () => {
+	document.body.classList.toggle('dark-mode');
+
+	if(document.body.classList.contains('dark-mode')){
+		localStorage.setItem('dark-mode', 'true');
+	} else {
+		localStorage.setItem('dark-mode', 'false');
+	}
+});
+
+if(localStorage.getItem('dark-mode') === 'true'){
+    document.body.classList.add('dark-mode');
+} else {
+    document.body.classList.remove('dark-mode');
+}
+
 //WhatsApp
 const WhatsApp = document.querySelector('.whatsapp');
 
