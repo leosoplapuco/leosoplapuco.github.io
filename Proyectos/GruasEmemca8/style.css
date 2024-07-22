@@ -35,11 +35,8 @@ body::-webkit-scrollbar{
 .dark-mode{
     --body: #222222;
     --header: #111111;
-    --red: #DA111D;
     --text: #FFFFFF;
-    --black-2: #999999;
     --target: #555555;
-    --white: #FFFFFF;
     --footer: #000000;
 }
 
@@ -200,6 +197,14 @@ button{
     color: var(--black-2);
 }
 
+.dark-mode .button-link-secondary{
+    background: var(--white);
+}
+
+.dark-mode .button-link-secondary .button-link-text{
+    color: var(--black-2);
+}
+
 video{
     /* border-radius: 5px; */
     object-fit: cover;
@@ -236,6 +241,7 @@ header{
     top: 0;
     width: 100%;
     background: var(--header);
+    transition: var(--transition-250ms-linear);
     z-index: 100;
 }
 
@@ -258,30 +264,52 @@ header{
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 2px;
+    height: 1px;
     background: var(--black-2);
-    border-radius: 2px;
+    transition: var(--transition-250ms-linear);
+    border-radius: 1px;
+}
+
+.dark-mode .header-contact-container::before{
+    background: var(--white);
 }
 
 .networks{
     color: var(--text);
+    transition: var(--transition-250ms-linear);
 }
 
 .network{
+    font-size: 14px;
     color: var(--black-2);
+    transition: var(--transition-250ms-linear);
+}
+
+.dark-mode .network{
+    color: var(--white);
 }
 
 .header-contact-link span,
 .header-contact-link h2{
     color: var(--black-2);
+    transition: var(--transition-250ms-linear);
 }
 
-.header-contact-link-1 h2{
+.dark-mode .header-contact-link span,
+.dark-mode .header-contact-link h2{
+    color: var(--white);
+}
+
+/* .header-contact-link-1 h2{
     font-size: 15px;
+} */
+
+.header-contact-link h2{
+    font-size: 14px;
 }
 
 .header-contact-link span{
-    font-size: 21px;
+    font-size: 20px;
 }
 
 .header{
@@ -336,6 +364,11 @@ header{
 .link span{
     color: var(--black-2);
     transition: var(--transition-250ms-linear);
+}
+
+.dark-mode .link h2,
+.dark-mode .link span{
+    color: var(--white);
 }
 
 .link span{
@@ -459,7 +492,12 @@ header{
     width: 100%;
     height: 30px;
     background: var(--black-2);
+    transition: var(--transition-250ms-linear);
     /* position: relative; */
+}
+
+.dark-mode .header-bottom{
+    background: #333;
 }
 
 /* .header-bottom::before{
@@ -655,6 +693,11 @@ h1{
     flex-direction: column;
     /* margin-bottom: 20px; */
     color: var(--black-2);
+    transition: var(--transition-250ms-linear);
+}
+
+.dark-mode .block-title{
+    color: var(--white);
 }
 
 .block-title-title,
@@ -669,6 +712,11 @@ h1{
 .text-title{
     font-size: 20px;
     color: var(--black-2);
+    transition: var(--transition-250ms-linear);
+}
+
+.dark-mode .text-title{
+    color: var(--white);
 }
 
 .text-title b{
@@ -679,10 +727,16 @@ h1{
 .text-sub-title{
     font-size: 18px;
     color: var(--black-2);
+    transition: var(--transition-250ms-linear);
+}
+
+.dark-mode .text-sub-title{
+    color: var(--white);
 }
 
 .text{
     color: var(--text);
+    transition: var(--transition-250ms-linear);
 }
 
 /*Tarjetas*/
@@ -709,6 +763,10 @@ h1{
 
 .index-card .text-title{
     color: var(--black-2);
+}
+
+.dark-mode .index-card .text-title{
+    color: var(--white);
 }
 
 .index-card span{
@@ -811,8 +869,13 @@ h1{
     padding-bottom: 10px;
     overflow: hidden;
     border-radius: 5px;
+    transition: var(--transition-250ms-linear);
     /* padding: 10px; */
     /* border: 1px solid var(--black-2); */
+}
+
+.dark-mode .index-project{
+    background: #444444;
 }
 
 .index-project-img{
@@ -859,6 +922,11 @@ h1{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    transition: var(--transition-250ms-linear);
+}
+
+.dark-mode .index-testimonial{
+    background: #444444;
 }
 
 .testimonial-info{
@@ -878,6 +946,19 @@ h1{
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+.testimonial-company{
+    color: var(--black-2);
+    transition: var(--transition-250ms-linear);
+}
+
+.dark-mode .testimonial-company{
+    color: var(--white);
+}
+
+.testimonial-name{
+    font-size: 14px;
 }
 
 /*Maps*/
@@ -970,7 +1051,7 @@ h1{
     outline: 0;
     border-radius: 2.5px;
     border: 2px solid transparent;
-    transition: all 100ms linear;
+    transition: var(--transition-250ms-linear);
     color: var(--text);
 }
 
@@ -1002,7 +1083,7 @@ input[type=number]::-webkit-outer-spin-button{
     resize: none;
     border-radius: 2.5px;
     border: 2px solid transparent;
-    transition: all 100ms linear;
+    transition: var(--transition-250ms-linear);
     outline: 0;
     color: var(--text);
 }
@@ -1131,6 +1212,10 @@ footer .footer .block-title-title{
 
 .footer-target ul li a{
     color: var(--white);
+}
+
+.footer-target ul li a:hover{
+    text-decoration: underline;
 }
 
 .footer .networks li .network{
