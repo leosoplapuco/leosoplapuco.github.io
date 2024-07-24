@@ -99,13 +99,16 @@ function MenuDesactive(){
 }
 
 const LinkOne = document.querySelector('.link-1');
-LinkOne.addEventListener('click', MenuDesactive)
+LinkOne.addEventListener('click', MenuDesactive);
 
-const LinkTwo = document.querySelector('.link-4');
-LinkTwo.addEventListener('click', MenuDesactive)
+const LinkThree = document.querySelector('.link-3');
+LinkThree.addEventListener('click', MenuDesactive);
 
-const LinkThree = document.querySelector('.link-5');
-LinkThree.addEventListener('click', MenuDesactive)
+const LinkFour = document.querySelector('.link-4');
+LinkFour.addEventListener('click', MenuDesactive);
+
+const LinkFive = document.querySelector('.link-5');
+LinkFive.addEventListener('click', MenuDesactive);
 
 const HeaderContactButton = document.querySelector('.header-contact-button');
 HeaderContactButton.addEventListener('click', MenuDesactive);

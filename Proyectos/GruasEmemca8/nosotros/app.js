@@ -41,23 +41,23 @@ fetch('../maquinaria/app-data.json')
     });
 
     // Machine's filter
-    const FilterButtons = document.querySelectorAll('.machine-button');
+    // const FilterButtons = document.querySelectorAll('.machine-button');
 
-    FilterButtons.forEach(button => {
-        button.addEventListener('click', function(){
-            FilterButtons.forEach(btn => {
-                btn.classList.remove('active');
-            });
-            this.classList.add('active');
+    // FilterButtons.forEach(button => {
+    //     button.addEventListener('click', function(){
+    //         FilterButtons.forEach(btn => {
+    //             btn.classList.remove('active');
+    //         });
+    //         this.classList.add('active');
 
-            const filter = this.getAttribute('data-filter');
-            Machine.forEach(machine => {
-                machine.style.display = 'none';
-                if (filter === 'Todos' || machine.classList.contains(filter)){
-                    machine.style.display = 'block';
-                }
-            });
-        });
-    });
+    //         const filter = this.getAttribute('data-filter');
+    //         Machine.forEach(machine => {
+    //             machine.style.display = 'none';
+    //             if (filter === 'Todos' || machine.classList.contains(filter)){
+    //                 machine.style.display = 'block';
+    //             }
+    //         });
+    //     });
+    // });
 })
 .catch(error => console.error('Error fetching data:', error));
