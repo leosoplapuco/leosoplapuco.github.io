@@ -34,9 +34,7 @@ fetch('../maquinaria/app-data.json')
         `;
         MachinesContainer.appendChild(machineElement);
     });
-
-    // <p class="text">${machine['machine-short-description']}</p>
-
+    
     const Machine = document.querySelectorAll('.machine');
     Machine.forEach(machine => {
         machine.style.display = 'block';
