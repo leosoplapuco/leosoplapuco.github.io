@@ -19,7 +19,9 @@ fetch('../maquinaria/app-data.json')
 
         machineElement.innerHTML = `
             <div class="machine-photo">
-                <img src="${machine['machine-img']}" alt="${machine['machine-alt']} | Grúas Ememca SAC">
+                <a href="${machine['machine-img']}" target="_blank">
+                    <img src="${machine['machine-img']}" alt="${machine['machine-alt']} | Grúas Ememca SAC">
+                </a>
             </div>
             <div class="machine-description flex-column gap-10">
                 <h3 class="machine-name text-title">${machine['machine-name']}</h3>

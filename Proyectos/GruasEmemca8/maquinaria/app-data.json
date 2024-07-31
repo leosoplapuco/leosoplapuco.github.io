@@ -2,7 +2,7 @@
     "Maquinas": [
         {
             "id": 1,
-            "machine-name": "PPM ATT 400",
+            "machine-name": "PPM 40",
             "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-img-bg": "../media/img/GROVE_TMS_875.png",
             "machine-img": "../media/img/gruas/PPM_ATT_400.jpg",
@@ -10,6 +10,7 @@
             "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-characteristics": [
                 {
+                    "characteristic-0": "Modelo: PPM ATT 400",
                     "characteristic-1": "Año: 2000",
                     "characteristic-2": "Caja: Automática ZF",
                     "characteristic-3": "Medidas: 9 x 2.60 metros",
@@ -23,7 +24,7 @@
         },
         {
             "id": 2,
-            "machine-name": "Grove TMS 875",
+            "machine-name": "Grove 80",
             "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-img-bg": "./media/img/gallery-2.webp",
             "machine-img": "../media/img/gruas/GROVE_TMS_875.jpg",
@@ -31,6 +32,7 @@
             "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-characteristics": [
                 {
+                    "characteristic-0": "Modelo: Grove TMS 875",
                     "characteristic-1": "Año: 1996",
                     "characteristic-2": "Caja: Fuller",
                     "characteristic-3": "Medidas: 12 x 3.40 metros",
@@ -44,7 +46,7 @@
         },
         {
             "id": 3,
-            "machine-name": "PHT300A",
+            "machine-name": "PH40",
             "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-img-bg": "./media/img/gallery-3.webp",
             "machine-img": "../media/img/gruas/PETTIBONE.png",
@@ -52,6 +54,7 @@
             "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-characteristics": [
                 {
+                    "characteristic-0": "Modelo: PHT300A",
                     "characteristic-1": "Año: 1988",
                     "characteristic-2": "Caja: Fuller",
                     "characteristic-3": "Medidas: 9 x 2.40 metros",
@@ -65,14 +68,15 @@
         },
         {
             "id": 4,
-            "machine-name": "PHT500",
+            "machine-name": "PH50",
             "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-img-bg": "./media/img/gallery-4.webp",
-            "machine-img": "../media/img/gruas/GROVE_TMS_875.png",
+            "machine-img": "../media/img/gruas/PH50.jpg",
             "machine-alt": "PHT500",
             "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-characteristics": [
                 {
+                    "characteristic-0": "Modelo: PHT500",
                     "characteristic-1": "Año: 1986",
                     "characteristic-2": "Caja: Fuller",
                     "characteristic-3": "Medidas: 11 x 3 metros",
@@ -89,11 +93,12 @@
             "machine-name": "Pettibone",
             "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-img-bg": "./media/img/gallery-5.webp",
-            "machine-img": "../media/img/gruas/PETTIBONE.png",
+            "machine-img": "../media/img/gruas/PETTIBONE.jpg",
             "machine-alt": "Pettibone",
             "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-characteristics": [
                 {
+                    "characteristic-0": "Modelo: PPM ATT 400",
                     "characteristic-1": "Año: 1988",
                     "characteristic-2": "Caja: Fuller",
                     "characteristic-3": "Medidas: 12 x 3.20 metros",
@@ -107,7 +112,7 @@
         },
         {
             "id": 6,
-            "machine-name": "AC-205",
+            "machine-name": "Demag",
             "machine-short-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-img-bg": "./media/img/gallery-5.webp",
             "machine-img": "../media/img/gruas/AC_205.jpg",
@@ -115,6 +120,7 @@
             "machine-large-description": "Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero. Descripción de maquina 1 - Lorem sudo fugiat earum est at exercitationem, neque itaque cumque sint repellendus ipsa iusto vero.",
             "machine-characteristics": [
                 {
+                    "characteristic-0": "Modelo: AC-205",
                     "characteristic-1": "Año: 2010",
                     "characteristic-2": "Caja: Alison",
                     "characteristic-3": "Medidas: 3.6 x 2.60 metros",
