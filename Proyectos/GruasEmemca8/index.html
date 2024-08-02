@@ -21,7 +21,7 @@
             <div class="header-contact-container flex-center-between">
                 <ul class="networks flex-center-center gap-10">
                     <li><a href="https://www.facebook.com/gruasememcasac08" target="_blank"><h2 class="network" title="Facebook">Facebook</h2></a></li>
-                    |<li><a href="https://www.instagram.com/ememcagruas/?hl=es" target="_blank"><h2 class="network" title="Instagram">Instagram</h2></a></li>
+                    <li><a href="https://www.instagram.com/ememcagruas/?hl=es" target="_blank"><h2 class="network" title="Instagram">Instagram</h2></a></li>
                 </ul>
 
                 <ul class="header-contact-links flex-center-center gap-10">
@@ -42,7 +42,7 @@
 
             <div class="header transition-250ms-linear">
                 <a href="./index.html" class="logo">
-                    <img src="./media/img/logo-original-sin-fondo.webp" alt="Alquiler de grúas telescópicas | Grúas Ememca SAC">
+                    <img src="./media/img/logo-original-sin-fondo.webp" width="95px" height="70px" alt="Alquiler de grúas telescópicas | Grúas Ememca SAC">
                 </a>
 
                 <nav class="menu-container">
@@ -147,7 +147,11 @@
         </div>
 
         <div class="body-layer transition-250ms-linear"></div>
-        <video src="./media/videos/video-1.webm" controls class="video-demo transition-250ms-linear"></video>
+        <video width="600px" height="400px" controls class="video-demo transition-250ms-linear">
+            <source src="./media/videos/video-1.webm" type="video/mp4">
+            <track src="captions_en.vtt" kind="captions" srclang="en" label="Inglés">
+            <track src="captions_es.vtt" kind="captions" srclang="es" label="Español">
+        </video>
 
         <div class="block-container" id="tarjetas">
             <div class="block-content">
@@ -159,7 +163,7 @@
                     <div class="index-card index-card-1">
                         <span class="material-symbols-outlined">new_releases</span>
                         <p class="text-title">Seguridad y garantía</p>
-                        <p class="index-card-text">Con más de 15 años de experiencia, garantizamos seguridad y exito en nuestros servicios.</p>
+                        <p class="index-card-text">Con más de 15 años de experiencia, garantizamos seguridad y éxito en nuestros servicios.</p>
                     </div>
                     <div class="index-card index-card-2">
                         <span class="material-symbols-outlined">badge</span>
@@ -209,7 +213,11 @@
                         </a>
                     </div>
                     <div class="index-us-target index-us-target-2">
-                        <video src="./media/videos/video-1.webm" controls></video>
+                        <video width="auto" height="278.44px" controls>
+                            <source src="./media/videos/video-1.webm" type="video/mp4">
+                            <track src="captions_en.vtt" kind="captions" srclang="en" label="Inglés">
+                            <track src="captions_es.vtt" kind="captions" srclang="es" label="Español">
+                        </video>
                     </div>
                 </div>
             </div>
@@ -222,9 +230,8 @@
 
                     <div class="index-services grid-2-1fr">
                         <div class="index-services-target index-services-target-1 flex-column gap-10">
-                            <!-- <p class="text-title">Guia de nuestros servicios</p> -->
-                            <img src="./media/img/gallery-1.webp" alt="Alquiler de grúas telescópicas | Grúas Ememca SAC" class="margin-left-auto">
-                            <img src="./media/img/gallery-2.webp" alt="Alquiler de grúas telescópicas | Grúas Ememca SAC" class="margin-right-auto">
+                            <img width="400px" height="200px" src="./media/img/gallery-1.webp" alt="Alquiler de grúas telescópicas | Grúas Ememca SAC" class="margin-left-auto">
+                            <img width="400px" height="200px" src="./media/img/gallery-2.webp" alt="Alquiler de grúas telescópicas | Grúas Ememca SAC" class="margin-right-auto">
                         </div>
 
                         <div class="index-services-target index-services-target-2 flex-column gap-10">
@@ -236,10 +243,6 @@
                             <p class="text">Contamos con grúas especificas y preparadas para la eliminación de tierra.</p>
 
                             <div class="index-services-target-links flex-center-left gap-10">
-                                <!-- <a href="./servicios/index.html" class="button-link button-link-secondary">
-                                    <p class="button-link-text">Saber más</p>
-                                </a> -->
-
                                 <a href="#contacto" class="button-link button-link-principal">
                                     <h2 class="button-link-text">Cotizar servicio</h2>
                                     <span class="material-symbols-outlined">chevron_right</span>
@@ -259,7 +262,7 @@
 
                 <div class="phrase gap-10">
                     <div class="phrase-target phrase-target-1">
-                        <img src="./media/img/gruas/Demag_AC_205.png" alt="Demag AC 205 | Grúas Ememca">
+                        <img width="305px" height="365px" src="./media/img/gruas/Demag_AC_205.webp" alt="Demag AC 205 | Grúas Ememca">
                     </div>
 
                     <div class="phrase-target phrase-target-2 flex-column gap-10">
@@ -339,7 +342,7 @@
                 </div>
 
                 <div class="find-us">
-                    <h2 class="ubications flex-column">
+                    <ul class="ubications flex-column gap-5">
                         <li>
                             <button type="button" class="ubication ubication-1 flex-center-left active">
                                 <span class="material-symbols-outlined material-symbols-outlined-backfill">play_arrow</span>
@@ -352,11 +355,11 @@
                                 <h2 class="transition-250ms-linear text">Antigua Panamericana Sur 927, Lurí­n</h2>
                             </button>
                         </li>
-                    </h2>
+                    </ul>
 
                     <div class="maps">
-                        <iframe class="map map-1 transition-250ms-linear active" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4640.163128504588!2d-76.95624070609803!3d-12.05063896409591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c68fc4e31e1d%3A0xb64d4ed59417ce29!2sGr%C3%BAas%20Ememca%20SAC!5e0!3m2!1sen!2spe!4v1719809740435!5m2!1sen!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <iframe class="map map-2 transition-250ms-linear" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.9083009351893!2d-76.92217977871101!3d-12.254484499999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105bb17b653d613%3A0x3d72e660c7045fea!2sGr%C3%BAas%20Ememca%20SAC!5e0!3m2!1sen!2spe!4v1719809764167!5m2!1sen!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe title="Grúas Ememca SAC | Ate" class="map map-1 transition-250ms-linear active" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4640.163128504588!2d-76.95624070609803!3d-12.05063896409591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c68fc4e31e1d%3A0xb64d4ed59417ce29!2sGr%C3%BAas%20Ememca%20SAC!5e0!3m2!1sen!2spe!4v1719809740435!5m2!1sen!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe title="Grúas Ememca SAC | Lurín" class="map map-2 transition-250ms-linear" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.9083009351893!2d-76.92217977871101!3d-12.254484499999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105bb17b653d613%3A0x3d72e660c7045fea!2sGr%C3%BAas%20Ememca%20SAC!5e0!3m2!1sen!2spe!4v1719809764167!5m2!1sen!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -420,7 +423,8 @@
                             <div class="contact-form-target contact-form-target-3 flex-column gap-10">
                                 <p class="text-sub-title">Tipo de servicio</p>
 
-                                <select name="Tipo de servicio">
+                                <label for="Tipo-de-servicio">Tipo de servicio</label>
+                                <select id="Tipo-de-servicio" name="Tipo de servicio">
                                     <optgroup label="Tipo de servicio:">
                                         <option value="Seleccione">Seleccione</option>
                                     </optgroup>
@@ -474,7 +478,7 @@
 
                     <div class="contact-target contact-target-2 flex-column gap-10">
                         <p class="text-title">Grúas Ememca SAC | Trabajando con seguridad y garantía desde 2006</p>
-                        <img src="./media/img/gallery-5.webp" alt="Grúas Ememca SAC">
+                        <img width="495px" height="278.44px" src="./media/img/gallery-5.webp" alt="Grúas Ememca SAC">
                         <p class="text-title">Horarios de atención:</p>
                         <ul class="schedule">
                             <li class="flex-center-left gap-10">
@@ -510,7 +514,7 @@
                 <div class="footer-target footer-target-2">
                     <p class="text-title">Nosotros</p>
 
-                    <ul>
+                    <ul class="flex-column gap-5">
                         <li><a href="./nosotros/index.html#nosotros">Saber de nosotros</a></li>
                         <li><a href="./nosotros/index.html#certificaciones">Nuestras certifiaciones</a></li>
                         <li><a href="./nosotros/index.html#nuestra-maquinaria">Nuestra maquinaria</a></li>
@@ -519,7 +523,7 @@
                 <div class="footer-target footer-target-3">
                     <p class="text-title">Servicios</p>
 
-                    <ul>
+                    <ul class="flex-column gap-5">
                         <li><a href="#alquiler-de-gruas">Alquiler de grúas</a></li>
                         <li><a href="#servicios-de-izaje">Servicios de izaje</a></li>
                         <li><a href="#eliminacion-de-tierra">Eliminación de tierra</a></li>
@@ -528,7 +532,7 @@
                 <div class="footer-target footer-target-4">
                     <p class="text-title">Ubícanos</p>
 
-                    <ul>
+                    <ul class="flex-column gap-5">
                         <li><a href="https://www.google.com/maps/place/Gr%C3%BAas+Ememca+SAC/@-12.050359,-76.952984,16z/data=!4m6!3m5!1s0x9105c68fc4e31e1d:0xb64d4ed59417ce29!8m2!3d-12.0503591!4d-76.9529838!16s%2Fg%2F11fknh8qtz?hl=en&entry=ttu">Av. Ate 190, Ate</a></li>
                         <li><a href="https://www.google.com/maps?ll=-12.254484,-76.919396&z=16&t=m&hl=en&gl=PE&mapclient=embed&cid=4427854686988820458">Antigua Panamericana Sur 927, Lurí­n</a></li>
                     </ul>
@@ -537,7 +541,7 @@
 
             <ul class="networks flex-center-left gap-10">
                 <li><a href="https://www.facebook.com/gruasememcasac08" target="_blank"><h2 class="network" title="Facebook">Facebook</h2></a></li>
-                |<li><a href="https://www.instagram.com/ememcagruas/?hl=es" target="_blank"><h2 class="network" title="Instagram">Instagram</h2></a></li>
+                <li><a href="https://www.instagram.com/ememcagruas/?hl=es" target="_blank"><h2 class="network" title="Instagram">Instagram</h2></a></li>
             </ul>
 
             <div class="footer-copy flex-center-between">

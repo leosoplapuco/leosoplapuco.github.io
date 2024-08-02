@@ -112,6 +112,10 @@ body::-webkit-scrollbar{
     gap: 10px;
 }
 
+.gap-5{
+    gap: 5px;
+}
+
 .grid-2-1fr{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -584,6 +588,7 @@ h1{
     translate: -50% -50%;
     width: calc(100% - 20px);
     max-width: 800px;
+    height: auto;
     object-fit: cover;
     border-radius: 5px;
     opacity: 0;
